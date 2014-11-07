@@ -1,0 +1,12 @@
+C:\Users\WONG\Desktop\InterfacesSief\InterfacesSief\bin\Release\InterfacesSief.exe
+C:\Users\WONG\Desktop\InterfacesSief\InterfacesSief\bin\Release\InterfacesSief.pdb
+C:\Users\WONG\Desktop\InterfacesSief\InterfacesSief\obj\x86\Release\InterfacesSief.Form1.resources
+C:\Users\WONG\Desktop\InterfacesSief\InterfacesSief\obj\x86\Release\InterfacesSief.IW_CapInt.resources
+C:\Users\WONG\Desktop\InterfacesSief\InterfacesSief\obj\x86\Release\InterfacesSief.IW_CapInt2.resources
+C:\Users\WONG\Desktop\InterfacesSief\InterfacesSief\obj\x86\Release\InterfacesSief.IW_CapInt3.resources
+C:\Users\WONG\Desktop\InterfacesSief\InterfacesSief\obj\x86\Release\InterfacesSief.I_FormPlantilla.resources
+C:\Users\WONG\Desktop\InterfacesSief\InterfacesSief\obj\x86\Release\InterfacesSief.I_LogUsu.resources
+C:\Users\WONG\Desktop\InterfacesSief\InterfacesSief\obj\x86\Release\InterfacesSief.Properties.Resources.resources
+C:\Users\WONG\Desktop\InterfacesSief\InterfacesSief\obj\x86\Release\InterfacesSief.csproj.GenerateResource.Cache
+C:\Users\WONG\Desktop\InterfacesSief\InterfacesSief\obj\x86\Release\InterfacesSief.exe
+C:\Users\WONG\Desktop\InterfacesSief\InterfacesSief\obj\x86\Release\InterfacesSief.pdb

@@ -1,0 +1,19 @@
+c:\users\wong\documents\visual studio 2010\Projects\InterfacesSief\InterfacesSief\bin\Debug\InterfacesSief.exe
+c:\users\wong\documents\visual studio 2010\Projects\InterfacesSief\InterfacesSief\bin\Debug\InterfacesSief.pdb
+c:\users\wong\documents\visual studio 2010\Projects\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.I_FormPlantilla.resources
+c:\users\wong\documents\visual studio 2010\Projects\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.Properties.Resources.resources
+c:\users\wong\documents\visual studio 2010\Projects\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.csproj.GenerateResource.Cache
+c:\users\wong\documents\visual studio 2010\Projects\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.exe
+c:\users\wong\documents\visual studio 2010\Projects\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.pdb
+C:\Users\WONG\Desktop\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.exe
+C:\Users\WONG\Desktop\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.pdb
+C:\Users\WONG\Desktop\InterfacesSief\InterfacesSief\bin\Debug\InterfacesSief.exe
+C:\Users\WONG\Desktop\InterfacesSief\InterfacesSief\bin\Debug\InterfacesSief.pdb
+C:\Users\WONG\Desktop\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.Form1.resources
+C:\Users\WONG\Desktop\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.IW_CapInt.resources
+C:\Users\WONG\Desktop\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.IW_CapInt2.resources
+C:\Users\WONG\Desktop\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.IW_CapInt3.resources
+C:\Users\WONG\Desktop\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.I_FormPlantilla.resources
+C:\Users\WONG\Desktop\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.I_LogUsu.resources
+C:\Users\WONG\Desktop\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.Properties.Resources.resources
+C:\Users\WONG\Desktop\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.csproj.GenerateResource.Cache
