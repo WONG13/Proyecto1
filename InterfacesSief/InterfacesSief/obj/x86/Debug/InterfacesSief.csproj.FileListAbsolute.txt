@@ -17,3 +17,5 @@ C:\Users\WONG\Desktop\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief
 C:\Users\WONG\Desktop\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.I_LogUsu.resources
 C:\Users\WONG\Desktop\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.Properties.Resources.resources
 C:\Users\WONG\Desktop\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.csproj.GenerateResource.Cache
+C:\Users\lanix\Documents\GitHub\Proyecto1\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.exe
+C:\Users\lanix\Documents\GitHub\Proyecto1\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.pdb
