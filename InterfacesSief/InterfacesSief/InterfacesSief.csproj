@@ -44,116 +44,146 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="E_ElaRep.cs">
+    <Compile Include="Conexion.cs" />
+    <Compile Include="Empleado.cs" />
+    <Compile Include="InteresadoMainComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InteresadoMainComponent.Designer.cs">
+      <DependentUpon>InteresadoMainComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\E_ElaRep.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="E_ElaRep.Designer.cs">
+    <Compile Include="Interfaces\E_ElaRep.Designer.cs">
       <DependentUpon>E_ElaRep.cs</DependentUpon>
     </Compile>
-    <Compile Include="E_FormRev.cs">
+    <Compile Include="Interfaces\E_FormRev.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="E_FormRev.Designer.cs">
+    <Compile Include="Interfaces\E_FormRev.Designer.cs">
       <DependentUpon>E_FormRev.cs</DependentUpon>
     </Compile>
-    <Compile Include="E_MosRep.cs">
+    <Compile Include="Interfaces\E_MosRep.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="E_MosRep.Designer.cs">
+    <Compile Include="Interfaces\E_MosRep.Designer.cs">
       <DependentUpon>E_MosRep.cs</DependentUpon>
     </Compile>
-    <Compile Include="E_RevSol.cs">
+    <Compile Include="Interfaces\E_RevSol.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="E_RevSol.Designer.cs">
+    <Compile Include="Interfaces\E_RevSol.Designer.cs">
       <DependentUpon>E_RevSol.cs</DependentUpon>
     </Compile>
-    <Compile Include="I_CapInt.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Interesado.cs" />
+    <Compile Include="Interfaces\I_CapInt.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="I_CapInt.Designer.cs">
+    <Compile Include="Interfaces\I_CapInt.Designer.cs">
       <DependentUpon>I_CapInt.cs</DependentUpon>
     </Compile>
-    <Compile Include="I_FormSol.cs">
+    <Compile Include="Interfaces\I_FormSol.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="I_FormSol.Designer.cs">
+    <Compile Include="Interfaces\I_FormSol.Designer.cs">
       <DependentUpon>I_FormSol.cs</DependentUpon>
     </Compile>
-    <Compile Include="I_NewUsu.cs">
+    <Compile Include="Interfaces\I_NewUsu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="I_NewUsu.Designer.cs">
+    <Compile Include="Interfaces\I_NewUsu.Designer.cs">
       <DependentUpon>I_NewUsu.cs</DependentUpon>
     </Compile>
-    <Compile Include="I_CapAlu.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Interfaces\I_CapAlu.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="I_CapAlu.Designer.cs">
+    <Compile Include="Interfaces\I_CapAlu.Designer.cs">
       <DependentUpon>I_CapAlu.cs</DependentUpon>
     </Compile>
-    <Compile Include="I_CapDoc.cs">
+    <Compile Include="Interfaces\I_CapDoc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="I_CapDoc.Designer.cs">
+    <Compile Include="Interfaces\I_CapDoc.Designer.cs">
       <DependentUpon>I_CapDoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="I_FormPlantilla.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Interfaces\I_FormPlantilla.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="I_FormPlantilla.Designer.cs">
+    <Compile Include="Interfaces\I_FormPlantilla.Designer.cs">
       <DependentUpon>I_FormPlantilla.cs</DependentUpon>
     </Compile>
-    <Compile Include="I_LogUsu.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Interfaces\I_LogUsu.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="I_LogUsu.Designer.cs">
+    <Compile Include="Interfaces\I_LogUsu.Designer.cs">
       <DependentUpon>I_LogUsu.cs</DependentUpon>
     </Compile>
-    <Compile Include="E_RevDoc.cs">
+    <Compile Include="Interfaces\E_RevDoc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="E_RevDoc.Designer.cs">
+    <Compile Include="Interfaces\E_RevDoc.Designer.cs">
       <DependentUpon>E_RevDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginComponent.Designer.cs">
+      <DependentUpon>LoginComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario.cs" />
-    <EmbeddedResource Include="E_ElaRep.resx">
+    <EmbeddedResource Include="InteresadoMainComponent.resx">
+      <DependentUpon>InteresadoMainComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\E_ElaRep.resx">
       <DependentUpon>E_ElaRep.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="E_FormRev.resx">
+    <EmbeddedResource Include="Interfaces\E_FormRev.resx">
       <DependentUpon>E_FormRev.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="E_MosRep.resx">
+    <EmbeddedResource Include="Interfaces\E_MosRep.resx">
       <DependentUpon>E_MosRep.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="E_RevSol.resx">
+    <EmbeddedResource Include="Interfaces\E_RevSol.resx">
       <DependentUpon>E_RevSol.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="I_CapInt.resx">
+    <EmbeddedResource Include="Interfaces\I_CapInt.resx">
       <DependentUpon>I_CapInt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="I_FormSol.resx">
+    <EmbeddedResource Include="Interfaces\I_FormSol.resx">
       <DependentUpon>I_FormSol.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="I_NewUsu.resx">
+    <EmbeddedResource Include="Interfaces\I_NewUsu.resx">
       <DependentUpon>I_NewUsu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="I_CapAlu.resx">
+    <EmbeddedResource Include="Interfaces\I_CapAlu.resx">
       <DependentUpon>I_CapAlu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="I_CapDoc.resx">
+    <EmbeddedResource Include="Interfaces\I_CapDoc.resx">
       <DependentUpon>I_CapDoc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="I_FormPlantilla.resx">
+    <EmbeddedResource Include="Interfaces\I_FormPlantilla.resx">
       <DependentUpon>I_FormPlantilla.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="I_LogUsu.resx">
+    <EmbeddedResource Include="Interfaces\I_LogUsu.resx">
       <DependentUpon>I_LogUsu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="E_RevDoc.resx">
+    <EmbeddedResource Include="Interfaces\E_RevDoc.resx">
       <DependentUpon>E_RevDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginComponent.resx">
+      <DependentUpon>LoginComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

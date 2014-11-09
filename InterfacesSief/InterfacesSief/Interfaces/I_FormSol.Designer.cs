@@ -55,7 +55,7 @@
             // 
             this.salirToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.salirToolStripMenuItem.Text = "Cerrar Sesión";
             // 
             // capturarDatosToolStripMenuItem
@@ -65,31 +65,32 @@
             this.alumnoToolStripMenuItem,
             this.anexarDocumentosToolStripMenuItem1});
             this.capturarDatosToolStripMenuItem.Name = "capturarDatosToolStripMenuItem";
-            this.capturarDatosToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
+            this.capturarDatosToolStripMenuItem.Size = new System.Drawing.Size(108, 20);
             this.capturarDatosToolStripMenuItem.Text = "Capturar de Datos";
             // 
             // interesadoToolStripMenuItem
             // 
             this.interesadoToolStripMenuItem.Name = "interesadoToolStripMenuItem";
-            this.interesadoToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.interesadoToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.interesadoToolStripMenuItem.Text = "Interesado";
             // 
             // alumnoToolStripMenuItem
             // 
             this.alumnoToolStripMenuItem.Name = "alumnoToolStripMenuItem";
-            this.alumnoToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.alumnoToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.alumnoToolStripMenuItem.Text = "Alumno";
             // 
             // anexarDocumentosToolStripMenuItem1
             // 
             this.anexarDocumentosToolStripMenuItem1.Name = "anexarDocumentosToolStripMenuItem1";
-            this.anexarDocumentosToolStripMenuItem1.Size = new System.Drawing.Size(181, 22);
+            this.anexarDocumentosToolStripMenuItem1.Size = new System.Drawing.Size(171, 22);
             this.anexarDocumentosToolStripMenuItem1.Text = "Anexar Documentos";
+            this.anexarDocumentosToolStripMenuItem1.Click += new System.EventHandler(this.anexarDocumentosToolStripMenuItem1_Click);
             // 
             // enviarSolicitudToolStripMenuItem
             // 
             this.enviarSolicitudToolStripMenuItem.Name = "enviarSolicitudToolStripMenuItem";
-            this.enviarSolicitudToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
+            this.enviarSolicitudToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
             this.enviarSolicitudToolStripMenuItem.Text = "Enviar Solicitud";
             // 
             // I_FormSol

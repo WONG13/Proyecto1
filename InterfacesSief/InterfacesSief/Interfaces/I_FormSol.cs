@@ -9,18 +9,16 @@ using System.Windows.Forms;
 
 namespace InterfacesSief
 {
-    public partial class I_FormPlantilla : Form
+    public partial class I_FormSol : Form
     {
-        public I_FormPlantilla()
+        public I_FormSol()
         {
             InitializeComponent();
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void anexarDocumentosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Close();
+
         }
-
-
     }
 }

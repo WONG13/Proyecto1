@@ -28,17 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(I_LogUsu));
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContra = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnNewUsu = new System.Windows.Forms.Button();
             this.GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(110, 186);
+            resources.ApplyResources(this.btnAceptar, "btnAceptar");
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // GroupBox1
             // 
@@ -46,65 +51,52 @@
             this.GroupBox1.Controls.Add(this.txtUsuario);
             this.GroupBox1.Controls.Add(this.label3);
             this.GroupBox1.Controls.Add(this.label2);
-            this.GroupBox1.Size = new System.Drawing.Size(254, 98);
+            resources.ApplyResources(this.GroupBox1, "GroupBox1");
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(254, 35);
-            this.label1.Text = "Inicio de Sesión";
+            resources.ApplyResources(this.label1, "label1");
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(191, 187);
+            resources.ApplyResources(this.btnCancel, "btnCancel");
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 36);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Usuario:";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 62);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Contraseña:";
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(97, 33);
+            resources.ApplyResources(this.txtUsuario, "txtUsuario");
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(100, 20);
-            this.txtUsuario.TabIndex = 2;
             // 
             // txtContra
             // 
-            this.txtContra.Location = new System.Drawing.Point(97, 59);
+            resources.ApplyResources(this.txtContra, "txtContra");
             this.txtContra.Name = "txtContra";
-            this.txtContra.Size = new System.Drawing.Size(100, 20);
-            this.txtContra.TabIndex = 3;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // btnNewUsu
             // 
-            this.btnNewUsu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnNewUsu.Location = new System.Drawing.Point(16, 165);
+            resources.ApplyResources(this.btnNewUsu, "btnNewUsu");
             this.btnNewUsu.Name = "btnNewUsu";
-            this.btnNewUsu.Size = new System.Drawing.Size(75, 45);
-            this.btnNewUsu.TabIndex = 8;
-            this.btnNewUsu.Text = "Crear \r\nUsuario";
             this.btnNewUsu.UseVisualStyleBackColor = true;
             // 
             // I_LogUsu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(278, 221);
+            resources.ApplyResources(this, "$this");
             this.Controls.Add(this.btnNewUsu);
             this.Name = "I_LogUsu";
+            this.Load += new System.EventHandler(this.I_LogUsu_Load);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.GroupBox1, 0);
             this.Controls.SetChildIndex(this.btnAceptar, 0);
@@ -112,6 +104,7 @@
             this.Controls.SetChildIndex(this.btnNewUsu, 0);
             this.GroupBox1.ResumeLayout(false);
             this.GroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -122,6 +115,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtContra;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button btnNewUsu;
     }
 }

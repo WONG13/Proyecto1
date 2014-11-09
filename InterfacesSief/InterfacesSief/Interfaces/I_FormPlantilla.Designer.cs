@@ -38,7 +38,7 @@
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(497, 327);
+            this.btnCancel.Location = new System.Drawing.Point(500, 488);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 7;
@@ -50,7 +50,7 @@
             // 
             this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAceptar.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnAceptar.Location = new System.Drawing.Point(416, 327);
+            this.btnAceptar.Location = new System.Drawing.Point(419, 488);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 6;
@@ -63,9 +63,9 @@
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GroupBox1.Location = new System.Drawing.Point(12, 61);
+            this.GroupBox1.Location = new System.Drawing.Point(12, 71);
             this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Size = new System.Drawing.Size(560, 238);
+            this.GroupBox1.Size = new System.Drawing.Size(563, 389);
             this.GroupBox1.TabIndex = 5;
             this.GroupBox1.TabStop = false;
             // 
@@ -76,9 +76,9 @@
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(12, 10);
+            this.label1.Location = new System.Drawing.Point(12, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(560, 35);
+            this.label1.Size = new System.Drawing.Size(563, 30);
             this.label1.TabIndex = 4;
             this.label1.Text = "label1";
             // 
@@ -87,13 +87,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(584, 361);
-            this.ControlBox = false;
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.GroupBox1);
             this.Controls.Add(this.label1);
             this.Name = "I_FormPlantilla";
+            this.Size = new System.Drawing.Size(587, 522);
             this.ResumeLayout(false);
 
         }
@@ -102,8 +101,8 @@
 
         protected System.Windows.Forms.Button btnAceptar;
         protected System.Windows.Forms.GroupBox GroupBox1;
-        protected System.Windows.Forms.Label label1;
         protected System.Windows.Forms.Button btnCancel;
+        protected System.Windows.Forms.Label label1;
 
     }
 }
