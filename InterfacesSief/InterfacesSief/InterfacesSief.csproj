@@ -65,7 +65,7 @@
       <DependentUpon>E_FormRev.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\E_MosRep.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Interfaces\E_MosRep.Designer.cs">
       <DependentUpon>E_MosRep.cs</DependentUpon>
@@ -90,7 +90,7 @@
       <DependentUpon>I_FormSol.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\I_NewUsu.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Interfaces\I_NewUsu.Designer.cs">
       <DependentUpon>I_NewUsu.cs</DependentUpon>
@@ -102,7 +102,7 @@
       <DependentUpon>I_CapAlu.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\I_CapDoc.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Interfaces\I_CapDoc.Designer.cs">
       <DependentUpon>I_CapDoc.cs</DependentUpon>
@@ -120,7 +120,7 @@
       <DependentUpon>I_LogUsu.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\E_RevDoc.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Interfaces\E_RevDoc.Designer.cs">
       <DependentUpon>E_RevDoc.cs</DependentUpon>

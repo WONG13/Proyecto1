@@ -110,7 +110,17 @@ namespace InterfacesSief
             temp[1] = nomUsu;
             temp[2] = perUsu;
             return temp;
-        }      
+        }
+
+        public int getCodigo()
+        {
+            return codUsu;
+        }
+
+        public string getPermisos()
+        {
+            return perUsu;
+        }
 
     }
 }

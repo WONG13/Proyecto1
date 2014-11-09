@@ -12,9 +12,15 @@ namespace InterfacesSief
     public partial class LoginComponent : UserControl
     {
         Usuario actual;
+        cargarComponentes cargarEnMainForm;
         public LoginComponent()
         {
             InitializeComponent();
+        }
+
+        public void setDelegado(MainForm f)
+        {
+            cargarEnMainForm=new cargarComponentes(f.loadComponentsByUser);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -27,6 +33,7 @@ namespace InterfacesSief
                     {
                         actual = user.abrirSesion();
                         mostrarUsuario();
+                        cargarEnMainForm(actual);
                     }
                     else
                         MessageBox.Show("Usuario o contraseña incorrectas");

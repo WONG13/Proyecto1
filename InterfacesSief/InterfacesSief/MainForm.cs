@@ -9,17 +9,22 @@ using System.Windows.Forms;
 
 namespace InterfacesSief
 {
+    delegate void cargarComponentes(Usuario user);
     public partial class MainForm : Form
     {
         public MainForm()
         {
             InitializeComponent();
             LoginComponent LogCom = new LoginComponent();
+            LogCom.setDelegado(this);
             panel1.Controls.Add(LogCom);
             LogCom.Show();
-            InteresadoMainComponent IMC = new InteresadoMainComponent();
-            panel2.Controls.Add(IMC);
-            IMC.Show();
+            //I_FormSol f1 = new I_FormSol();
+            /*f1.TopLevel = false;
+            f1.WindowState = FormWindowState.Maximized;
+            panel2.Controls.Add(f1);
+            f1.Show();*/
+            
             /*
             I_LogUsu log = new I_LogUsu();
             log.TopLevel = false;
@@ -30,39 +35,24 @@ namespace InterfacesSief
             
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        public void loadComponentsByUser(Usuario user)
         {
-
+            switch(user.getPermisos())
+            {
+                case "Interesado":
+                    InteresadoMainComponent IMC = new InteresadoMainComponent();
+                    IMC.setUsuario(user);
+                    panel2.Controls.Add(IMC);
+                    IMC.Show();
+                    break;
+                case "Empleado":
+                    //Hacer cosas
+                    break;
+                case "Lider":
+                    //Hacer cosas
+                    break;
+            }
         }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtContra_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUsuario_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

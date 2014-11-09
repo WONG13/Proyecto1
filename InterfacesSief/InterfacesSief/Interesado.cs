@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
-
+using System.Windows.Forms;
 namespace InterfacesSief
 {
     class Interesado: Usuario
-    {        
+    {
         private string nomInt;
         private string dirInt;
         private string telInt;
@@ -18,8 +18,7 @@ namespace InterfacesSief
 
         public Interesado(int codigo,string NomUsu, string PerUsu, string nombre, string direccion, string telefono, string correo):
             base(codigo,NomUsu,null,PerUsu)
-        {
-            Usuario temp = getUsuarioFromDB("", codigo);
+        {            
             codUsu = codigo;     
             nomInt = nombre;
             dirInt = direccion;
@@ -56,6 +55,56 @@ namespace InterfacesSief
             return i;
         }
 
+        public static Interesado getInteresadoFromDB(int codUsu)
+        {
+            return getInteresadoFromUsuario(codUsu, "", "");
+        }
 
+        public string getNombre()
+        {
+            return nomInt;
+        }
+
+        public string getDireccion()
+        {
+            return dirInt;
+        }
+
+        public string getCorreo()
+        {
+            return corInt;
+        }
+
+        public string getTelefono()
+        {
+            return telInt;
+        }
+
+        public bool ActualizarToDB()
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = Conexion.ObtenerConexion();
+            comando.CommandText = "UPDATE Interesados SET NomInt=@NomInt,"+
+                                                         "DirInt=@DirInt,"+
+                                                         "CorInt=@CorInt,"+ 
+                                                         "TelInt=@TelInt WHERE CodUsuInt=@CodUsuInt";
+            comando.Parameters.AddWithValue("@NomInt", nomInt);
+            comando.Parameters.AddWithValue("@DirInt", dirInt);
+            comando.Parameters.AddWithValue("@CorInt", corInt);
+            comando.Parameters.AddWithValue("@TelInt", telInt);
+            comando.Parameters.AddWithValue("@CodUsuInt", getCodigo());
+            try
+            {
+                comando.Connection.Open();
+                comando.ExecuteNonQuery();
+                comando.Connection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error al actualizar los datos: " + e.Message);
+                return false;               
+            }
+            return true;
+        }
     }
 }

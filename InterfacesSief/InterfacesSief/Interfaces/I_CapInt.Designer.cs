@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtTelInt = new System.Windows.Forms.TextBox();
             this.txtCorInt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -36,13 +37,16 @@
             this.txtNomComInt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAceptar
             // 
             this.btnAceptar.Location = new System.Drawing.Point(249, 226);
             this.btnAceptar.Text = "Guardar";
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // GroupBox1
             // 
@@ -56,14 +60,14 @@
             this.GroupBox1.Controls.Add(this.label5);
             this.GroupBox1.Size = new System.Drawing.Size(393, 137);
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(330, 226);
+            // 
             // label1
             // 
             this.label1.Size = new System.Drawing.Size(393, 35);
             this.label1.Text = "Capturar Datos del Interesado";
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(330, 226);
             // 
             // txtTelInt
             // 
@@ -129,13 +133,18 @@
             this.label5.TabIndex = 30;
             this.label5.Text = "Nombre Completo:";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // I_CapInt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(417, 260);
             this.Name = "I_CapInt";
+            this.Size = new System.Drawing.Size(417, 260);
             this.GroupBox1.ResumeLayout(false);
             this.GroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -150,5 +159,6 @@
         private System.Windows.Forms.TextBox txtNomComInt;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
