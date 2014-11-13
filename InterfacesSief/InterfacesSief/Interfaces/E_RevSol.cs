@@ -15,5 +15,10 @@ namespace InterfacesSief
         {
             InitializeComponent();
         }
+
+        private void E_RevSol_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -371,6 +371,7 @@
             this.Controls.Add(this.txtNomComInt);
             this.Name = "E_RevSol";
             this.Text = "Revisión de Solicitud";
+            this.Load += new System.EventHandler(this.E_RevSol_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

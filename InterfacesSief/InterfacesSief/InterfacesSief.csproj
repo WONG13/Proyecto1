@@ -125,6 +125,12 @@
     <Compile Include="Interfaces\E_RevDoc.Designer.cs">
       <DependentUpon>E_RevDoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\SecuenciaCaptura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\SecuenciaCaptura.Designer.cs">
+      <DependentUpon>SecuenciaCaptura.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginComponent.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\E_RevDoc.resx">
       <DependentUpon>E_RevDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\SecuenciaCaptura.resx">
+      <DependentUpon>SecuenciaCaptura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginComponent.resx">
       <DependentUpon>LoginComponent.cs</DependentUpon>

@@ -15,7 +15,7 @@ namespace InterfacesSief
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());//new I_LogUsu());
+            Application.Run(new SecuenciaCaptura());//new I_LogUsu());
         }
     }
 }
