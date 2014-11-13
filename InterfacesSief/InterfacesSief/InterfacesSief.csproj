@@ -44,7 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alumno.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="Documento.cs" />
     <Compile Include="Empleado.cs" />
     <Compile Include="InteresadoMainComponent.cs">
       <SubType>UserControl</SubType>

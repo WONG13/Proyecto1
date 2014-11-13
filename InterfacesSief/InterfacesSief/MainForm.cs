@@ -14,11 +14,9 @@ namespace InterfacesSief
     {
         public MainForm()
         {
-            InitializeComponent();
-            LoginComponent LogCom = new LoginComponent();
-            LogCom.setDelegado(this);
-            panel1.Controls.Add(LogCom);
-            LogCom.Show();
+            InitializeComponent();         
+            loginComponent1.setDelegado(this);
+            
             //I_FormSol f1 = new I_FormSol();
             /*f1.TopLevel = false;
             f1.WindowState = FormWindowState.Maximized;

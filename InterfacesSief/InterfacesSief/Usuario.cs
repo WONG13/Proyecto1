@@ -11,9 +11,7 @@ namespace InterfacesSief
     {
         protected int codUsu;
         protected string nomUsu;
-        private string contUsu;
-        //public enum Permiso { interesado, lider_proyecto, empleado };
-        //private Permiso permiso;
+        private string contUsu;        
         private string perUsu;
         public Usuario()
         {}

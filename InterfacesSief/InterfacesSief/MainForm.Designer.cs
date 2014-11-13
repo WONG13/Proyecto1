@@ -28,18 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.loginComponent1 = new InterfacesSief.LoginComponent();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Location = new System.Drawing.Point(380, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 100);
-            this.panel1.TabIndex = 0;
             // 
             // panel2
             // 
@@ -57,14 +49,21 @@
             this.panel3.Size = new System.Drawing.Size(214, 100);
             this.panel3.TabIndex = 2;
             // 
+            // loginComponent1
+            // 
+            this.loginComponent1.Location = new System.Drawing.Point(369, 3);
+            this.loginComponent1.Name = "loginComponent1";
+            this.loginComponent1.Size = new System.Drawing.Size(311, 83);
+            this.loginComponent1.TabIndex = 3;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 613);
+            this.Controls.Add(this.loginComponent1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
@@ -76,9 +75,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private LoginComponent loginComponent1;
 
 
 
