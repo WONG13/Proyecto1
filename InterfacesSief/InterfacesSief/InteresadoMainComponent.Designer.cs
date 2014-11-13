@@ -32,9 +32,9 @@
             this.agergarDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.interesadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alumnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.subirDocumentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hacerSolicitudToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verFichasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.subirDocumentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notificacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -76,6 +76,13 @@
             this.alumnoToolStripMenuItem.Text = "Alumno";
             this.alumnoToolStripMenuItem.Click += new System.EventHandler(this.alumnoToolStripMenuItem_Click);
             // 
+            // subirDocumentosToolStripMenuItem
+            // 
+            this.subirDocumentosToolStripMenuItem.Name = "subirDocumentosToolStripMenuItem";
+            this.subirDocumentosToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.subirDocumentosToolStripMenuItem.Text = "Subir Documentos";
+            this.subirDocumentosToolStripMenuItem.Click += new System.EventHandler(this.subirDocumentosToolStripMenuItem_Click);
+            // 
             // hacerSolicitudToolStripMenuItem
             // 
             this.hacerSolicitudToolStripMenuItem.Name = "hacerSolicitudToolStripMenuItem";
@@ -88,12 +95,6 @@
             this.verFichasToolStripMenuItem.Name = "verFichasToolStripMenuItem";
             this.verFichasToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.verFichasToolStripMenuItem.Text = "Ver Fichas";
-            // 
-            // subirDocumentosToolStripMenuItem
-            // 
-            this.subirDocumentosToolStripMenuItem.Name = "subirDocumentosToolStripMenuItem";
-            this.subirDocumentosToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.subirDocumentosToolStripMenuItem.Text = "Subir Documentos";
             // 
             // notificacionesToolStripMenuItem
             // 

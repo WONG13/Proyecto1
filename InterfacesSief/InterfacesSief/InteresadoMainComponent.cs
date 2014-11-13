@@ -50,5 +50,14 @@ namespace InterfacesSief
         {
 
         }
+
+        private void subirDocumentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            eliminarAnterior();
+            I_CapDoc ICD = new I_CapDoc();
+            ICD.setUser(interesado/*, null*/);//Null es Alumno Cambiarlo luego
+            Controls.Add(ICD);
+            ICD.Show();
+        }
     }
 }
