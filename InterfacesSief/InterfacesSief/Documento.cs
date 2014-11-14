@@ -27,29 +27,46 @@ namespace InterfacesSief
             doc = Documento;
         }
 
+        static public DataTable getDocumentsTypesFromDB()
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = Conexion.ObtenerConexion();
+            comando.CommandText = "SELECT * FROM TipoDocumento";
+
+            SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+
+            comando.Connection.Open();
+            comando.ExecuteNonQuery();
+            comando.Connection.Close();
+
+            return tabla;
+        }
+
         static public List<Documento> getDocumentFromDB(int CodUsuInt, int CodAlu,string tipo, int CodDoc)
         {
             SqlCommand comando = new SqlCommand();
             comando.Connection = Conexion.ObtenerConexion();
             if(CodAlu==-1 && tipo=="" && CodDoc==-1)
             {
-            comando.CommandText = "SELECT C.CodDoc, C.CodUsuInt, C.CodAlu, C.TipoDoc, C.Doc FROM Documentos C " +
-                                    "where CodUsuInt=@CodUsuInt ";
+            comando.CommandText = @"SELECT C.CodDoc, C.CodUsuInt, C.CodAlu, TD.TipoDoc, C.Doc FROM Documentos C, TipoDocumento TD 
+                                    where CodUsuInt=@CodUsuInt and C.TipoDoc=TD.CodTipDoc";
             comando.Parameters.AddWithValue("@CodUsuInt", CodUsuInt);
             }
             else if(CodDoc==-1)
             {
-                comando.CommandText = "SELECT C.CodDoc, C.CodUsuInt, C.CodAlu, C.TipoDoc, C.Doc FROM Documentos C" +
-                                        " where CodUsuInt=@CodUsuInt "+
-                                            "AND CodAlu=@CodAlu AND TipoDoc=@tipo";
+                comando.CommandText = @"SELECT C.CodDoc, C.CodUsuInt, C.CodAlu, TD.TipoDoc, C.Doc FROM Documentos C, TipoDocumento TD 
+                                    where CodUsuInt=@CodUsuInt and C.TipoDoc=TD.CodTipDoc 
+                                            AND CodAlu=@CodAlu AND TipoDoc=@tipo";
                 comando.Parameters.AddWithValue("@CodUsuInt", CodUsuInt);
                 comando.Parameters.AddWithValue("@CodAlu", CodAlu);
                 comando.Parameters.AddWithValue("@tipo", tipo);
             }
             else if (CodDoc!=-1)
             {
-                comando.CommandText = "SELECT C.CodDoc, C.CodUsuInt, C.CodAlu, C.TipoDoc, C.Doc FROM Documentos C "+ 
-                                        "where CodDoc=@CodDoc";
+                comando.CommandText = @"SELECT C.CodDoc, C.CodUsuInt, C.CodAlu, TD.TipoDoc, C.Doc FROM Documentos C, TipoDocumento TD 
+                                    where CodDoc=@CodDoc and C.TipoDoc=TD.CodTipDoc";
                 comando.Parameters.AddWithValue("@CodDoc", CodDoc);
             }
 
@@ -79,7 +96,9 @@ namespace InterfacesSief
         {
             SqlCommand comando = new SqlCommand();
             comando.Connection = Conexion.ObtenerConexion();
-                comando.CommandText = "insert into Documentos  values (@CodUsuInt,@TipoDoc, @Doc, @CodAlu)";
+                comando.CommandText = @"insert into Documentos  values (@CodUsuInt,
+                                            (SELECT TD.CodTipDoc FROM TipoDocumento TD where TD.TipoDoc=@TipoDoc),
+                                            @Doc, @CodAlu)";
 
                 comando.Parameters.AddWithValue("@CodDoc", codDoc);
                 comando.Parameters.AddWithValue("@CodUsuInt", codUsuInt);
@@ -92,6 +111,11 @@ namespace InterfacesSief
                 comando.Connection.Close();
                 return true;
 
+        }
+
+        public void makeImage()
+        {
+            imaDoc = (Bitmap)Image.FromStream(new System.IO.MemoryStream(doc)); 
         }
     }
 }

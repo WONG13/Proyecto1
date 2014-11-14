@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Registrarse = new System.Windows.Forms.LinkLabel();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -102,11 +103,23 @@
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Visible = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(217, 67);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "label3";
+            this.label3.Visible = false;
             // 
             // LoginComponent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.Registrarse);
             this.Controls.Add(this.label2);
@@ -130,5 +143,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel Registrarse;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Label label3;
     }
 }

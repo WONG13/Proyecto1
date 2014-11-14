@@ -10,6 +10,7 @@ using System.Windows.Forms;
 namespace InterfacesSief
 {
     delegate void cargarComponentes(Usuario user);
+    delegate void cerrarSesion();
     public partial class MainForm : Form
     {
         public MainForm()
@@ -53,6 +54,12 @@ namespace InterfacesSief
                     //Hacer cosas
                     break;
             }
+        }
+
+        public void Logout()
+        {
+            panel2.Dispose();
+
         }
         
     }
