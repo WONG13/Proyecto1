@@ -27,7 +27,7 @@ namespace InterfacesSief
         {
             SqlCommand comando = new SqlCommand();
             comando.Connection = Conexion.ObtenerConexion();
-            comando.CommandText = "SELECT * FROM Empleados where CodUsuEmp=@CodUsu";
+            comando.CommandText = "SELECT * FROM Empleados where CodUsu=@CodUsu";
             comando.Parameters.AddWithValue("@CodUsu", codUsu);
 
             SqlDataAdapter adaptador = new SqlDataAdapter(comando);

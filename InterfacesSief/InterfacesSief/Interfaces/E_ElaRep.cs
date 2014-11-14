@@ -41,10 +41,10 @@ namespace InterfacesSief
                 "Insert into Reportes(CodRep, CodSol, , CodRev, InfRep )" +
                 "Values (@CodRep, @CodSol, @CodRev, @InfRep)";
 
-            comando.Parameters.AddWithValue("@CodRep",  );
-            comando.Parameters.AddWithValue("@CodSol", );
-            comando.Parameters.AddWithValue("@CodRev", );
-            comando.Parameters.AddWithValue("@InfRep", );
+            //comando.Parameters.AddWithValue("@CodRep",  );
+            //comando.Parameters.AddWithValue("@CodSol", );
+            //comando.Parameters.AddWithValue("@CodRev", );
+            //comando.Parameters.AddWithValue("@InfRep", );
          
 
             comando.Connection.Open();

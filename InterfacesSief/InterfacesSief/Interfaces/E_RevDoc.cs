@@ -16,8 +16,8 @@ namespace InterfacesSief
         private SqlCommand comando = null;
         private DataTable dTable = null;
         public DataTable DatosSolicitudes;
-        int Index;
-        int ID
+        int Index=-1;
+        int ID;
         public E_RevDoc()
         {
             InitializeComponent();
@@ -46,7 +46,7 @@ namespace InterfacesSief
         {
             
 
-            if (Index != null)
+            if (Index != -1)
             {
                 ID = Int16.Parse(dataGridView1[0, Index].Value.ToString());
                 ActualizarSolicitud();
