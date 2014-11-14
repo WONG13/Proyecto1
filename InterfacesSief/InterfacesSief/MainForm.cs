@@ -44,7 +44,10 @@ namespace InterfacesSief
                     IMC.Show();
                     break;
                 case "Empleado":
-                    //Hacer cosas
+                    EmpleadoMainComponent EMC = new EmpleadoMainComponent();
+                    //EMC.setUsuario(user);
+                    panel2.Controls.Add(EMC);
+                    EMC.Show();
                     break;
                 case "Lider":
                     //Hacer cosas

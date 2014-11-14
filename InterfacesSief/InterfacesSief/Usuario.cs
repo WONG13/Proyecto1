@@ -10,11 +10,13 @@ namespace InterfacesSief
     public class Usuario
     {
         protected int codUsu;
-        protected string nomUsu;
+        public string nomUsu;
         private string contUsu;        
         private string perUsu;
         public Usuario()
         {}
+
+
 
         public Usuario(int numero, string nombre, string contraseña, string permiso)
         {
@@ -33,6 +35,7 @@ namespace InterfacesSief
                     result = Interesado.getInteresadoFromUsuario(codUsu,nomUsu,perUsu); 
                     break;
                 case "Empleado":
+                    result = Empleado.getEmpleadoFromUsuario(codUsu, nomUsu, perUsu); 
                     break;
                 case "Lider":
                     break;

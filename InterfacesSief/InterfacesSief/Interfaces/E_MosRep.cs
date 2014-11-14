@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace InterfacesSief
 {
-    public partial class E_MosRep : InterfacesSief.I_FormPlantilla
+    public partial class E_MosRep : InterfacesSief.I_FormPlantilla, iModulo
     {
         public E_MosRep()
         {

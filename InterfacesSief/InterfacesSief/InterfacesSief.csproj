@@ -48,6 +48,13 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="Documento.cs" />
     <Compile Include="Empleado.cs" />
+    <Compile Include="EmpleadoMainComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmpleadoMainComponent.Designer.cs">
+      <DependentUpon>EmpleadoMainComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="iModulo.cs" />
     <Compile Include="InteresadoMainComponent.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -148,6 +155,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario.cs" />
+    <EmbeddedResource Include="EmpleadoMainComponent.resx">
+      <DependentUpon>EmpleadoMainComponent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InteresadoMainComponent.resx">
       <DependentUpon>InteresadoMainComponent.cs</DependentUpon>
     </EmbeddedResource>
