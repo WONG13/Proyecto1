@@ -40,16 +40,7 @@
             this.txtFecNacAlu = new System.Windows.Forms.TextBox();
             this.txtNivAcaAlu = new System.Windows.Forms.TextBox();
             this.txtEscAlu = new System.Windows.Forms.TextBox();
-            this.txtTelInt = new System.Windows.Forms.TextBox();
-            this.txtCorInt = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtDirInt = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -59,6 +50,7 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnReporte = new System.Windows.Forms.Button();
             this.btnTerminar = new System.Windows.Forms.Button();
+            this.i_CapInt1 = new InterfacesSief.I_CapInt();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -166,74 +158,6 @@
             this.txtEscAlu.Size = new System.Drawing.Size(181, 20);
             this.txtEscAlu.TabIndex = 69;
             // 
-            // txtTelInt
-            // 
-            this.txtTelInt.Location = new System.Drawing.Point(469, 124);
-            this.txtTelInt.Name = "txtTelInt";
-            this.txtTelInt.ReadOnly = true;
-            this.txtTelInt.Size = new System.Drawing.Size(177, 20);
-            this.txtTelInt.TabIndex = 77;
-            // 
-            // txtCorInt
-            // 
-            this.txtCorInt.Location = new System.Drawing.Point(469, 98);
-            this.txtCorInt.Name = "txtCorInt";
-            this.txtCorInt.ReadOnly = true;
-            this.txtCorInt.Size = new System.Drawing.Size(177, 20);
-            this.txtCorInt.TabIndex = 76;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(347, 127);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
-            this.label1.TabIndex = 75;
-            this.label1.Text = "Telefono:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(347, 101);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(97, 13);
-            this.label8.TabIndex = 74;
-            this.label8.Text = "Correo Electronico:";
-            // 
-            // txtDirInt
-            // 
-            this.txtDirInt.Location = new System.Drawing.Point(469, 72);
-            this.txtDirInt.Name = "txtDirInt";
-            this.txtDirInt.ReadOnly = true;
-            this.txtDirInt.Size = new System.Drawing.Size(177, 20);
-            this.txtDirInt.TabIndex = 73;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(469, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(177, 20);
-            this.textBox1.TabIndex = 72;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(347, 75);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 13);
-            this.label9.TabIndex = 71;
-            this.label9.Text = "Direccion:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(347, 49);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(94, 13);
-            this.label10.TabIndex = 70;
-            this.label10.Text = "Nombre Completo:";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -243,16 +167,6 @@
             this.label11.Size = new System.Drawing.Size(151, 20);
             this.label11.TabIndex = 78;
             this.label11.Text = "Datos del Alumno";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(347, 19);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(178, 20);
-            this.label12.TabIndex = 79;
-            this.label12.Text = "Datos del Interesado";
             // 
             // pictureBox3
             // 
@@ -332,12 +246,20 @@
             this.btnTerminar.Text = "Terminar";
             this.btnTerminar.UseVisualStyleBackColor = true;
             // 
+            // i_CapInt1
+            // 
+            this.i_CapInt1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.i_CapInt1.Location = new System.Drawing.Point(300, 0);
+            this.i_CapInt1.Name = "i_CapInt1";
+            this.i_CapInt1.Size = new System.Drawing.Size(380, 258);
+            this.i_CapInt1.TabIndex = 89;
+            // 
             // E_RevSol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(683, 453);
+            this.Controls.Add(this.i_CapInt1);
             this.Controls.Add(this.btnTerminar);
             this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.btnAceptar);
@@ -347,16 +269,7 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.txtTelInt);
-            this.Controls.Add(this.txtCorInt);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtDirInt);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.txtEscAlu);
             this.Controls.Add(this.txtNivAcaAlu);
             this.Controls.Add(this.txtFecNacAlu);
@@ -370,7 +283,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNomComInt);
             this.Name = "E_RevSol";
-            this.Text = "Revisión de Solicitud";
+            this.Size = new System.Drawing.Size(683, 453);
             this.Load += new System.EventHandler(this.E_RevSol_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -394,16 +307,7 @@
         private System.Windows.Forms.TextBox txtFecNacAlu;
         private System.Windows.Forms.TextBox txtNivAcaAlu;
         private System.Windows.Forms.TextBox txtEscAlu;
-        private System.Windows.Forms.TextBox txtTelInt;
-        private System.Windows.Forms.TextBox txtCorInt;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtDirInt;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -413,5 +317,6 @@
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnReporte;
         private System.Windows.Forms.Button btnTerminar;
+        private I_CapInt i_CapInt1;
     }
 }

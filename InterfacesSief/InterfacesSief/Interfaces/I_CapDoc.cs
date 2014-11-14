@@ -41,18 +41,20 @@ namespace InterfacesSief
         private void button1_Click(object sender, EventArgs e)
         {
             openFileDialog1.Multiselect = false;
-            openFileDialog1.InitialDirectory = "C://";
+            //openFileDialog1.InitialDirectory = "C://";
             openFileDialog1.ShowDialog();
-                        
-            string path = openFileDialog1.InitialDirectory + openFileDialog1.SafeFileName;//SafeFileName;
-            
-            Documento doc = new Documento(0, user.getCodigo(), 0, comboBox1.Text, null);
-            doc.dirDoc = path;
+
+
+            string path = openFileDialog1.FileName;//SafeFileName;
+            Bitmap ima = (Bitmap)Image.FromFile(path);
+            pictureBox1.Image = ima;
+            MemoryStream ms = new MemoryStream();
+            ima.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            Documento doc = new Documento(0, user.getCodigo(), 1, comboBox1.Text, ms.ToArray());
+
 
             if (doc.saveDocumentToDB())
                 MessageBox.Show("Guardado Exitosamente");
-
-
         }
     }
 }

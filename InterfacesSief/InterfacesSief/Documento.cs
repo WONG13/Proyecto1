@@ -79,14 +79,13 @@ namespace InterfacesSief
         {
             SqlCommand comando = new SqlCommand();
             comando.Connection = Conexion.ObtenerConexion();
-                comando.CommandText = "insert into Documentos  values (@CodUsuInt,@TipoDoc,(SELECT BulkColumn "+ 
-                                       "FROM Openrowset( Bulk @DirDoc, Single_Blob) as img), @CodAlu)";
+                comando.CommandText = "insert into Documentos  values (@CodUsuInt,@TipoDoc, @Doc, @CodAlu)";
 
                 comando.Parameters.AddWithValue("@CodDoc", codDoc);
                 comando.Parameters.AddWithValue("@CodUsuInt", codUsuInt);
                 comando.Parameters.AddWithValue("@CodAlu", codAlu);
                 comando.Parameters.AddWithValue("@TipoDoc", tipDoc);
-                comando.Parameters.AddWithValue("@DirDoc", dirDoc);
+                comando.Parameters.AddWithValue("@Doc", doc);
 
                 comando.Connection.Open();
                 comando.ExecuteNonQuery();

@@ -37,21 +37,22 @@
             // 
             this.btnAceptar.Location = new System.Drawing.Point(416, 350);
             this.btnAceptar.Text = "Revisar";
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // GroupBox1
+            // label1
             // 
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.listBox1);
-            this.groupBox1.Size = new System.Drawing.Size(560, 261);
+            this.label1.Text = "Revisión de Solicitudes";
             // 
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(497, 350);
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // label1
+            // groupBox1
             // 
-            this.label1.Text = "Revisión de Solicitudes";
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.listBox1);
+            this.groupBox1.Size = new System.Drawing.Size(560, 261);
             // 
             // listBox1
             // 

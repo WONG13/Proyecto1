@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 namespace InterfacesSief
 {
+    
     public partial class E_RevSol : UserControl,iModulo
     {
         public E_RevSol()
@@ -18,7 +19,8 @@ namespace InterfacesSief
 
         private void E_RevSol_Load(object sender, EventArgs e)
         {
-
+            i_CapInt1.OcultarBotones();
+            i_CapInt1.cargarDatos(1);//Este es el numero del Interesado
         }
     }
 }

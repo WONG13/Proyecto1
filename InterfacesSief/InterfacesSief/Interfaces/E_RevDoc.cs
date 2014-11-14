@@ -10,6 +10,7 @@ namespace InterfacesSief
 {
     public partial class E_RevDoc : InterfacesSief.I_FormPlantilla ,iModulo
     {
+        public LlamarRevision LR;
         public E_RevDoc()
         {
             InitializeComponent();
@@ -18,6 +19,12 @@ namespace InterfacesSief
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            LR(new E_RevSol());
+            
         }
     }
 }

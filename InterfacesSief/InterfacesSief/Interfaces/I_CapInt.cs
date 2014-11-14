@@ -69,6 +69,12 @@ namespace InterfacesSief
             return condicion;
         }
 
+        public void OcultarBotones()
+        {
+            btnAceptar.Visible = false;
+            btnCancel.Visible = false;
+        }
+
         
     }
 }

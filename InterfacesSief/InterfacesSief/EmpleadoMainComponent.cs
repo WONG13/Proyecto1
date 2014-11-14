@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 namespace InterfacesSief
 {
+    public delegate void LlamarRevision(UserControl u);
     public partial class EmpleadoMainComponent : UserControl
     {
         string ApuntadorControl = null;
@@ -23,7 +24,9 @@ namespace InterfacesSief
        
         private void Inicio()
         {
-            MostrarModulo(new E_RevDoc());
+            E_RevDoc ER = new E_RevDoc();          
+            ER.LR = new LlamarRevision(MostrarModulo);
+            MostrarModulo(ER);
         }
 
         private void verSolicitudesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -42,7 +45,7 @@ namespace InterfacesSief
         }
 
 
-        private void MostrarModulo(UserControl NuevoModulo)
+        public void MostrarModulo(UserControl NuevoModulo)
         {
             if (ModuloActual != null)
             {
