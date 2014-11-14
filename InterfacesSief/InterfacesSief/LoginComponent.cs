@@ -25,10 +25,15 @@ namespace InterfacesSief
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            MetodoLogin();
+        }
+
+        private void MetodoLogin()
+        {
             if (Validar())
             {
-                Usuario user=Usuario.getUsuarioFromDB(txtUsuario.Text, -1);
-                if(user!=null)
+                Usuario user = Usuario.getUsuarioFromDB(txtUsuario.Text, -1);
+                if (user != null)
                     if (user.getAcceso(txtContraseña.Text))
                     {
                         actual = user.abrirSesion();
@@ -65,6 +70,15 @@ namespace InterfacesSief
             btnLogin.Visible = false;
             btnLogout.Location = btnLogin.Location;
             btnLogout.Visible = true;
+        }
+
+        private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (int)Keys.Enter)
+            {
+                MetodoLogin();
+            }
+
         }
     }
 }

@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAceptar
@@ -50,17 +51,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.listBox1);
             this.groupBox1.Size = new System.Drawing.Size(560, 261);
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(9, 32);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(261, 212);
-            this.listBox1.TabIndex = 0;
             // 
             // label2
             // 
@@ -71,6 +64,19 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Solicitudes:";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(9, 32);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(228, 191);
+            this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // E_RevDoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -78,13 +84,14 @@
             this.Size = new System.Drawing.Size(584, 384);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

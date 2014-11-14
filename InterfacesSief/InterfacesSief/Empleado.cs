@@ -9,7 +9,7 @@ namespace InterfacesSief
 {
     class Empleado:Usuario
     {
-        private int codUsuEmp;
+        public static int codUsuEmp;
         private string nomEmp;
         private string puesto;
         

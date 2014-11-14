@@ -14,13 +14,18 @@ namespace InterfacesSief
     {
         string ApuntadorControl = null;
         private iModulo ModuloActual { get; set; }
-        
+
+
+         public Usuario Empleado;
         public EmpleadoMainComponent()
         {
             InitializeComponent();
             Inicio();
         }
-
+        public void setUsuario(Usuario user)
+        {
+            Empleado = user;
+        }
        
         private void Inicio()
         {

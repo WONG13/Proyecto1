@@ -59,18 +59,18 @@
             this.btnEnviar.TabIndex = 2;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = true;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // E_ElaRep
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(576, 181);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Name = "E_ElaRep";
-            this.Text = "Reporte";
+            this.Size = new System.Drawing.Size(576, 181);
             this.ResumeLayout(false);
             this.PerformLayout();
 
