@@ -36,7 +36,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.GroupBox1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,13 +46,13 @@
             // 
             // GroupBox1
             // 
-            this.GroupBox1.Controls.Add(this.button1);
-            this.GroupBox1.Controls.Add(this.comboBox1);
-            this.GroupBox1.Controls.Add(this.btnEliminar1);
-            this.GroupBox1.Controls.Add(this.pictureBox1);
-            this.GroupBox1.Controls.Add(this.label3);
-            this.GroupBox1.Controls.Add(this.btnAdjBol);
-            this.GroupBox1.Size = new System.Drawing.Size(469, 414);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.btnEliminar1);
+            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.btnAdjBol);
+            this.groupBox1.Size = new System.Drawing.Size(469, 414);
             // 
             // btnCancel
             // 
@@ -126,8 +126,8 @@
             this.Name = "I_CapDoc";
             this.Size = new System.Drawing.Size(493, 537);
             this.Load += new System.EventHandler(this.I_CapDoc_Load);
-            this.GroupBox1.ResumeLayout(false);
-            this.GroupBox1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

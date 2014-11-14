@@ -30,7 +30,7 @@
         {
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.GroupBox1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAceptar
@@ -40,9 +40,9 @@
             // 
             // GroupBox1
             // 
-            this.GroupBox1.Controls.Add(this.label2);
-            this.GroupBox1.Controls.Add(this.listBox1);
-            this.GroupBox1.Size = new System.Drawing.Size(560, 261);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.listBox1);
+            this.groupBox1.Size = new System.Drawing.Size(560, 261);
             // 
             // btnCancel
             // 
@@ -75,8 +75,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.Name = "E_RevDoc";
             this.Size = new System.Drawing.Size(584, 384);
-            this.GroupBox1.ResumeLayout(false);
-            this.GroupBox1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }

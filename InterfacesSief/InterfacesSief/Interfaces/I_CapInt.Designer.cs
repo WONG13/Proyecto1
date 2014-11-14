@@ -38,7 +38,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.GroupBox1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,15 +50,15 @@
             // 
             // GroupBox1
             // 
-            this.GroupBox1.Controls.Add(this.txtTelInt);
-            this.GroupBox1.Controls.Add(this.txtCorInt);
-            this.GroupBox1.Controls.Add(this.label6);
-            this.GroupBox1.Controls.Add(this.label7);
-            this.GroupBox1.Controls.Add(this.txtDirInt);
-            this.GroupBox1.Controls.Add(this.txtNomComInt);
-            this.GroupBox1.Controls.Add(this.label4);
-            this.GroupBox1.Controls.Add(this.label5);
-            this.GroupBox1.Size = new System.Drawing.Size(393, 137);
+            this.groupBox1.Controls.Add(this.txtTelInt);
+            this.groupBox1.Controls.Add(this.txtCorInt);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.txtDirInt);
+            this.groupBox1.Controls.Add(this.txtNomComInt);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Size = new System.Drawing.Size(393, 137);
             // 
             // btnCancel
             // 
@@ -142,8 +142,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.Name = "I_CapInt";
             this.Size = new System.Drawing.Size(417, 260);
-            this.GroupBox1.ResumeLayout(false);
-            this.GroupBox1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 

@@ -42,7 +42,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtGraAlu = new System.Windows.Forms.TextBox();
-            this.GroupBox1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAceptar
@@ -52,21 +52,21 @@
             // 
             // GroupBox1
             // 
-            this.GroupBox1.Controls.Add(this.txtGraAlu);
-            this.GroupBox1.Controls.Add(this.label3);
-            this.GroupBox1.Controls.Add(this.label2);
-            this.GroupBox1.Controls.Add(this.ComboBoxEsc);
-            this.GroupBox1.Controls.Add(this.ComboBoxNivel);
-            this.GroupBox1.Controls.Add(this.ComboBoxA);
-            this.GroupBox1.Controls.Add(this.ComboBoxMes);
-            this.GroupBox1.Controls.Add(this.ComboBoxDia);
-            this.GroupBox1.Controls.Add(this.txtProAlu);
-            this.GroupBox1.Controls.Add(this.label6);
-            this.GroupBox1.Controls.Add(this.label5);
-            this.GroupBox1.Controls.Add(this.label7);
-            this.GroupBox1.Controls.Add(this.label4);
-            this.GroupBox1.Controls.Add(this.txtNomComInt);
-            this.GroupBox1.Size = new System.Drawing.Size(383, 192);
+            this.groupBox1.Controls.Add(this.txtGraAlu);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.ComboBoxEsc);
+            this.groupBox1.Controls.Add(this.ComboBoxNivel);
+            this.groupBox1.Controls.Add(this.ComboBoxA);
+            this.groupBox1.Controls.Add(this.ComboBoxMes);
+            this.groupBox1.Controls.Add(this.ComboBoxDia);
+            this.groupBox1.Controls.Add(this.txtProAlu);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.txtNomComInt);
+            this.groupBox1.Size = new System.Drawing.Size(383, 192);
             // 
             // label1
             // 
@@ -278,8 +278,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(407, 315);
             this.Name = "I_CapAlu";
-            this.GroupBox1.ResumeLayout(false);
-            this.GroupBox1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }

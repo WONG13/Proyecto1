@@ -36,7 +36,7 @@
             this.txtConUsuInt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.GroupBox1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAceptar
@@ -46,15 +46,15 @@
             // 
             // GroupBox1
             // 
-            this.GroupBox1.Controls.Add(this.label8);
-            this.GroupBox1.Controls.Add(this.txtNomUsuInt);
-            this.GroupBox1.Controls.Add(this.txtCorInt);
-            this.GroupBox1.Controls.Add(this.label7);
-            this.GroupBox1.Controls.Add(this.txtConConInt);
-            this.GroupBox1.Controls.Add(this.txtConUsuInt);
-            this.GroupBox1.Controls.Add(this.label3);
-            this.GroupBox1.Controls.Add(this.label2);
-            this.GroupBox1.Size = new System.Drawing.Size(386, 138);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.txtNomUsuInt);
+            this.groupBox1.Controls.Add(this.txtCorInt);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.txtConConInt);
+            this.groupBox1.Controls.Add(this.txtConUsuInt);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Size = new System.Drawing.Size(386, 138);
             // 
             // label1
             // 
@@ -134,8 +134,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(410, 261);
             this.Name = "IW_CapIntX";
-            this.GroupBox1.ResumeLayout(false);
-            this.GroupBox1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }

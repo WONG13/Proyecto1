@@ -36,7 +36,7 @@
             this.txtContra = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnNewUsu = new System.Windows.Forms.Button();
-            this.GroupBox1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,11 +47,11 @@
             // 
             // GroupBox1
             // 
-            this.GroupBox1.Controls.Add(this.txtContra);
-            this.GroupBox1.Controls.Add(this.txtUsuario);
-            this.GroupBox1.Controls.Add(this.label3);
-            this.GroupBox1.Controls.Add(this.label2);
-            resources.ApplyResources(this.GroupBox1, "GroupBox1");
+            this.groupBox1.Controls.Add(this.txtContra);
+            this.groupBox1.Controls.Add(this.txtUsuario);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            resources.ApplyResources(this.groupBox1, "GroupBox1");
             // 
             // label1
             // 
@@ -98,12 +98,12 @@
             this.Name = "I_LogUsu";
             this.Load += new System.EventHandler(this.I_LogUsu_Load);
             this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.GroupBox1, 0);
+            this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.btnAceptar, 0);
             this.Controls.SetChildIndex(this.btnCancel, 0);
             this.Controls.SetChildIndex(this.btnNewUsu, 0);
-            this.GroupBox1.ResumeLayout(false);
-            this.GroupBox1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
