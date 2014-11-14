@@ -249,9 +249,9 @@
             // i_CapInt1
             // 
             this.i_CapInt1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.i_CapInt1.Location = new System.Drawing.Point(331, 0);
+            this.i_CapInt1.Location = new System.Drawing.Point(329, -3);
             this.i_CapInt1.Name = "i_CapInt1";
-            this.i_CapInt1.Size = new System.Drawing.Size(349, 245);
+            this.i_CapInt1.Size = new System.Drawing.Size(354, 248);
             this.i_CapInt1.TabIndex = 89;
             // 
             // E_RevSol

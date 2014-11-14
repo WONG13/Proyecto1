@@ -17,7 +17,7 @@ namespace InterfacesSief
         private DataTable dTable = null;
         public DataTable DatosSolicitudes;
         int Index=-1;
-        int ID;
+        public static int ID, IDint ;
         public E_RevDoc()
         {
             InitializeComponent();
@@ -49,9 +49,10 @@ namespace InterfacesSief
             if (Index != -1)
             {
                 ID = Int16.Parse(dataGridView1[0, Index].Value.ToString());
+                IDint = Int16.Parse(dataGridView1[2, Index].Value.ToString());
                 ActualizarSolicitud();
 
-                LR(new E_RevSol());
+                LR(new E_RevSol(IDint));
             }
         }
 
@@ -83,7 +84,7 @@ namespace InterfacesSief
 
             comando.Connection = Conexion.ObtenerConexion();
             comando.CommandType = CommandType.Text;
-            comando.CommandText = "select CodSol, NomInt from Solicitudes s join Interesados i on i.CodUsuInt=s.CodUsuInt";
+            comando.CommandText = "select CodSol, NomInt, s.CodUsuInt from Solicitudes s join Interesados i on i.CodUsuInt=s.CodUsuInt";
             SqlDataAdapter da = new SqlDataAdapter(comando);
             da.Fill(dTable);
 

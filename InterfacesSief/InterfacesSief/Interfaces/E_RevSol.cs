@@ -12,15 +12,20 @@ namespace InterfacesSief
     
     public partial class E_RevSol : UserControl,iModulo
     {
-        public E_RevSol()
+        int x;
+        public E_RevSol(int x)
         {
             InitializeComponent();
+            this.x = x;
         }
+
 
         private void E_RevSol_Load(object sender, EventArgs e)
         {
+           
+            
             i_CapInt1.OcultarBotones();
-            i_CapInt1.cargarDatos(1);//Este es el numero del Interesado
+            i_CapInt1.cargarDatos(x);//Este es el numero del Interesado
         }
     }
 }

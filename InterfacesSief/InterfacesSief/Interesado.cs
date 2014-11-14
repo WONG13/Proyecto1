@@ -9,6 +9,7 @@ namespace InterfacesSief
 {
     class Interesado: Usuario
     {
+        public static int CodInt;
         private string nomInt;
         private string dirInt;
         private string telInt;
@@ -49,6 +50,9 @@ namespace InterfacesSief
                                              tabla.Rows[0].Field<string>("DirInt"),
                                              tabla.Rows[0].Field<string>("TelInt"),
                                              tabla.Rows[0].Field<string>("CorInt"));
+                CodInt = tabla.Rows[0].Field<int>("CodUsuInt");
+
+
             }
             else
                 i = null;
