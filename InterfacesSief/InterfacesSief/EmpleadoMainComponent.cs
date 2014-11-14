@@ -11,21 +11,36 @@ namespace InterfacesSief
 {
     public partial class EmpleadoMainComponent : UserControl
     {
+        string ApuntadorControl = null;
+        private iModulo ModuloActual { get; set; }
+        
         public EmpleadoMainComponent()
         {
             InitializeComponent();
+            Inicio();
         }
 
-        string ApuntadorControl = null;
-        private iModulo ModuloActual { get; set; }
+       
+        private void Inicio()
+        {
+            MostrarModulo(new E_RevDoc());
+        }
 
         private void verSolicitudesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            E_MosRep ObjE = new E_MosRep();
-             MostrarModulo(ObjE);
-
-
+            MostrarModulo(new E_RevDoc());
         }
+
+        private void reporteDeSolicitudesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MostrarModulo(new E_MosRep());
+        }
+
+        private void bucarSolicitudToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           // MostrarModulo(new E_MosRep());
+        }
+
 
         private void MostrarModulo(UserControl NuevoModulo)
         {
@@ -37,8 +52,14 @@ namespace InterfacesSief
             ModuloActual = (iModulo)NuevoModulo;
             NuevoModulo.Dock = DockStyle.Fill;
             this.Controls.Add(NuevoModulo);
-            
+
             //NuevoModulo.Parent = this
         }
+
+    
+
+      
+
+     
     }
 }

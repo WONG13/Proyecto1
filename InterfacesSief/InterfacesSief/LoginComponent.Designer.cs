@@ -39,33 +39,34 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(209, 13);
+            this.btnLogin.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnLogin.Location = new System.Drawing.Point(209, 3);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 23);
-            this.btnLogin.TabIndex = 0;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(78, 13);
+            this.txtUsuario.Location = new System.Drawing.Point(78, 3);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(100, 20);
-            this.txtUsuario.TabIndex = 2;
+            this.txtUsuario.TabIndex = 0;
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(78, 37);
+            this.txtContraseña.Location = new System.Drawing.Point(78, 27);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(100, 20);
-            this.txtContraseña.TabIndex = 3;
+            this.txtContraseña.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 18);
+            this.label1.Location = new System.Drawing.Point(17, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 4;
@@ -74,7 +75,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 42);
+            this.label2.Location = new System.Drawing.Point(17, 32);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 5;
@@ -83,19 +84,20 @@
             // Registrarse
             // 
             this.Registrarse.AutoSize = true;
-            this.Registrarse.Location = new System.Drawing.Point(217, 44);
+            this.Registrarse.LinkColor = System.Drawing.Color.Black;
+            this.Registrarse.Location = new System.Drawing.Point(217, 34);
             this.Registrarse.Name = "Registrarse";
             this.Registrarse.Size = new System.Drawing.Size(60, 13);
-            this.Registrarse.TabIndex = 7;
+            this.Registrarse.TabIndex = 4;
             this.Registrarse.TabStop = true;
             this.Registrarse.Text = "Registrarse";
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(209, 74);
+            this.btnLogout.Location = new System.Drawing.Point(209, 29);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(75, 23);
-            this.btnLogout.TabIndex = 8;
+            this.btnLogout.TabIndex = 3;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Visible = false;

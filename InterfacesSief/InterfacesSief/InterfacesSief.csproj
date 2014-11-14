@@ -62,7 +62,7 @@
       <DependentUpon>InteresadoMainComponent.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\E_ElaRep.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Interfaces\E_ElaRep.Designer.cs">
       <DependentUpon>E_ElaRep.cs</DependentUpon>
@@ -80,7 +80,7 @@
       <DependentUpon>E_MosRep.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\E_RevSol.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Interfaces\E_RevSol.Designer.cs">
       <DependentUpon>E_RevSol.cs</DependentUpon>

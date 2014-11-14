@@ -63,7 +63,7 @@
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GroupBox1.Location = new System.Drawing.Point(12, 71);
+            this.GroupBox1.Location = new System.Drawing.Point(12, 75);
             this.GroupBox1.Name = "GroupBox1";
             this.GroupBox1.Size = new System.Drawing.Size(563, 389);
             this.GroupBox1.TabIndex = 5;
@@ -73,12 +73,12 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(12, 28);
+            this.label1.Location = new System.Drawing.Point(0, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(563, 30);
+            this.label1.Size = new System.Drawing.Size(587, 30);
             this.label1.TabIndex = 4;
             this.label1.Text = "label1";
             // 
@@ -101,8 +101,8 @@
 
         protected System.Windows.Forms.Button btnAceptar;
         protected System.Windows.Forms.GroupBox GroupBox1;
-        protected System.Windows.Forms.Button btnCancel;
         protected System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnCancel;
 
     }
 }

@@ -37,30 +37,32 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Location = new System.Drawing.Point(12, 109);
+            this.panel2.Location = new System.Drawing.Point(22, 68);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(668, 400);
+            this.panel2.Size = new System.Drawing.Size(840, 410);
             this.panel2.TabIndex = 1;
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(12, 3);
+            this.panel3.Location = new System.Drawing.Point(22, 12);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(214, 100);
+            this.panel3.Size = new System.Drawing.Size(261, 50);
             this.panel3.TabIndex = 2;
             // 
             // loginComponent1
             // 
-            this.loginComponent1.Location = new System.Drawing.Point(369, 3);
+            this.loginComponent1.Location = new System.Drawing.Point(552, 2);
             this.loginComponent1.Name = "loginComponent1";
-            this.loginComponent1.Size = new System.Drawing.Size(311, 83);
+            this.loginComponent1.Size = new System.Drawing.Size(311, 60);
             this.loginComponent1.TabIndex = 3;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(692, 613);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.SteelBlue;
+            this.ClientSize = new System.Drawing.Size(884, 491);
             this.Controls.Add(this.loginComponent1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);

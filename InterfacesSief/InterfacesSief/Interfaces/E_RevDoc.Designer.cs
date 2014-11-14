@@ -44,13 +44,14 @@
             this.GroupBox1.Controls.Add(this.listBox1);
             this.GroupBox1.Size = new System.Drawing.Size(560, 261);
             // 
-            // label1
-            // 
-            this.label1.Text = "Revisión de Solicitudes";
-            // 
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(497, 350);
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // label1
+            // 
+            this.label1.Text = "Revisión de Solicitudes";
             // 
             // listBox1
             // 
@@ -69,11 +70,11 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Solicitudes:";
             // 
-            // I_RevDoc
+            // E_RevDoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(584, 384);
-            this.Name = "I_RevDoc";
+            this.Name = "E_RevDoc";
+            this.Size = new System.Drawing.Size(584, 384);
             this.GroupBox1.ResumeLayout(false);
             this.GroupBox1.PerformLayout();
             this.ResumeLayout(false);

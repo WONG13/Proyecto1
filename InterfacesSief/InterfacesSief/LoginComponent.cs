@@ -57,7 +57,7 @@ namespace InterfacesSief
         private void mostrarUsuario()
         {            
             label1.Text += ": "+ actual.nomUsu +"\nConectado";
-            label1.Font = new System.Drawing.Font("Arial", 16, FontStyle.Bold);
+            label1.Font = new System.Drawing.Font("Arial", 14, FontStyle.Bold);
             label2.Visible = false;
             txtContraseña.Visible = false;
             txtUsuario.Visible = false;

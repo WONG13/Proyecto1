@@ -38,11 +38,13 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.inicioToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(649, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(840, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -68,12 +70,14 @@
             this.reporteDeSolicitudesToolStripMenuItem.Name = "reporteDeSolicitudesToolStripMenuItem";
             this.reporteDeSolicitudesToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.reporteDeSolicitudesToolStripMenuItem.Text = "Reporte de Solicitudes";
+            this.reporteDeSolicitudesToolStripMenuItem.Click += new System.EventHandler(this.reporteDeSolicitudesToolStripMenuItem_Click);
             // 
             // bucarSolicitudToolStripMenuItem
             // 
             this.bucarSolicitudToolStripMenuItem.Name = "bucarSolicitudToolStripMenuItem";
             this.bucarSolicitudToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.bucarSolicitudToolStripMenuItem.Text = "Bucar Solicitud";
+            this.bucarSolicitudToolStripMenuItem.Text = "Buscar Solicitud";
+            this.bucarSolicitudToolStripMenuItem.Click += new System.EventHandler(this.bucarSolicitudToolStripMenuItem_Click);
             // 
             // EmpleadoMainComponent
             // 
@@ -81,7 +85,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.menuStrip1);
             this.Name = "EmpleadoMainComponent";
-            this.Size = new System.Drawing.Size(649, 471);
+            this.Size = new System.Drawing.Size(840, 410);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

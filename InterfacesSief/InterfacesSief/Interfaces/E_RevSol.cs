@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace InterfacesSief
 {
-    public partial class E_RevSol : Form
+    public partial class E_RevSol : UserControl,iModulo
     {
         public E_RevSol()
         {

@@ -45,14 +45,14 @@
             this.GroupBox1.Controls.Add(this.label2);
             this.GroupBox1.Size = new System.Drawing.Size(610, 249);
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(547, 338);
+            // 
             // label1
             // 
             this.label1.Size = new System.Drawing.Size(610, 35);
             this.label1.Text = "Reportes";
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(547, 338);
             // 
             // label2
             // 
@@ -83,8 +83,8 @@
             // E_MosRep
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(634, 372);
             this.Name = "E_MosRep";
+            this.Size = new System.Drawing.Size(634, 372);
             this.GroupBox1.ResumeLayout(false);
             this.GroupBox1.PerformLayout();
             this.ResumeLayout(false);

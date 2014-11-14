@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace InterfacesSief
 {
-    public partial class E_ElaRep : Form
+    public partial class E_ElaRep : UserControl,iModulo
     {
         public E_ElaRep()
         {
