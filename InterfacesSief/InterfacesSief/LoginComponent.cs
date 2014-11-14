@@ -13,6 +13,7 @@ namespace InterfacesSief
     {
         Usuario actual;
         cargarComponentes cargarEnMainForm;
+        cerrarSesion logout;
         public LoginComponent()
         {
             InitializeComponent();
@@ -21,6 +22,7 @@ namespace InterfacesSief
         public void setDelegado(MainForm f)
         {
             cargarEnMainForm=new cargarComponentes(f.loadComponentsByUser);
+            logout = new cerrarSesion(f.Logout);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -55,16 +57,36 @@ namespace InterfacesSief
         }
 
         private void mostrarUsuario()
-        {            
-            label1.Text += ": "+ actual.nomUsu +"\nConectado";
-            label1.Font = new System.Drawing.Font("Arial", 14, FontStyle.Bold);
+        {
+            label3.Location = label1.Location;
+            label3.Text += ": " + actual.nomUsu + "\nConectado";
+            label3.Font = new System.Drawing.Font("Arial", 14, FontStyle.Bold);
+            label3.Visible = true;            
+            label1.Visible = false;            
             label2.Visible = false;
             txtContraseña.Visible = false;
             txtUsuario.Visible = false;
             Registrarse.Visible = false;
             btnLogin.Visible = false;
-            btnLogout.Location = btnLogin.Location;
+            //btnLogout.Location = btnLogin.Location;
             btnLogout.Visible = true;
+           
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            
+            Controls.RemoveAt(Controls.Count-1);
+            label1.Visible = true;
+            label2.Visible = true;
+            txtContraseña.Visible = true;
+            txtUsuario.Visible = true;
+            btnLogin.Visible = true;
+            //btnLogin.Location = btnLogout.Location;
+            Registrarse.Visible = true;
+            btnLogout.Visible = false;
+            label3.Visible = false;
+            logout();
         }
     }
 }

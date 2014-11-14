@@ -14,6 +14,7 @@ namespace InterfacesSief
         Usuario user;
         Alumno student;
         List<Documento> listaDoc=new List<Documento>();
+        DataTable tipos;
         public I_CapDoc()
         {
             InitializeComponent();
@@ -33,9 +34,12 @@ namespace InterfacesSief
         private void I_CapDoc_Load(object sender, EventArgs e)
         {
             listaDoc = Documento.getDocumentFromDB(user.getCodigo(), -1, "", -1);
-            List<string> tipos = new List<string>();
-            foreach (Documento d in listaDoc)
-                comboBox1.Items.Add(d.tipDoc);
+            tipos=Documento.getDocumentsTypesFromDB();
+            int i = 0;
+            foreach (DataRow r in tipos.Rows)
+            {
+                comboBox1.Items.Add(r.Field<string>("TipoDoc"));
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -54,7 +58,25 @@ namespace InterfacesSief
 
 
             if (doc.saveDocumentToDB())
+            {
                 MessageBox.Show("Guardado Exitosamente");
+                listaDoc = Documento.getDocumentFromDB(user.getCodigo(), -1, "", -1);
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (Documento d in listaDoc)
+            {
+
+                if (d.tipDoc == comboBox1.Text)
+                {
+                    if (d.imaDoc == null)
+                        d.makeImage();
+                    pictureBox1.Image = d.imaDoc;
+                }
+            }
+            
         }
     }
 }

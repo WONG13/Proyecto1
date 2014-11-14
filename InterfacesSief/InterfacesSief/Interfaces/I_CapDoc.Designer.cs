@@ -44,7 +44,16 @@
             // 
             this.btnAceptar.Location = new System.Drawing.Point(325, 503);
             // 
-            // GroupBox1
+            // label1
+            // 
+            this.label1.Size = new System.Drawing.Size(469, 35);
+            this.label1.Text = "Documentación";
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(406, 503);
+            // 
+            // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.comboBox1);
@@ -54,18 +63,9 @@
             this.groupBox1.Controls.Add(this.btnAdjBol);
             this.groupBox1.Size = new System.Drawing.Size(469, 414);
             // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(406, 503);
-            // 
-            // label1
-            // 
-            this.label1.Size = new System.Drawing.Size(469, 35);
-            this.label1.Text = "Documentación";
-            // 
             // btnAdjBol
             // 
-            this.btnAdjBol.Location = new System.Drawing.Point(30, 333);
+            this.btnAdjBol.Location = new System.Drawing.Point(30, 375);
             this.btnAdjBol.Name = "btnAdjBol";
             this.btnAdjBol.Size = new System.Drawing.Size(75, 23);
             this.btnAdjBol.TabIndex = 0;
@@ -85,13 +85,14 @@
             // 
             this.pictureBox1.Location = new System.Drawing.Point(30, 59);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(256, 268);
+            this.pictureBox1.Size = new System.Drawing.Size(256, 310);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
             // btnEliminar1
             // 
-            this.btnEliminar1.Location = new System.Drawing.Point(211, 333);
+            this.btnEliminar1.Location = new System.Drawing.Point(211, 375);
             this.btnEliminar1.Name = "btnEliminar1";
             this.btnEliminar1.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar1.TabIndex = 9;
@@ -105,6 +106,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(174, 21);
             this.comboBox1.TabIndex = 12;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button1
             // 
