@@ -58,7 +58,7 @@ namespace InterfacesSief
 
         public void Logout()
         {
-            panel2.Dispose();
+            panel2.Controls.Clear();
 
         }
         

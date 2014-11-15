@@ -13,7 +13,7 @@ namespace InterfacesSief
         private string nomEmp;
         private string puesto;
         
-        public Empleado(int codigo,string NomUsu, string PerUsu, string nombre, string puesto):
+        public Empleado(int codigo, string NomUsu, string PerUsu, string nombre, string puesto):
             base(codigo,NomUsu,null,PerUsu)
         {            
             codUsuEmp = codigo;     
@@ -27,8 +27,8 @@ namespace InterfacesSief
         {
             SqlCommand comando = new SqlCommand();
             comando.Connection = Conexion.ObtenerConexion();
-            comando.CommandText = "SELECT * FROM Empleados where CodUsu=@CodUsu";
-            comando.Parameters.AddWithValue("@CodUsu", codUsu);
+            comando.CommandText = "SELECT * FROM Empleados where CodUsuEmp=@CodUsuEmp";
+            comando.Parameters.AddWithValue("@CodUsuEmp", codUsu);
 
             SqlDataAdapter adaptador = new SqlDataAdapter(comando);
             DataTable tabla = new DataTable();

@@ -64,7 +64,7 @@ namespace InterfacesSief
         private void mostrarUsuario()
         {
             label3.Location = label1.Location;
-            label3.Text += ": " + actual.nomUsu + "\nConectado";
+            label3.Text = "Usuario: " + actual.nomUsu + "\nConectado";
             label3.Font = new System.Drawing.Font("Arial", 14, FontStyle.Bold);
             label3.Visible = true;            
             label1.Visible = false;            
@@ -79,9 +79,7 @@ namespace InterfacesSief
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
-        {
-            
-            Controls.RemoveAt(Controls.Count-1);
+        {            
             label1.Visible = true;
             label2.Visible = true;
             txtContraseña.Visible = true;
@@ -91,6 +89,8 @@ namespace InterfacesSief
             Registrarse.Visible = true;
             btnLogout.Visible = false;
             label3.Visible = false;
+            txtContraseña.Text = "";
+            txtUsuario.Text = "";
             logout();
         }
 

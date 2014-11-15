@@ -27,5 +27,15 @@ namespace InterfacesSief
             i_CapInt1.OcultarBotones();
             i_CapInt1.cargarDatos(x);//Este es el numero del Interesado
         }
+
+        private void i_CapInt1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

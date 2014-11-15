@@ -11,8 +11,10 @@ using System.Data;
 
 namespace InterfacesSief
 {
+    
     public partial class E_ElaRep : UserControl,iModulo
     {
+        public int CodSol, CodRev;
         private SqlCommand comando = null;
         private DataTable dTable = null;
 

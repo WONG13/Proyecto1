@@ -236,6 +236,7 @@
             this.btnReporte.TabIndex = 87;
             this.btnReporte.Text = "Reporte\r\nSolicitud";
             this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // btnTerminar
             // 
@@ -249,10 +250,11 @@
             // i_CapInt1
             // 
             this.i_CapInt1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.i_CapInt1.Location = new System.Drawing.Point(329, -3);
+            this.i_CapInt1.Location = new System.Drawing.Point(331, -19);
             this.i_CapInt1.Name = "i_CapInt1";
             this.i_CapInt1.Size = new System.Drawing.Size(354, 248);
             this.i_CapInt1.TabIndex = 89;
+            this.i_CapInt1.Load += new System.EventHandler(this.i_CapInt1_Load);
             // 
             // E_RevSol
             // 

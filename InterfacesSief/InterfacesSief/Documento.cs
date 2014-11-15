@@ -96,9 +96,8 @@ namespace InterfacesSief
         {
             SqlCommand comando = new SqlCommand();
             comando.Connection = Conexion.ObtenerConexion();
-                comando.CommandText = @"insert into Documentos  values (@CodUsuInt,
-                                            (SELECT TD.CodTipDoc FROM TipoDocumento TD where TD.TipoDoc=@TipoDoc),
-                                            @Doc, @CodAlu)";
+            comando.CommandText = @"insert into Documentos  values (@CodUsuInt,@Doc, @CodAlu,
+                                    (SELECT TD.CodTipDoc FROM TipoDocumento TD where TD.TipoDoc=@TipoDoc))";
 
                 comando.Parameters.AddWithValue("@CodDoc", codDoc);
                 comando.Parameters.AddWithValue("@CodUsuInt", codUsuInt);
