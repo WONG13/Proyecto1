@@ -42,6 +42,7 @@ namespace InterfacesSief
         {
             eliminarAnterior();
             I_CapAlu ICA = new I_CapAlu();
+            ICA.setInteresado((Interesado)interesado);
             Controls.Add(ICA);
             ICA.Show();
         }

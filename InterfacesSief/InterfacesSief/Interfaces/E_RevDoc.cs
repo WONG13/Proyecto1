@@ -101,6 +101,11 @@ namespace InterfacesSief
 
         }
 
+        private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            //Index = dataGridView1.CurrentRow.Index;
+        }
+
 
 
 

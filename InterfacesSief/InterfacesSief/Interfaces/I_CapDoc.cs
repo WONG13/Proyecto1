@@ -34,8 +34,7 @@ namespace InterfacesSief
         private void I_CapDoc_Load(object sender, EventArgs e)
         {
             listaDoc = Documento.getDocumentFromDB(user.getCodigo(), -1, "", -1);
-            tipos=Documento.getDocumentsTypesFromDB();
-            int i = 0;
+            tipos=Documento.getDocumentsTypesFromDB();           
             foreach (DataRow r in tipos.Rows)
             {
                 comboBox1.Items.Add(r.Field<string>("TipoDoc"));

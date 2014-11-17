@@ -134,3 +134,5 @@ C:\Users\WONG\Desktop\Proyecto1\Proyecto1\Proyecto1\InterfacesSief\InterfacesSie
 C:\Users\WONG\Desktop\Proyecto1\Proyecto1\Proyecto1\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.MainForm.resources
 C:\Users\WONG\Desktop\Proyecto1\Proyecto1\Proyecto1\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.Properties.Resources.resources
 C:\Users\WONG\Desktop\Proyecto1\Proyecto1\Proyecto1\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.csproj.GenerateResource.Cache
+C:\Users\lanix\Documents\GitHub\Proyecto1\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.EmpleadoMainComponent.resources
+C:\Users\lanix\Documents\GitHub\Proyecto1\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.Interfaces.SecuenciaCaptura.resources

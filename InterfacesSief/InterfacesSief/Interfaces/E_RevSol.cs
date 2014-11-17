@@ -22,8 +22,8 @@ namespace InterfacesSief
 
         private void E_RevSol_Load(object sender, EventArgs e)
         {
-           
-            
+            i_CapAlu1.setInteresado(Interesado.getInteresadoFromUsuario(x,"",""));
+            i_CapAlu1.CargarDatosIniciales();
             i_CapInt1.OcultarBotones();
             i_CapInt1.cargarDatos(x);//Este es el numero del Interesado
         }

@@ -44,10 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alumno.cs" />
+    <Compile Include="ClasesPrimarias\Alumno.cs" />
+    <Compile Include="ClasesPrimarias\Escuela.cs" />
+    <Compile Include="ClasesPrimarias\NivelEducativo.cs" />
     <Compile Include="Conexion.cs" />
-    <Compile Include="Documento.cs" />
-    <Compile Include="Empleado.cs" />
+    <Compile Include="ClasesPrimarias\Documento.cs" />
+    <Compile Include="ClasesPrimarias\Empleado.cs" />
     <Compile Include="EmpleadoMainComponent.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -85,7 +87,7 @@
     <Compile Include="Interfaces\E_RevSol.Designer.cs">
       <DependentUpon>E_RevSol.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interesado.cs" />
+    <Compile Include="ClasesPrimarias\Interesado.cs" />
     <Compile Include="Interfaces\I_CapInt.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -154,7 +156,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Usuario.cs" />
+    <Compile Include="ClasesPrimarias\Usuario.cs" />
     <EmbeddedResource Include="EmpleadoMainComponent.resx">
       <DependentUpon>EmpleadoMainComponent.cs</DependentUpon>
     </EmbeddedResource>
