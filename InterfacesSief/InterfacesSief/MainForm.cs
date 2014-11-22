@@ -11,6 +11,7 @@ namespace InterfacesSief
 {
     delegate void cargarComponentes(Usuario user);
     delegate void cerrarSesion();
+    delegate void abrirRegistro();
     public partial class MainForm : Form
     {
         public MainForm()
@@ -41,13 +42,13 @@ namespace InterfacesSief
                 case "Interesado":
                     InteresadoMainComponent IMC = new InteresadoMainComponent();
                     IMC.setUsuario(user);
-                    panel2.Controls.Add(IMC);
+                    pnlCentral.Controls.Add(IMC);
                     IMC.Show();
                     break;
                 case "Empleado":
                     EmpleadoMainComponent EMC = new EmpleadoMainComponent();
                     //EMC.setUsuario(user);
-                    panel2.Controls.Add(EMC);
+                    pnlCentral.Controls.Add(EMC);
                     EMC.Show();
                     break;
                 case "Lider":
@@ -58,8 +59,16 @@ namespace InterfacesSief
 
         public void Logout()
         {
-            panel2.Controls.Clear();
+            pnlCentral.Controls.Clear();
 
+        }
+
+        public void showLogUpScreen()
+        {
+            I_NewUsu Registro=new I_NewUsu();
+            Registro.SetDelegado(this);
+            pnlCentral.Controls.Clear();
+            pnlCentral.Controls.Add(Registro);
         }
         
     }

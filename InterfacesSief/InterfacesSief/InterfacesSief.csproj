@@ -47,6 +47,7 @@
     <Compile Include="ClasesPrimarias\Alumno.cs" />
     <Compile Include="ClasesPrimarias\Escuela.cs" />
     <Compile Include="ClasesPrimarias\NivelEducativo.cs" />
+    <Compile Include="ClasesPrimarias\Usuario.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="ClasesPrimarias\Documento.cs" />
     <Compile Include="ClasesPrimarias\Empleado.cs" />
@@ -142,6 +143,12 @@
     <Compile Include="Interfaces\SecuenciaCaptura.Designer.cs">
       <DependentUpon>SecuenciaCaptura.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\U_PantReg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\U_PantReg.Designer.cs">
+      <DependentUpon>U_PantReg.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginComponent.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -156,7 +163,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ClasesPrimarias\Usuario.cs" />
     <EmbeddedResource Include="EmpleadoMainComponent.resx">
       <DependentUpon>EmpleadoMainComponent.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\SecuenciaCaptura.resx">
       <DependentUpon>SecuenciaCaptura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\U_PantReg.resx">
+      <DependentUpon>U_PantReg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginComponent.resx">
       <DependentUpon>LoginComponent.cs</DependentUpon>

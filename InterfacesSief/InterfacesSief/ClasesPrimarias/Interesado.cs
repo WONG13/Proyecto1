@@ -110,5 +110,30 @@ namespace InterfacesSief
             }
             return true;
         }
+
+        public bool CreateInteresadoToDB(int CodUsu)
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = Conexion.ObtenerConexion();
+            comando.CommandText = @"INSERT INTO Interesados (CodUsuInt,NomInt,DirInt,CorInt,TelInt)
+                                              VALUES (@CodUsuInt,@NomInt, @DirInt, @CorInt,@TelInt)";
+            comando.Parameters.AddWithValue("@NomInt", nomInt);
+            comando.Parameters.AddWithValue("@DirInt", dirInt);
+            comando.Parameters.AddWithValue("@CorInt", corInt);
+            comando.Parameters.AddWithValue("@TelInt", telInt);
+            comando.Parameters.AddWithValue("@CodUsuInt", CodUsu);
+            try
+            {
+                comando.Connection.Open();
+                comando.ExecuteNonQuery();
+                comando.Connection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error al Crear Interesado y guardar los datos: " + e.Message);
+                return false;
+            }
+            return true;
+        }
     }
 }

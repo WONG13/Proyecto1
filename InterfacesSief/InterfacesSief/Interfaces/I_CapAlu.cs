@@ -18,6 +18,9 @@ namespace InterfacesSief
         public I_CapAlu()
         {
             InitializeComponent();
+            niveles = NivelEducativo.getNivelesFromDB(-1, "");
+            txtGraAlu.Text = "0";
+            txtProAlu.Text = "0";
         }
 
         public void setInteresado(Interesado i)
@@ -27,29 +30,50 @@ namespace InterfacesSief
 
         public void CargarDatosIniciales()
         {
-            a = Alumno.getAlumnosFromDB(-1, "", user.getCodigo());
-            esc = Escuela.getEscuelaFromDB(a.codEsc, "", "", -1);
+           
+            if (user != null)//Verificar que se haya cargado un usuario Interesado
+            {
+                //Optiene Alumno de la BD segun codigo
+                a = Alumno.getAlumnosFromDB(-1, "", user.getCodigo());
+                //Optiene la Escuela de la BD segun el codigo que tiene el alumno
+                esc = Escuela.getEscuelaFromDB(a.codEsc, "", "", -1);
+            }
+            else
+                a = null;
 
+            //Optiene todos los Niveles Academicos
             niveles = NivelEducativo.getNivelesFromDB(-1, "");
-            foreach (NivelEducativo n in niveles)
+            
+            if (a != null)
             {
-                if (esc.codNiv == n.codNiv)
+                foreach (NivelEducativo n in niveles)
                 {
-                    ComboBoxNivel.Text = n.nivAca;
-                    lista = Escuela.getEscuelasFromDB(-1, "", "", n.codNiv);
+                    if (esc.codNiv == n.codNiv)
+                    {
+                        ComboBoxNivel.Text = n.nivAca;
+                        lista = Escuela.getEscuelasFromDB(-1, "", "", n.codNiv);
+                    }
+                    ComboBoxNivel.Items.Add(n.nivAca);
                 }
-                ComboBoxNivel.Items.Add(n.nivAca);
+                foreach (Escuela _esc in lista)
+                {
+                    if (_esc.codEsc == a.codEsc)
+                        ComboBoxEsc.Text = _esc.nomEsc;
+                    ComboBoxEsc.Items.Add(_esc.nomEsc);
+                }
+                txtNomAlumno.Text = a.nomAlu;
+                txtGraAlu.Text = a.graAca.ToString();
+                txtProAlu.Text = a.proAlu.ToString();
+                dateFechNacimiento.Value = a.nacAlu;
             }
-            foreach (Escuela _esc in lista)
+            else
             {
-                if (_esc.codEsc == a.codEsc)
-                    ComboBoxEsc.Text = _esc.nomEsc;
-                ComboBoxEsc.Items.Add(_esc.nomEsc);
+                lista = Escuela.getEscuelasFromDB(-1, "", "", -1);
+                foreach (NivelEducativo n in niveles)
+                {                    
+                    ComboBoxNivel.Items.Add(n.nivAca);
+                } 
             }
-            txtNomAlumno.Text = a.nomAlu;
-            txtGraAlu.Text = a.graAca.ToString();
-            txtProAlu.Text = a.proAlu.ToString();
-            dateFechNacimiento.Value = a.nacAlu;
         }
 
         private void I_CapAlu_Load(object sender, EventArgs e)
@@ -98,7 +122,7 @@ namespace InterfacesSief
             }
         }
 
-        private bool Validar()
+        public bool Validar()
         {
             errorProvider1.Clear();
             bool comprobar=true;
@@ -108,53 +132,92 @@ namespace InterfacesSief
                 comprobar = false;
                 errorProvider1.SetError(txtNomAlumno, "Error, el campo nombre no debe de estar vacio");
             }
-            //Comprobar que el Promedio sea numerico y que sea mayor que 0
-            try
+            //Comprobar que Promedio no este vacio
+            if (txtProAlu.Text != "")
             {
-                if (double.Parse(txtProAlu.Text) > 0)
-                    comprobar = true;
-                else
+                //Comprobar que el Promedio sea numerico y que sea mayor que 0
+                try
                 {
-                    errorProvider1.SetError(txtProAlu, "El prmedio no puede se menor que 0");
+                    if (double.Parse(txtProAlu.Text) > 0)
+                        comprobar = true;
+                    else
+                    {
+                        errorProvider1.SetError(txtProAlu, "El prmedio no puede se menor que 0");
+                        comprobar = false;
+                    }
+                }
+                catch (Exception e)
+                {
+                    errorProvider1.SetError(txtProAlu, "Error, datos no numericos: " + e.Message);
                     comprobar = false;
                 }
             }
-            catch (Exception e)
-            {
-                errorProvider1.SetError(txtProAlu, "Error, datos no numericos: " + e.Message);
-                comprobar = false;
-            }
-            //Comprobar que el Grado sea numerico y mayor que 0
-            try
-            {
-                if (int.Parse(txtGraAlu.Text) > 0)
-                    comprobar = true;
-                else
-                {
-                    errorProvider1.SetError(txtGraAlu, "El grado debe de ser mayor a 0");
-                    comprobar = false;
-                }
-            }
-            catch (Exception e)
-            {
-                errorProvider1.SetError(txtGraAlu, "Error, datos no numericos: " + e.Message);
-                comprobar = false;
-            }
-            //Comprovar que la Escuela se Encuentre en la lista oficial
-            bool comprobar2 = false;
-            foreach (Escuela es in lista)
-            {
-                if (ComboBoxEsc.Text == es.nomEsc)
-                    comprobar2 = true;
-            }
-            if (comprobar2) { }
             else
             {
-                errorProvider1.SetError(ComboBoxEsc, "Error, la escuela no se encuentra en la lista oficial");
+                errorProvider1.SetError(txtProAlu, "Promedio no puede estar vacio");
                 comprobar = false;
             }
+            //Comprobar que Grado no este vacio
+            if (txtGraAlu.Text != "")
+            {
+                //Comprobar que el Grado sea numerico y mayor que 0
+                try
+                {
+                    if (int.Parse(txtGraAlu.Text) > 0)
+                        comprobar = true;
+                    else
+                    {
+                        errorProvider1.SetError(txtGraAlu, "El grado debe de ser mayor a 0");
+                        comprobar = false;
+                    }
+                }
+                catch (Exception e)
+                {
+                    errorProvider1.SetError(txtGraAlu, "Error, datos no numericos: " + e.Message);
+                    comprobar = false;
+                }
+            }
+            else
+            {
+                errorProvider1.SetError(txtGraAlu, "Grado no puede estar vacio");
+                comprobar = false;
+            }
+            
+           
+                //Comprovar que la Escuela se Encuentre en la lista oficial
+                bool comprobar2 = true;
+                if (ComboBoxEsc.Text != "")//Comprobar que Escuela no este vacio
+                {
+                    comprobar2 = false;
+                    foreach (Escuela es in lista)
+                    {
+                        if (ComboBoxEsc.Text == es.nomEsc)
+                            comprobar2 = true;
+                    }
+                }
+                if (comprobar2) { }
+                else
+                {
+                    errorProvider1.SetError(ComboBoxEsc, "Error, la escuela no se encuentra en la lista oficial");
+                    comprobar = false;
+                }
+           
             //Regresar resultados de la validacion
             return comprobar;
+        }
+
+        public int CrearAlumno(int CodUsuInt)
+        {
+            Escuela esc=Escuela.getEscuelaFromDB(-1,ComboBoxEsc.Text,"",-1);            
+
+            Alumno a_nuevo = new Alumno(-1, txtNomAlumno.Text, 
+                                            dateFechNacimiento.Value, 
+                                            esc.codEsc, 
+                                            double.Parse(txtProAlu.Text),
+                                            int.Parse(txtGraAlu.Text),
+                                            CodUsuInt);
+            int CodAlu=a_nuevo.CreateAlumnoToDB();
+            return CodAlu;
         }
     }
 }

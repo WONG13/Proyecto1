@@ -14,6 +14,7 @@ namespace InterfacesSief
         Usuario actual;
         cargarComponentes cargarEnMainForm;
         cerrarSesion logout;
+        abrirRegistro logup;
         public LoginComponent()
         {
             InitializeComponent();
@@ -23,6 +24,7 @@ namespace InterfacesSief
         {
             cargarEnMainForm=new cargarComponentes(f.loadComponentsByUser);
             logout = new cerrarSesion(f.Logout);
+            logup = new abrirRegistro(f.showLogUpScreen);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -101,6 +103,11 @@ namespace InterfacesSief
                 MetodoLogin();
             }
 
+        }
+
+        private void Registrarse_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            logup();
         }
     }
 }

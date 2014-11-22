@@ -98,10 +98,10 @@
 
         #endregion
 
-        protected System.Windows.Forms.Button btnAceptar;
         protected System.Windows.Forms.Label label1;
-        protected System.Windows.Forms.Button btnCancel;
         protected System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.Button btnAceptar;
+        public System.Windows.Forms.Button btnCancel;
 
     }
 }

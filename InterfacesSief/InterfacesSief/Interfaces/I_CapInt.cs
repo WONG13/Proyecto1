@@ -52,7 +52,7 @@ namespace InterfacesSief
             }
         }
 
-        private bool validar()
+        public bool validar()
         {
             bool condicion = true;
             errorProvider1.Clear();
@@ -73,6 +73,19 @@ namespace InterfacesSief
         {
             btnAceptar.Visible = false;
             btnCancel.Visible = false;
+        }
+
+        public bool CrearInteresado(int CodUsu)
+        {
+            Interesado i_nuevo = new Interesado(CodUsu,"","Interesado",
+                                                 txtNomComInt.Text,
+                                                 txtDirInt.Text,
+                                                 txtTelInt.Text,
+                                                 txtCorInt.Text);
+            if (i_nuevo.CreateInteresadoToDB(CodUsu))
+                return true;//MessageBox.Show("Datos de Tutor guardados Exitosamente");
+            else
+                return false;
         }
 
         

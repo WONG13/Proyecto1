@@ -104,15 +104,7 @@ namespace InterfacesSief
             return comprobarContraseña(contraseña, contUsu);                
         }
 
-        public string[] Datos()
-        {
-            string[] temp = new string[3];
-            temp[0] = codUsu.ToString();
-            temp[1] = nomUsu;
-            temp[2] = perUsu;
-            return temp;
-        }
-
+       
         public int getCodigo()
         {
             return codUsu;
@@ -123,5 +115,30 @@ namespace InterfacesSief
             return perUsu;
         }
 
+        public bool CreateUserToDB()
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = Conexion.ObtenerConexion();
+
+            comando.CommandText = @"INSERT INTO Usuarios (NomUsu,ConUsu,PerUsu) 
+                                                  values (@NomUsu,@ConUsu,@PerUsu)";
+            comando.Parameters.AddWithValue("@NomUsu", nomUsu);
+            comando.Parameters.AddWithValue("@ConUsu", contUsu);
+            comando.Parameters.AddWithValue("@PerUsu", perUsu);
+
+
+            try
+            {
+                comando.Connection.Open();
+                comando.ExecuteNonQuery();
+                comando.Connection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error al registrar usuario, no se pudieron guardar datos: " + e.Message);
+                return false;
+            }
+            return true;
+        }
     }
 }

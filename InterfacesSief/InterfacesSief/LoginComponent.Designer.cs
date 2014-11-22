@@ -93,10 +93,11 @@
             this.Registrarse.TabIndex = 4;
             this.Registrarse.TabStop = true;
             this.Registrarse.Text = "Registrarse";
+            this.Registrarse.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Registrarse_LinkClicked);
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(209, 29);
+            this.btnLogout.Location = new System.Drawing.Point(209, 34);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(75, 23);
             this.btnLogout.TabIndex = 3;

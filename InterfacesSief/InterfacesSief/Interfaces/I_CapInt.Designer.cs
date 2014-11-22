@@ -99,9 +99,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(9, 80);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 13);
+            this.label7.Size = new System.Drawing.Size(101, 13);
             this.label7.TabIndex = 34;
-            this.label7.Text = "Correo Electronico:";
+            this.label7.Text = "*Correo Electronico:";
             // 
             // txtDirInt
             // 
@@ -131,9 +131,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(9, 28);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 13);
+            this.label5.Size = new System.Drawing.Size(98, 13);
             this.label5.TabIndex = 30;
-            this.label5.Text = "Nombre Completo:";
+            this.label5.Text = "*Nombre Completo:";
             // 
             // errorProvider1
             // 

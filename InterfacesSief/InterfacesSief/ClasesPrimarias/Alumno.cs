@@ -80,12 +80,12 @@ namespace InterfacesSief
                 return null;
         }
 
-        public int saveAlumnoToDB()
+        public int CreateAlumnoToDB()
         {
             SqlCommand comando = new SqlCommand();
             comando.Connection = Conexion.ObtenerConexion();
-            comando.CommandText = @"INSERT INTO Alumnos (NomAlu,NacAlu,CodNiv,CodEsc,ProAlu,GraAca, CodUsuInt)
-                                    VALUES (@NomAlu,@NacAlu,@CodNiv,@CodEsc,@ProAlu,@GraAca, @CodUsuInt)";            
+            comando.CommandText = @"INSERT INTO Alumnos (NomAlu,NacAlu,CodEsc,ProAlu,GraAca, CodUsuInt)
+                                    VALUES (@NomAlu,@NacAlu,@CodEsc,@ProAlu,@GraAca, @CodUsuInt)";            
             comando.Parameters.AddWithValue("@NomAlu", nomAlu);
             comando.Parameters.AddWithValue("@NacAlu", nacAlu);            
             comando.Parameters.AddWithValue("@CodEsc", codEsc);
@@ -105,7 +105,7 @@ namespace InterfacesSief
                 return -1;
             }
             //Terminado el guardado
-            comando.CommandText = @"SELECT CodAlu FROM Alumnos WHERE @NomAlu=NomAlu AND @CodUsuInt=CodUsuInt)";
+            comando.CommandText = @"SELECT CodAlu FROM Alumnos WHERE @NomAlu=NomAlu AND @CodUsuInt=CodUsuInt";
             DataTable tabla = new DataTable();
             SqlDataAdapter adaptador = new SqlDataAdapter(comando);
             adaptador.Fill(tabla);

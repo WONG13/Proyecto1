@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlCentral = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.loginComponent1 = new InterfacesSief.LoginComponent();
             this.SuspendLayout();
             // 
-            // panel2
+            // pnlCentral
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.pnlCentral.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Location = new System.Drawing.Point(22, 68);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(840, 410);
-            this.panel2.TabIndex = 1;
+            this.pnlCentral.Location = new System.Drawing.Point(22, 64);
+            this.pnlCentral.Name = "pnlCentral";
+            this.pnlCentral.Size = new System.Drawing.Size(840, 450);
+            this.pnlCentral.TabIndex = 1;
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(22, 12);
+            this.panel3.Location = new System.Drawing.Point(22, 8);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(261, 50);
             this.panel3.TabIndex = 2;
@@ -62,10 +62,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(884, 491);
+            this.ClientSize = new System.Drawing.Size(884, 523);
             this.Controls.Add(this.loginComponent1);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnlCentral);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
@@ -77,7 +77,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlCentral;
         private System.Windows.Forms.Panel panel3;
         private LoginComponent loginComponent1;
 
