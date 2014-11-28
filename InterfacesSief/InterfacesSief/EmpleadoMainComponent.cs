@@ -10,6 +10,7 @@ using System.Windows.Forms;
 namespace InterfacesSief
 {
     public delegate void LlamarRevision(UserControl u);
+    public delegate void LlamarRevision1(E_RevSol u);
     public partial class EmpleadoMainComponent : UserControl
     {
         string ApuntadorControl = null;
@@ -58,9 +59,17 @@ namespace InterfacesSief
             }
 
             ModuloActual = (iModulo)NuevoModulo;
+           
             NuevoModulo.Dock = DockStyle.Fill;
             this.Controls.Add(NuevoModulo);
 
+            //NuevoModulo.Parent = this
+        }
+
+        public void MostrarModulo(E_RevSol NuevoModulo)
+        {           
+            NuevoModulo.Dock = DockStyle.Fill;
+            this.Controls.Add(NuevoModulo);
             //NuevoModulo.Parent = this
         }
 

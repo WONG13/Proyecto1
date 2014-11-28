@@ -47,6 +47,7 @@
     <Compile Include="ClasesPrimarias\Alumno.cs" />
     <Compile Include="ClasesPrimarias\Escuela.cs" />
     <Compile Include="ClasesPrimarias\NivelEducativo.cs" />
+    <Compile Include="ClasesPrimarias\Solicitud.cs" />
     <Compile Include="ClasesPrimarias\Usuario.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="ClasesPrimarias\Documento.cs" />
@@ -100,6 +101,12 @@
     </Compile>
     <Compile Include="Interfaces\I_FormSol.Designer.cs">
       <DependentUpon>I_FormSol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\I_HacerSol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\I_HacerSol.Designer.cs">
+      <DependentUpon>I_HacerSol.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\I_NewUsu.cs">
       <SubType>UserControl</SubType>
@@ -187,6 +194,9 @@
     <EmbeddedResource Include="Interfaces\I_FormSol.resx">
       <DependentUpon>I_FormSol.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\I_HacerSol.resx">
+      <DependentUpon>I_HacerSol.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\I_NewUsu.resx">
       <DependentUpon>I_NewUsu.cs</DependentUpon>
     </EmbeddedResource>
@@ -235,6 +245,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="palomita.png" />
+    <Content Include="tacha.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

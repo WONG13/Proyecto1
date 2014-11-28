@@ -136,7 +136,7 @@
             this.i_CapAlu1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.i_CapAlu1.Location = new System.Drawing.Point(407, 103);
             this.i_CapAlu1.Name = "i_CapAlu1";
-            this.i_CapAlu1.Size = new System.Drawing.Size(360, 251);
+            this.i_CapAlu1.Size = new System.Drawing.Size(351, 251);
             this.i_CapAlu1.TabIndex = 33;
             // 
             // label4

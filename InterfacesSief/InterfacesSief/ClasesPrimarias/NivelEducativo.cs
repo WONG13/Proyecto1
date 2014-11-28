@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using System.Data;
 namespace InterfacesSief
 {
-    class NivelEducativo
+    public class NivelEducativo
     {
         public int codNiv;
         public string nivAca;

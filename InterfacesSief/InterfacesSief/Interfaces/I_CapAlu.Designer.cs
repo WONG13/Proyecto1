@@ -46,21 +46,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Location = new System.Drawing.Point(168, 228);
-            this.btnAceptar.Text = "Guardar";
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
-            // 
             // label1
             // 
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Size = new System.Drawing.Size(312, 35);
             this.label1.Text = "Captura Datos del Alumno";
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(249, 228);
             // 
             // groupBox1
             // 
@@ -78,6 +68,16 @@
             this.groupBox1.Controls.Add(this.txtNomAlumno);
             this.groupBox1.Location = new System.Drawing.Point(12, 38);
             this.groupBox1.Size = new System.Drawing.Size(312, 184);
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Location = new System.Drawing.Point(168, 228);
+            this.btnAceptar.Text = "Guardar";
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(249, 228);
             // 
             // txtProAlu
             // 
@@ -131,6 +131,7 @@
             // 
             // ComboBoxNivel
             // 
+            this.ComboBoxNivel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBoxNivel.FormattingEnabled = true;
             this.ComboBoxNivel.Location = new System.Drawing.Point(134, 70);
             this.ComboBoxNivel.Name = "ComboBoxNivel";
@@ -140,6 +141,7 @@
             // 
             // ComboBoxEsc
             // 
+            this.ComboBoxEsc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBoxEsc.FormattingEnabled = true;
             this.ComboBoxEsc.Location = new System.Drawing.Point(134, 97);
             this.ComboBoxEsc.Name = "ComboBoxEsc";
@@ -173,6 +175,7 @@
             // 
             // dateFechNacimiento
             // 
+            this.dateFechNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateFechNacimiento.Location = new System.Drawing.Point(134, 45);
             this.dateFechNacimiento.Name = "dateFechNacimiento";
             this.dateFechNacimiento.Size = new System.Drawing.Size(168, 20);

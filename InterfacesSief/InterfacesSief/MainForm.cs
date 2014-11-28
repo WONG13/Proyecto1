@@ -37,6 +37,7 @@ namespace InterfacesSief
 
         public void loadComponentsByUser(Usuario user)
         {
+            pnlCentral.Controls.Clear();
             switch(user.getPermisos())
             {
                 case "Interesado":

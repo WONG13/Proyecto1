@@ -7,9 +7,9 @@ using System.Data;
 using System.Windows.Forms;
 namespace InterfacesSief
 {
-    class Alumno
+    public class Alumno
     {
-        int codAlu;
+        public int codAlu;
         public string nomAlu;
         public DateTime nacAlu;        
         public int codEsc; 
@@ -68,7 +68,15 @@ namespace InterfacesSief
                 int _CodAlu = tabla.Rows[0].Field<int>("CodAlu");
                 string _NomAlu=tabla.Rows[0].Field<string>("NomAlu");
                 DateTime _NacAlu=tabla.Rows[0].Field<DateTime>("NacAlu");
-                int _CodEsc=tabla.Rows[0].Field<int>("CodEsc");
+                int _CodEsc;
+                try
+                {
+                    _CodEsc = tabla.Rows[0].Field<int>("CodEsc");
+                }
+                catch (Exception)
+                {
+                    _CodEsc = -1;
+                }
                 double _ProAlu=tabla.Rows[0].Field<double>("ProAlu");
                 int _GraAca=tabla.Rows[0].Field<int>("GraAca");
                 int _CodUsuInt = tabla.Rows[0].Field<int>("CodUsuInt");
@@ -84,15 +92,27 @@ namespace InterfacesSief
         {
             SqlCommand comando = new SqlCommand();
             comando.Connection = Conexion.ObtenerConexion();
-            comando.CommandText = @"INSERT INTO Alumnos (NomAlu,NacAlu,CodEsc,ProAlu,GraAca, CodUsuInt)
-                                    VALUES (@NomAlu,@NacAlu,@CodEsc,@ProAlu,@GraAca, @CodUsuInt)";            
-            comando.Parameters.AddWithValue("@NomAlu", nomAlu);
-            comando.Parameters.AddWithValue("@NacAlu", nacAlu);            
-            comando.Parameters.AddWithValue("@CodEsc", codEsc);
-            comando.Parameters.AddWithValue("@ProAlu", proAlu);
-            comando.Parameters.AddWithValue("@GraAca", graAca);
-            comando.Parameters.AddWithValue("@CodUsuInt", codUsuInt);
-
+            if (codEsc > 0)
+            {
+                comando.CommandText = @"INSERT INTO Alumnos (NomAlu,NacAlu,CodEsc,ProAlu,GraAca, CodUsuInt)
+                                    VALUES (@NomAlu,@NacAlu,@CodEsc,@ProAlu,@GraAca, @CodUsuInt)";
+                comando.Parameters.AddWithValue("@NomAlu", nomAlu);
+                comando.Parameters.AddWithValue("@NacAlu", nacAlu);
+                comando.Parameters.AddWithValue("@CodEsc", codEsc);
+                comando.Parameters.AddWithValue("@ProAlu", proAlu);
+                comando.Parameters.AddWithValue("@GraAca", graAca);
+                comando.Parameters.AddWithValue("@CodUsuInt", codUsuInt);
+            }
+            else
+            {
+                comando.CommandText = @"INSERT INTO Alumnos (NomAlu,NacAlu,ProAlu,GraAca, CodUsuInt)
+                                    VALUES (@NomAlu,@NacAlu,@ProAlu,@GraAca, @CodUsuInt)";
+                comando.Parameters.AddWithValue("@NomAlu", nomAlu);
+                comando.Parameters.AddWithValue("@NacAlu", nacAlu);                
+                comando.Parameters.AddWithValue("@ProAlu", proAlu);
+                comando.Parameters.AddWithValue("@GraAca", graAca);
+                comando.Parameters.AddWithValue("@CodUsuInt", codUsuInt); 
+            }
             try
             {
                 comando.Connection.Open();
@@ -120,14 +140,28 @@ namespace InterfacesSief
         {
             SqlCommand comando = new SqlCommand();
             comando.Connection = Conexion.ObtenerConexion();
-            comando.CommandText = @"UPDATE Alumnos SET NomAlu=@NomAlu, NacAlu=@NacAlu,CodEsc=@CodEsc,
-                                                        ProAlu=@ProAlu,GraAca=GraAca";
-            comando.Parameters.AddWithValue("@NomAlu", nomAlu);
-            comando.Parameters.AddWithValue("@NacAlu", nacAlu);            
-            comando.Parameters.AddWithValue("@CodEsc", codEsc);
-            comando.Parameters.AddWithValue("@ProAlu", proAlu);
-            comando.Parameters.AddWithValue("@GraAca", graAca);
-
+            if (codEsc > 0)
+            {
+                comando.CommandText = @"UPDATE Alumnos SET NomAlu=@NomAlu, NacAlu=@NacAlu,CodEsc=@CodEsc,
+                                                        ProAlu=@ProAlu,GraAca=@GraAca 
+                                                        where CodAlu=@CodAlu";
+                comando.Parameters.AddWithValue("@NomAlu", nomAlu);
+                comando.Parameters.AddWithValue("@NacAlu", nacAlu);
+                comando.Parameters.AddWithValue("@CodEsc", codEsc);
+                comando.Parameters.AddWithValue("@ProAlu", proAlu);
+                comando.Parameters.AddWithValue("@GraAca", graAca);
+                comando.Parameters.AddWithValue("@CodAlu", codAlu);
+            }
+            else
+            {
+                comando.CommandText = @"UPDATE Alumnos SET NomAlu=@NomAlu, NacAlu=@NacAlu,
+                                                        ProAlu=@ProAlu,GraAca=@GraAca
+                                                        where CodAlu=@CodAlu";
+                comando.Parameters.AddWithValue("@NomAlu", nomAlu);
+                comando.Parameters.AddWithValue("@NacAlu", nacAlu);                
+                comando.Parameters.AddWithValue("@ProAlu", proAlu);
+                comando.Parameters.AddWithValue("@CodAlu", codAlu); 
+            }
             try
             {
                 comando.Connection.Open();

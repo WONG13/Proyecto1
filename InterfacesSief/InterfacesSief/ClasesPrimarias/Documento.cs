@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using System.Data;
 namespace InterfacesSief
 {
-    class Documento
+    public class Documento
     {
         private int codDoc;
         private int codUsuInt;

@@ -36,7 +36,10 @@ namespace InterfacesSief
                 //Optiene Alumno de la BD segun codigo
                 a = Alumno.getAlumnosFromDB(-1, "", user.getCodigo());
                 //Optiene la Escuela de la BD segun el codigo que tiene el alumno
-                esc = Escuela.getEscuelaFromDB(a.codEsc, "", "", -1);
+                if (a.codEsc > 0)
+                    esc = Escuela.getEscuelaFromDB(a.codEsc, "", "", -1);
+                else
+                    esc = null;
             }
             else
                 a = null;
@@ -48,26 +51,36 @@ namespace InterfacesSief
             {
                 foreach (NivelEducativo n in niveles)
                 {
-                    if (esc.codNiv == n.codNiv)
-                    {
-                        ComboBoxNivel.Text = n.nivAca;
-                        lista = Escuela.getEscuelasFromDB(-1, "", "", n.codNiv);
-                    }
                     ComboBoxNivel.Items.Add(n.nivAca);
+                    if (esc != null)
+                    {
+                        if (esc.codNiv == n.codNiv)
+                        {
+                            ComboBoxNivel.SelectedItem = n.nivAca;//.Text = n.nivAca;
+                            lista = Escuela.getEscuelasFromDB(-1, "", "", n.codNiv);
+                        }
+                    }
                 }
-                foreach (Escuela _esc in lista)
+                //ComboBoxNivel.DropDownStyle = ComboBoxStyle.DropDownList;
+                ComboBoxEsc.Items.Clear();
+                try
                 {
-                    if (_esc.codEsc == a.codEsc)
-                        ComboBoxEsc.Text = _esc.nomEsc;
-                    ComboBoxEsc.Items.Add(_esc.nomEsc);
+                    foreach (Escuela _esc in lista)
+                    {
+                        ComboBoxEsc.Items.Add(_esc.nomEsc);
+                        if (_esc.codEsc == a.codEsc)
+                            ComboBoxEsc.SelectedItem = _esc.nomEsc;
+                    }
                 }
+                catch (Exception)
+                { }
                 txtNomAlumno.Text = a.nomAlu;
                 txtGraAlu.Text = a.graAca.ToString();
                 txtProAlu.Text = a.proAlu.ToString();
                 dateFechNacimiento.Value = a.nacAlu;
             }
             else
-            {
+            {                
                 lista = Escuela.getEscuelasFromDB(-1, "", "", -1);
                 foreach (NivelEducativo n in niveles)
                 {                    
@@ -89,14 +102,14 @@ namespace InterfacesSief
             {
                 if (NE.nivAca == ComboBoxNivel.Text)
                 {
-                    lista = Escuela.getEscuelasFromDB(-1, "", "", NE.codNiv);
-                    ComboBoxEsc.Text = "";
+                    lista = Escuela.getEscuelasFromDB(-1, "", "", NE.codNiv);                    
                 }
             }
             foreach (Escuela _esc in lista)
             {                
                 ComboBoxEsc.Items.Add(_esc.nomEsc);
             }
+            ComboBoxEsc.SelectedValue = 0;
         }
 
         private void ComboBoxNivel_SelectedIndexChanged(object sender, EventArgs e)
@@ -112,10 +125,23 @@ namespace InterfacesSief
                 a.nacAlu = dateFechNacimiento.Value;
                 a.proAlu = double.Parse(txtProAlu.Text);
                 a.graAca = int.Parse(txtGraAlu.Text);
-                foreach (Escuela es in lista)
+                try
                 {
-                    if (es.nomEsc == ComboBoxEsc.Text)
-                        a.codEsc = es.codEsc;
+                    foreach (Escuela es in lista)
+                    {
+                        try
+                        {
+                            if (es.nomEsc == ComboBoxEsc.SelectedItem.ToString())
+                                a.codEsc = es.codEsc;
+                        }
+                        catch (Exception)
+                        {
+
+                        }
+                    }
+                }
+                catch (Exception)
+                {
                 }
                 if (a.ActualizarToDB())
                     MessageBox.Show("Datos de Alumno guardados Exitosamente :-)");
@@ -208,11 +234,19 @@ namespace InterfacesSief
 
         public int CrearAlumno(int CodUsuInt)
         {
-            Escuela esc=Escuela.getEscuelaFromDB(-1,ComboBoxEsc.Text,"",-1);            
-
+            int ID_Esc = -1;
+            try
+            {
+                Escuela esc = Escuela.getEscuelaFromDB(-1, ComboBoxEsc.SelectedItem.ToString(), "", -1);
+                ID_Esc = esc.codEsc;
+            }
+            catch (Exception)
+            {
+                ID_Esc = -1; 
+            }
             Alumno a_nuevo = new Alumno(-1, txtNomAlumno.Text, 
                                             dateFechNacimiento.Value, 
-                                            esc.codEsc, 
+                                            ID_Esc, 
                                             double.Parse(txtProAlu.Text),
                                             int.Parse(txtGraAlu.Text),
                                             CodUsuInt);

@@ -7,7 +7,7 @@ using System.Data;
 
 namespace InterfacesSief
 {
-    class Empleado:Usuario
+    public class Empleado:Usuario
     {
         public static int codUsuEmp;
         private string nomEmp;

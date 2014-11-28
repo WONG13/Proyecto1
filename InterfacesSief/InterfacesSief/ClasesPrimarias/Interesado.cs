@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 namespace InterfacesSief
 {
-    class Interesado: Usuario
+    public class Interesado: Usuario
     {
         public static int CodInt;
         private string nomInt;

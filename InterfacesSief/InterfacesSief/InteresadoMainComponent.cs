@@ -49,6 +49,10 @@ namespace InterfacesSief
 
         private void hacerSolicitudToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Interfaces.I_HacerSol HS = new Interfaces.I_HacerSol();
+            HS.setInteresado((Interesado)interesado);
+            eliminarAnterior();
+            this.Controls.Add(HS);
 
         }
 

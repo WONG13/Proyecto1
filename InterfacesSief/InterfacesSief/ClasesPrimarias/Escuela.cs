@@ -7,7 +7,7 @@ using System.Data;
 using System.Windows.Forms;
 namespace InterfacesSief
 {
-    class Escuela
+    public class Escuela
     {
         public int codEsc;
         public string nomEsc;
