@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Data;
 
 namespace InterfacesSief
 {
@@ -17,7 +16,7 @@ namespace InterfacesSief
         private DataTable dTable = null;
         public DataTable DatosSolicitudes;
         int Index=-1;
-        public static int ID, IDint ;
+        public int ID, IDint ;
         public E_RevDoc()
         {
             InitializeComponent();
@@ -48,8 +47,8 @@ namespace InterfacesSief
 
             if (Index != -1)
             {
-                ID = Int16.Parse(dataGridView1[0, Index].Value.ToString());
-                IDint = Int16.Parse(dataGridView1[2, Index].Value.ToString());
+                ID = int.Parse(dataGridView1[0, Index].Value.ToString());
+                IDint = int.Parse(dataGridView1[2, Index].Value.ToString());
                 ActualizarSolicitud();
 
                 LR(new E_RevSol(IDint));

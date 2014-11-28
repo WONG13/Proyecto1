@@ -26,6 +26,10 @@ namespace InterfacesSief
             i_CapAlu1.CargarDatosIniciales();
             i_CapInt1.OcultarBotones();
             i_CapInt1.cargarDatos(x);//Este es el numero del Interesado
+            Interesado inte = Interesado.getInteresadoFromUsuario(x, "", "");
+            i_CapDoc1.setUser(inte);
+            i_CapDoc1.Inicializar();
+
         }
 
         private void i_CapInt1_Load(object sender, EventArgs e)

@@ -11,7 +11,7 @@ namespace InterfacesSief
 {
     public partial class I_CapDoc : InterfacesSief.I_FormPlantilla
     {
-        Usuario user;
+        Interesado user;
         Alumno student;
         List<Documento> listaDoc=new List<Documento>();
         DataTable tipos;
@@ -22,21 +22,26 @@ namespace InterfacesSief
             InitializeComponent();            
         }
 
-        public void setUser(Usuario u/*, /*Alumno a*/)
+        public void setUser(Interesado u/*, /*Alumno a*/)
         {
-            if (u.getPermisos() == "Interesado")
-                user = (Interesado)u;
-            else if (u.getPermisos() == "Empleado")
-                user = (Empleado)u;
-            else if (u.getPermisos() == "Lider")
-            { /*Falta clase Lider*/}
+            //if (u.getPermisos() == "Interesado")
+            user = u;// (Interesado)u;
+            //else if (u.getPermisos() == "Empleado")
+              //  user = (Empleado)u;
+            //else if (u.getPermisos() == "Lider")
+            //{ /*Falta clase Lider*/}
                 //student = a;
         }
 
         private void I_CapDoc_Load(object sender, EventArgs e)
         {
+            
+        }
+
+        public void Inicializar()
+        {
             listaDoc = Documento.getDocumentFromDB(user.getCodigo(), -1, "", -1);
-            tipos=Documento.getDocumentsTypesFromDB();           
+            tipos = Documento.getDocumentsTypesFromDB();
             foreach (DataRow r in tipos.Rows)
             {
                 comboBox1.Items.Add(r.Field<string>("TipoDoc"));

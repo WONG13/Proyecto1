@@ -11,7 +11,7 @@ namespace InterfacesSief
 {
     public partial class InteresadoMainComponent : UserControl
     {
-        Usuario interesado;
+        Interesado interesado;
         public InteresadoMainComponent()
         {
             InitializeComponent();
@@ -19,7 +19,7 @@ namespace InterfacesSief
 
         public void setUsuario(Usuario user)
         {
-            interesado = user;
+            interesado = (Interesado)user;
         }
 
         public void eliminarAnterior()

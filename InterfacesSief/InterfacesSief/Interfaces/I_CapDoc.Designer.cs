@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btnAdjBol = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnEliminar1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -46,7 +45,7 @@
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(816, 35);
+            this.label1.Size = new System.Drawing.Size(448, 35);
             this.label1.Text = "Documentación";
             // 
             // groupBox1
@@ -59,18 +58,19 @@
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.btnEliminar1);
             this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btnAdjBol);
             this.groupBox1.Location = new System.Drawing.Point(12, 69);
-            this.groupBox1.Size = new System.Drawing.Size(816, 301);
+            this.groupBox1.Size = new System.Drawing.Size(448, 301);
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(672, 376);
+            this.btnAceptar.Location = new System.Drawing.Point(304, 376);
+            this.btnAceptar.Visible = false;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(753, 376);
+            this.btnCancel.Location = new System.Drawing.Point(385, 376);
+            this.btnCancel.Visible = false;
             // 
             // btnAdjBol
             // 
@@ -80,15 +80,6 @@
             this.btnAdjBol.TabIndex = 0;
             this.btnAdjBol.Text = "Adjuntar";
             this.btnAdjBol.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(292, 75);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 26);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Comprobante de Inscripcion\r\nal nuevo ciclo escolar";
             // 
             // pictureBox1
             // 
@@ -120,7 +111,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(319, 104);
+            this.btnBuscar.Location = new System.Drawing.Point(319, 130);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(79, 55);
             this.btnBuscar.TabIndex = 13;
@@ -135,13 +126,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(293, 16);
+            this.label2.Location = new System.Drawing.Point(293, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(393, 52);
+            this.label2.Size = new System.Drawing.Size(147, 52);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Intrucciones:\r\n1.- Elija un tipo de documento de la lista.\r\n2.- Busque el archivo" +
-                " del documento (solo formatos de imagenes .jpg, .bmp, .png).\r\n3.- Suba el archiv" +
-                "o.";
+            this.label2.Text = "Intrucciones:\r\n1.- Elija un tipo de documento\r\n2.- Busque el archivo\r\n3.- Suba el" +
+                " archivo.";
             // 
             // label4
             // 
@@ -154,7 +144,7 @@
             // 
             // btnEnviar
             // 
-            this.btnEnviar.Location = new System.Drawing.Point(319, 165);
+            this.btnEnviar.Location = new System.Drawing.Point(319, 191);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(79, 44);
             this.btnEnviar.TabIndex = 15;
@@ -164,7 +154,7 @@
             // 
             // btnVerCompleto
             // 
-            this.btnVerCompleto.Location = new System.Drawing.Point(319, 215);
+            this.btnVerCompleto.Location = new System.Drawing.Point(319, 241);
             this.btnVerCompleto.Name = "btnVerCompleto";
             this.btnVerCompleto.Size = new System.Drawing.Size(77, 38);
             this.btnVerCompleto.TabIndex = 17;
@@ -176,7 +166,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.Name = "I_CapDoc";
-            this.Size = new System.Drawing.Size(840, 410);
+            this.Size = new System.Drawing.Size(472, 410);
             this.Load += new System.EventHandler(this.I_CapDoc_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -187,7 +177,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAdjBol;
         private System.Windows.Forms.Button btnEliminar1;
         private System.Windows.Forms.PictureBox pictureBox1;
