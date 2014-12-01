@@ -5,9 +5,9 @@ using System.Text;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-namespace InterfacesSief.ClasesPrimarias
+namespace InterfacesSief
 {
-    class Revision
+    public class Revision
     {
 
         public int codRev;
@@ -81,17 +81,57 @@ namespace InterfacesSief.ClasesPrimarias
             return tabla;
         }
 
+        public static Revision getRevisionFromDB(int CodRev, int CodSol, string EstRev, int CodUsuEmp)
+        {
+            DataTable tabla=getRevisionesFromDB(CodRev,CodSol,EstRev,CodUsuEmp);
+            Revision rev;
+            if (tabla.Rows.Count > 0)
+            {
+                int _CodMon=-1, _CodFic=-1;
+                try
+                {
+                    _CodMon = tabla.Rows[0].Field<int>("CodMon");
+                    _CodFic = tabla.Rows[0].Field<int>("CodFic");
+                }
+                catch (Exception)
+                {
+ 
+                }
+                rev = new Revision(tabla.Rows[0].Field<int>("CodRev"),
+                                      tabla.Rows[0].Field<int>("CodSol"),
+                                      tabla.Rows[0].Field<string>("EstRev"),
+                                      _CodMon,
+                                      tabla.Rows[0].Field<int>("CodUsuEmp"),
+                                      tabla.Rows[0].Field<DateTime>("FecRev"),
+                                      _CodFic);
+                return rev;
+            }
+            else
+            {
+                MessageBox.Show("Error al cargar Revision de la Base de Datos");
+                return null;
+            }
+        }
+
         public bool saveRevisionToDB()
         {
             SqlCommand comando = new SqlCommand();
             comando.Connection = Conexion.ObtenerConexion();
-            comando.CommandText = @"INSERT INTO Revisiones (CodSol, EstRev, CodMon,  CodEmp,  FecRev, CodFic)
+            comando.CommandText = @"INSERT INTO Revisiones (CodSol, EstRev, CodMon,  CodUsuEmp,  FecRev, CodFic)
                                     VALUES (@CodSol, @EstRev, @CodMon, @CodUsuEmp, @FecRev, @CodFic)";
-          
+
+            if (codMon > 0)
+            {
+                comando.Parameters.AddWithValue("@CodMon ", codMon);
+            }
+            else
+            {
+                comando.CommandText=comando.CommandText.Replace(", CodMon", "");
+                comando.CommandText=comando.CommandText.Replace(", @CodMon", "");
+            }
             comando.Parameters.AddWithValue("@CodSol ", codSol);
             comando.Parameters.AddWithValue("@EstRev ", estRev);
-            comando.Parameters.AddWithValue("@CodMon ", codMon);
-            comando.Parameters.AddWithValue("@CodEmp ", codUsuEmp);
+            comando.Parameters.AddWithValue("@CodUsuEmp ", codUsuEmp);
             comando.Parameters.AddWithValue("@FecRev ", fecRev);
             comando.Parameters.AddWithValue("@CodFic ", codFic);
             try

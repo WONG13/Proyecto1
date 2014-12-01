@@ -29,30 +29,31 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.txtInfoReporte = new System.Windows.Forms.TextBox();
+            this.dgvReportes = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReportes)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Location = new System.Drawing.Point(466, 338);
-            // 
-            // GroupBox1
-            // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.listBox1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Size = new System.Drawing.Size(610, 249);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(547, 338);
             // 
             // label1
             // 
             this.label1.Size = new System.Drawing.Size(610, 35);
             this.label1.Text = "Reportes";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dgvReportes);
+            this.groupBox1.Controls.Add(this.txtInfoReporte);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Size = new System.Drawing.Size(610, 249);
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Location = new System.Drawing.Point(466, 338);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(547, 338);
             // 
             // label2
             // 
@@ -64,21 +65,21 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Reporte";
             // 
-            // textBox1
+            // txtInfoReporte
             // 
-            this.textBox1.Location = new System.Drawing.Point(302, 49);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(280, 147);
-            this.textBox1.TabIndex = 8;
+            this.txtInfoReporte.Location = new System.Drawing.Point(302, 49);
+            this.txtInfoReporte.Multiline = true;
+            this.txtInfoReporte.Name = "txtInfoReporte";
+            this.txtInfoReporte.Size = new System.Drawing.Size(280, 150);
+            this.txtInfoReporte.TabIndex = 8;
             // 
-            // listBox1
+            // dgvReportes
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(10, 49);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(250, 147);
-            this.listBox1.TabIndex = 10;
+            this.dgvReportes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReportes.Location = new System.Drawing.Point(10, 49);
+            this.dgvReportes.Name = "dgvReportes";
+            this.dgvReportes.Size = new System.Drawing.Size(273, 150);
+            this.dgvReportes.TabIndex = 10;
             // 
             // E_MosRep
             // 
@@ -87,6 +88,7 @@
             this.Size = new System.Drawing.Size(634, 372);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReportes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -94,7 +96,7 @@
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TextBox txtInfoReporte;
+        private System.Windows.Forms.DataGridView dgvReportes;
     }
 }

@@ -50,7 +50,10 @@ namespace InterfacesSief
 
         private void reporteDeSolicitudesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MostrarModulo(new E_MosRep());
+            E_MosRep ER = new E_MosRep();
+            ER.setEmpleado(user);
+            ER.Inicializar();
+            MostrarModulo(ER);
         }
 
         private void bucarSolicitudToolStripMenuItem_Click(object sender, EventArgs e)

@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 namespace InterfacesSief
 {
-    class Solicitud
+    public class Solicitud
     {
         public int codSol,
                     codAlu,
@@ -66,9 +66,10 @@ namespace InterfacesSief
 
             DataTable tabla = new DataTable();
             SqlDataAdapter adaptador = new SqlDataAdapter(comando);
-            adaptador.Fill(tabla);
+            
             try
             {
+                adaptador.Fill(tabla);
                 comando.Connection.Open();
                 comando.ExecuteNonQuery();
                 comando.Connection.Close();

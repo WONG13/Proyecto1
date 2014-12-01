@@ -56,7 +56,10 @@ namespace InterfacesSief
                 IDint = int.Parse(dataGridView1[2, Index].Value.ToString());
                 ActualizarSolicitud();
 
-                LR(new E_RevSol(IDint));
+                Solicitud sol = Solicitud.getUnaSolicitudFromDB(ID, IDint, -1, "Pendiente", -1);
+                E_RevSol ERS = new E_RevSol();
+                ERS.setSolicitud(sol, Interesado.getInteresadoFromDB(IDint),user);
+                LR(ERS);
             }
         }
 
@@ -102,6 +105,7 @@ namespace InterfacesSief
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             Index=dataGridView1.CurrentRow.Index;
+            //dataGridView1.CurrentRow;
 
         }
 

@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.InfoReporte = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEnviar = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbboxTipoReporte = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // InfoReporte
             // 
-            this.textBox1.Location = new System.Drawing.Point(17, 88);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(391, 108);
-            this.textBox1.TabIndex = 0;
+            this.InfoReporte.Location = new System.Drawing.Point(17, 88);
+            this.InfoReporte.Multiline = true;
+            this.InfoReporte.Name = "InfoReporte";
+            this.InfoReporte.Size = new System.Drawing.Size(391, 108);
+            this.InfoReporte.TabIndex = 0;
             // 
             // label1
             // 
@@ -64,13 +64,14 @@
             this.btnEnviar.UseVisualStyleBackColor = true;
             this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
-            // comboBox1
+            // cmbboxTipoReporte
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(113, 48);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(198, 21);
-            this.comboBox1.TabIndex = 3;
+            this.cmbboxTipoReporte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbboxTipoReporte.FormattingEnabled = true;
+            this.cmbboxTipoReporte.Location = new System.Drawing.Point(113, 48);
+            this.cmbboxTipoReporte.Name = "cmbboxTipoReporte";
+            this.cmbboxTipoReporte.Size = new System.Drawing.Size(198, 21);
+            this.cmbboxTipoReporte.TabIndex = 3;
             // 
             // label2
             // 
@@ -98,11 +99,12 @@
             this.ClientSize = new System.Drawing.Size(428, 223);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbboxTipoReporte);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.InfoReporte);
             this.Name = "E_ElaRep";
+            this.Load += new System.EventHandler(this.E_ElaRep_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,10 +112,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox InfoReporte;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnEnviar;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbboxTipoReporte;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
     }

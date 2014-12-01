@@ -31,6 +31,20 @@ namespace InterfacesSief
             }
         }
 
+        public bool cargarDatos(Interesado i)
+        {
+            user = i;
+            if (user == null)
+                return false;
+            else
+            {
+                txtNomComInt.Text = user.getNombre();
+                txtDirInt.Text = user.getDireccion();
+                txtCorInt.Text = user.getCorreo();
+                txtTelInt.Text = user.getTelefono();
+                return true;
+            }
+        }
         private void guardarCambios()
         {
             Interesado actuzalido = new Interesado(user.getCodigo(), "", "",

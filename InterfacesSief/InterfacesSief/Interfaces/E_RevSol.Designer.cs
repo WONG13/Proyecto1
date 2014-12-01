@@ -44,7 +44,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(222, 32);
+            this.btnAceptar.Location = new System.Drawing.Point(217, 35);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(84, 35);
             this.btnAceptar.TabIndex = 86;
@@ -53,7 +53,7 @@
             // 
             // btnReporte
             // 
-            this.btnReporte.Location = new System.Drawing.Point(120, 32);
+            this.btnReporte.Location = new System.Drawing.Point(119, 35);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(82, 35);
             this.btnReporte.TabIndex = 87;
@@ -63,7 +63,7 @@
             // 
             // btnTerminar
             // 
-            this.btnTerminar.Location = new System.Drawing.Point(21, 32);
+            this.btnTerminar.Location = new System.Drawing.Point(13, 35);
             this.btnTerminar.Name = "btnTerminar";
             this.btnTerminar.Size = new System.Drawing.Size(82, 35);
             this.btnTerminar.TabIndex = 88;
