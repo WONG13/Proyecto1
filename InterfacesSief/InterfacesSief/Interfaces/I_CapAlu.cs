@@ -253,5 +253,11 @@ namespace InterfacesSief
             int CodAlu=a_nuevo.CreateAlumnoToDB();
             return CodAlu;
         }
+
+        public void OcultarBotones()
+        {
+            btnAceptar.Visible = false;
+            btnCancel.Visible = false;
+        }
     }
 }

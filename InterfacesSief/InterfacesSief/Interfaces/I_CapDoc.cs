@@ -11,12 +11,15 @@ namespace InterfacesSief
 {
     public partial class I_CapDoc : InterfacesSief.I_FormPlantilla
     {
+        bool vacio = true;
         Interesado user;
         Alumno student;
         List<Documento> listaDoc=new List<Documento>();
+        Dictionary<string, Documento> Doc = new Dictionary<string, Documento>();
         DataTable tipos;
         Bitmap ima = null;
         MemoryStream ms = null;
+        
         public I_CapDoc()
         {
             InitializeComponent();            
@@ -40,13 +43,15 @@ namespace InterfacesSief
 
         public void Inicializar()
         {
-            listaDoc = Documento.getDocumentFromDB(user.getCodigo(), -1, "", -1);
-            tipos = Documento.getDocumentsTypesFromDB();
+            //listaDoc = Documento.getDocumentFromDB(user.getCodigo(), -1, "", -1);
+            Doc = Documento.getDocumentFromDB(user.getCodigo(), -1, "", -1);
+            tipos = Documento.getDocumentsTypesFromDB(-1);
+            student = Alumno.getAlumnosFromDB(-1, "", user.getCodigo());
             foreach (DataRow r in tipos.Rows)
             {
                 comboBox1.Items.Add(r.Field<string>("TipoDoc"));
             }
-            comboBox1.SelectedIndex = 0;
+            comboBox1.SelectedIndex = 0;           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -71,34 +76,57 @@ namespace InterfacesSief
                 }
                 pictureBox1.Image = ima;
                 ms = new MemoryStream();
+                vacio = false;
                 ima.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                btnEnviar.Visible = true;
             }            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (Documento d in listaDoc)
+            if (Doc.ContainsKey(comboBox1.Text))
             {
-
-                if (d.tipDoc == comboBox1.Text)
-                {
-                    if (d.imaDoc == null)
-                        d.makeImage();
-                    pictureBox1.Image = d.imaDoc;
-                }
+                if (Doc[comboBox1.Text].imaDoc == null)
+                    Doc[comboBox1.Text].makeImage();
+                pictureBox1.Image = Doc[comboBox1.Text].imaDoc;
+                vacio = false;
             }
-
+            else
+            {
+                pictureBox1.Image = new Bitmap(pictureBox1.Size.Width, pictureBox1.Size.Height);
+                Graphics g = Graphics.FromImage(pictureBox1.Image);
+                g.Clear(Color.White);
+                g.DrawString("No se ha cargado la imagen en el sistema",
+                    new Font("Arial", 16, FontStyle.Bold),
+                    new SolidBrush(Color.Red),
+                    new RectangleF(10, 100, pictureBox1.Size.Width - 10, 100));
+                vacio = true;
+                g = null;
+                pictureBox1.Refresh();
+            }
         }
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            if (ms != null)
+            if (ms != null && !vacio)
             {
-                Documento doc = new Documento(-1, user.getCodigo(), 1, comboBox1.Text, ms.ToArray());
-                if (doc.saveDocumentToDB())
+                if (Doc.ContainsKey(comboBox1.Text))
                 {
-                    MessageBox.Show("Guardado Exitosamente");
-                    listaDoc = Documento.getDocumentFromDB(user.getCodigo(), -1, "", -1);
+                    Doc[comboBox1.Text].doc = ms.ToArray();
+                    if (Doc[comboBox1.Text].updateDocumentToDB())
+                    {
+                        Doc[comboBox1.Text].makeImage();
+                        MessageBox.Show("Actualizado correctamente");
+                    }
+                }
+                else
+                {
+                    Documento doc = new Documento(-1, user.getCodigo(), student.codAlu, -1, comboBox1.Text, ms.ToArray());
+                    if (doc.saveDocumentToDB())
+                    {
+                        Doc.Add(doc.tipDoc, doc);
+                        MessageBox.Show("Guardado Exitosamente");
+                    }
                 }
             }
             else
@@ -114,6 +142,12 @@ namespace InterfacesSief
                 BackgroundImage=pictureBox1.Image
             };
             f.ShowDialog();
+        }
+
+        public void OcultarBotones()
+        {
+            btnBuscar.Visible = false;
+            btnEnviar.Visible = false;
         }
     }
 }

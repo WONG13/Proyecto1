@@ -48,6 +48,7 @@ namespace InterfacesSief
                     break;
                 case "Empleado":
                     EmpleadoMainComponent EMC = new EmpleadoMainComponent();
+                    EMC.setUsuario((Empleado)user);
                     //EMC.setUsuario(user);
                     pnlCentral.Controls.Add(EMC);
                     EMC.Show();

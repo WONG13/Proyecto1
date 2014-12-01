@@ -11,8 +11,10 @@ using System.Data.SqlClient;
 namespace InterfacesSief
 {
     
-    public partial class E_ElaRep : UserControl,iModulo
+    public partial class E_ElaRep : Form//UserControl,iModulo
     {
+        public Solicitud sol;
+        public Reporte repo;
         public int CodSol, CodRev;
         private SqlCommand comando = null;
         private DataTable dTable = null;

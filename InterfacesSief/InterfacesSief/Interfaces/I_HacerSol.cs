@@ -25,7 +25,7 @@ namespace InterfacesSief.Interfaces
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Solicitud.getSolicitudFromDB(-1, user.getCodigo(), -1, "Pendiente").Count == 0)
+            if (Solicitud.getSolicitudFromDB(-1, user.getCodigo(), -1, "Pendiente",-1).Count == 0)
             {
                 if (_Alumno && _Documento && _Tutor)
                 {
@@ -36,6 +36,7 @@ namespace InterfacesSief.Interfaces
                                                   DateTime.Now, "Pendiente");
                     if (sol.saveSolicitudToDB())
                     {
+                        AdminReviciones.AsignarEmpleado(sol);
                         MessageBox.Show("Solicitud enviada correctamente");
                     }
 
@@ -70,24 +71,24 @@ namespace InterfacesSief.Interfaces
                 return false;
         }
 
-        bool ComprobarDatosDocumento(List<Documento> doc)
+        bool ComprobarDatosDocumento(Dictionary<string,Documento> doc)
         {
-            DataTable Tipos=Documento.getDocumentsTypesFromDB();
-            //bool veridficacion = false;
-            if (doc.Count == Tipos.Rows.Count)
+            DataTable Tipos=Documento.getDocumentsTypesFromDB(-1);
+            bool condicion = false;
+            foreach (DataRow r in Tipos.Rows)
             {
-                return true;
+                condicion = doc.ContainsKey(r.Field<string>("TipoDoc"));
+                if (!condicion)
+                    return false;
             }
-            else
-                return false;
-            //if(doc.Count==)
-            
+            return true;            
         }
 
         private void I_HacerSol_Load(object sender, EventArgs e)
         {
             Alumno alum = Alumno.getAlumnosFromDB(-1, "", user.getCodigo());
-            List<Documento> doc = Documento.getDocumentFromDB(user.getCodigo(), -1, "", -1);
+            Dictionary<string, Documento> doc = Documento.getDocumentFromDB(user.getCodigo(), -1, "", -1);
+            //List<Documento> doc = Documento.getDocumentFromDB(user.getCodigo(), -1, "", -1);
             _Alumno = ComprobarDatosAlumno(alum);
             _Documento = ComprobarDatosDocumento(doc);
             _Tutor = ComprobarDatosInteresado(user);

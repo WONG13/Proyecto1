@@ -61,6 +61,7 @@ namespace InterfacesSief
             eliminarAnterior();
             I_CapDoc ICD = new I_CapDoc();
             ICD.setUser(interesado/*, null*/);//Null es Alumno Cambiarlo luego
+            ICD.Inicializar();
             Controls.Add(ICD);
             ICD.Show();
         }

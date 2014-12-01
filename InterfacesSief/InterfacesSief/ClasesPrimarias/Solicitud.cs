@@ -5,7 +5,7 @@ using System.Text;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-namespace InterfacesSief.ClasesPrimarias
+namespace InterfacesSief
 {
     class Solicitud
     {
@@ -25,39 +25,47 @@ namespace InterfacesSief.ClasesPrimarias
             fecSol = FecSol; estSol = EstSol; codUsuInt = CodUsuInt;
         }
 
-        public static List<Solicitud> getSolicitudFromDB(int CodSol, int CodUsuInt, int CodAlu, string EstSol)
+        public static DataTable getSolicitudTableFromDB(int CodSol, int CodUsuInt, int CodAlu, string EstSol, int CodUsuEmp)
         {
             SqlCommand comando = new SqlCommand();
             comando.Connection = Conexion.ObtenerConexion();
             comando.CommandText = @"SELECT * FROM Solicitudes WHERE ";
-            if(CodAlu!=-1)
+            if (CodAlu != -1)
             {
-                comando.CommandText+="@CodSol=CodSol ";
-                if(CodAlu>0 || CodUsuInt>0 || EstSol!="")
-                    comando.CommandText+="AND ";
+                comando.CommandText += "@CodSol=CodSol ";
+                if (CodAlu > 0 || CodUsuInt > 0 || EstSol != "" || CodUsuEmp>0)
+                    comando.CommandText += "AND ";
                 comando.Parameters.AddWithValue("@CodSol", CodSol);
             }
-            if(CodUsuInt!=-1)
+            if (CodUsuInt != -1)
             {
-                comando.CommandText+="@CodUsuInt=CodUsuInt ";
-                if(CodAlu>0 || EstSol!="")
-                    comando.CommandText+="AND ";
+                comando.CommandText += "@CodUsuInt=CodUsuInt ";
+                if (CodAlu > 0 || EstSol != "" || CodUsuEmp > 0)
+                    comando.CommandText += "AND ";
                 comando.Parameters.AddWithValue("@CodUsuInt", CodUsuInt);
             }
-            if(CodAlu!=-1)
+            if (CodAlu != -1)
             {
-                comando.CommandText+="@CodAlu=CodAlu ";
-                if(CodUsuInt>0)
-                    comando.CommandText+="AND ";
+                comando.CommandText += "@CodAlu=CodAlu ";
+                if (EstSol != "" || CodUsuEmp > 0)
+                    comando.CommandText += "AND ";
                 comando.Parameters.AddWithValue("@CodAlu", CodAlu);
             }
-            if(EstSol!="")
+            if (EstSol != "")
             {
-                comando.CommandText+="@EstSol=EstSol ";
+                comando.CommandText += "@EstSol=EstSol ";
+                if (CodUsuEmp > 0)
+                    comando.CommandText += " AND ";
                 comando.Parameters.AddWithValue("@EstSol", EstSol);
             }
-            DataTable tabla=new DataTable();
-            SqlDataAdapter adaptador=new SqlDataAdapter(comando);
+            if (CodUsuEmp>0)
+            {
+                comando.CommandText += "@CodUsuEmp=CodUsuEmp ";
+                comando.Parameters.AddWithValue("@CodUsuEmp", CodUsuEmp);
+            }
+
+            DataTable tabla = new DataTable();
+            SqlDataAdapter adaptador = new SqlDataAdapter(comando);
             adaptador.Fill(tabla);
             try
             {
@@ -70,10 +78,16 @@ namespace InterfacesSief.ClasesPrimarias
                 MessageBox.Show("Error al cargar las Solicitudes desde la base de datos: " + e.Message);
                 return null;
             }
+            return tabla;
+        }
+        
+        public static List<Solicitud> getSolicitudFromDB(int CodSol, int CodUsuInt, int CodAlu, string EstSol, int CodUsuEmp)
+        {
+            DataTable tabla = getSolicitudTableFromDB(CodSol, CodUsuInt, CodAlu, EstSol,CodUsuEmp);
             List<Solicitud> sol=new List<Solicitud>();
             foreach(DataRow r in tabla.Rows)
             {
-                int _codUsuEmp = 0;
+                int _codUsuEmp = -1;
                 try
                 {
                     _codUsuEmp=r.Field<int>("CodUsuEmp");
@@ -93,6 +107,15 @@ namespace InterfacesSief.ClasesPrimarias
                 sol.Add(nueva);            
             }
             return sol;
+        }
+
+        public static Solicitud getUnaSolicitudFromDB(int CodSol, int CodUsuInt, int CodAlu, string EstSol, int CodUsuEmp)
+        {
+            List<Solicitud> sol = getSolicitudFromDB(CodSol, CodUsuInt, CodAlu, EstSol, CodUsuEmp);
+            if (sol.Count > 0)
+                return sol[0];
+            else
+                return null;
         }
 
         public bool saveSolicitudToDB()
@@ -148,10 +171,10 @@ namespace InterfacesSief.ClasesPrimarias
         {
             SqlCommand comando = new SqlCommand();
             comando.Connection = Conexion.ObtenerConexion();
-            comando.CommandText = @"UPDATE Solicitudes SET CodEmp=@CodEmp WHERE CodSol=@CodSol";
-
+            comando.CommandText = @"UPDATE Solicitudes SET CodUsuEmp=@CodUsuEmp WHERE CodSol=@CodSol";
+            codSol=Solicitud.getUnaSolicitudFromDB(-1,codUsuInt,-1,"Pendiente",-1).codSol;
             comando.Parameters.AddWithValue("@CodSol", codSol);
-            comando.Parameters.AddWithValue("@EstSol", estSol);
+            comando.Parameters.AddWithValue("@CodUsuEmp", codUsuEmp);
             try
             {
                 comando.Connection.Open();

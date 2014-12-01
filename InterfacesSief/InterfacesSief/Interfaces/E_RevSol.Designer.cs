@@ -44,18 +44,18 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(221, 19);
+            this.btnAceptar.Location = new System.Drawing.Point(222, 32);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(84, 48);
+            this.btnAceptar.Size = new System.Drawing.Size(84, 35);
             this.btnAceptar.TabIndex = 86;
             this.btnAceptar.Text = "Aprobar\r\nSolicitud";
             this.btnAceptar.UseVisualStyleBackColor = true;
             // 
             // btnReporte
             // 
-            this.btnReporte.Location = new System.Drawing.Point(120, 19);
+            this.btnReporte.Location = new System.Drawing.Point(120, 32);
             this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(82, 48);
+            this.btnReporte.Size = new System.Drawing.Size(82, 35);
             this.btnReporte.TabIndex = 87;
             this.btnReporte.Text = "Reporte\r\nSolicitud";
             this.btnReporte.UseVisualStyleBackColor = true;
@@ -63,9 +63,9 @@
             // 
             // btnTerminar
             // 
-            this.btnTerminar.Location = new System.Drawing.Point(21, 19);
+            this.btnTerminar.Location = new System.Drawing.Point(21, 32);
             this.btnTerminar.Name = "btnTerminar";
-            this.btnTerminar.Size = new System.Drawing.Size(82, 48);
+            this.btnTerminar.Size = new System.Drawing.Size(82, 35);
             this.btnTerminar.TabIndex = 88;
             this.btnTerminar.Text = "Terminar";
             this.btnTerminar.UseVisualStyleBackColor = true;
@@ -74,7 +74,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(3, 73);
+            this.tabControl1.Location = new System.Drawing.Point(3, 76);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(350, 334);
@@ -88,7 +88,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(342, 308);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Tutor";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // i_CapInt1
@@ -108,7 +108,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(342, 308);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Alumno";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // i_CapAlu1
@@ -124,7 +124,7 @@
             this.i_CapDoc1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.i_CapDoc1.Location = new System.Drawing.Point(365, 3);
             this.i_CapDoc1.Name = "i_CapDoc1";
-            this.i_CapDoc1.Size = new System.Drawing.Size(472, 410);
+            this.i_CapDoc1.Size = new System.Drawing.Size(475, 410);
             this.i_CapDoc1.TabIndex = 92;
             // 
             // E_RevSol

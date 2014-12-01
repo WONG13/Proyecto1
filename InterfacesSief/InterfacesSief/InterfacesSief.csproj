@@ -44,9 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClasesPrimarias\AdminReviciones.cs" />
     <Compile Include="ClasesPrimarias\Alumno.cs" />
     <Compile Include="ClasesPrimarias\Escuela.cs" />
     <Compile Include="ClasesPrimarias\NivelEducativo.cs" />
+    <Compile Include="ClasesPrimarias\Reporte.cs" />
+    <Compile Include="ClasesPrimarias\Revision.cs" />
     <Compile Include="ClasesPrimarias\Solicitud.cs" />
     <Compile Include="ClasesPrimarias\Usuario.cs" />
     <Compile Include="Conexion.cs" />
@@ -66,16 +69,10 @@
       <DependentUpon>InteresadoMainComponent.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\E_ElaRep.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Interfaces\E_ElaRep.Designer.cs">
       <DependentUpon>E_ElaRep.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Interfaces\E_FormRev.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interfaces\E_FormRev.Designer.cs">
-      <DependentUpon>E_FormRev.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\E_MosRep.cs">
       <SubType>UserControl</SubType>
@@ -178,9 +175,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\E_ElaRep.resx">
       <DependentUpon>E_ElaRep.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interfaces\E_FormRev.resx">
-      <DependentUpon>E_FormRev.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\E_MosRep.resx">
       <DependentUpon>E_MosRep.cs</DependentUpon>

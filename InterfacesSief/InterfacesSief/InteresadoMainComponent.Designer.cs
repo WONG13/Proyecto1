@@ -41,7 +41,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.Desktop;
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agergarDatosToolStripMenuItem,
@@ -95,7 +95,7 @@
             // verFichasToolStripMenuItem
             // 
             this.verFichasToolStripMenuItem.Name = "verFichasToolStripMenuItem";
-            this.verFichasToolStripMenuItem.Size = new System.Drawing.Size(94, 25);
+            this.verFichasToolStripMenuItem.Size = new System.Drawing.Size(95, 25);
             this.verFichasToolStripMenuItem.Text = "Ver Fichas";
             // 
             // notificacionesToolStripMenuItem

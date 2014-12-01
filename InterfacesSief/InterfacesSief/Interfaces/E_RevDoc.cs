@@ -15,19 +15,24 @@ namespace InterfacesSief
         private SqlCommand comando = null;
         private DataTable dTable = null;
         public DataTable DatosSolicitudes;
+        Empleado user;
         int Index=-1;
         public int ID, IDint ;
         public E_RevDoc()
         {
             InitializeComponent();
-            Inicio();
+            
         }
 
-        private void Inicio()
+        public void setEmpleado(Empleado emp)
+        {
+            user = emp;
+        }
+
+        public void Inicio()
         {
             DatosSolicitudes = new DataTable();
-            DatosSolicitudes = ConsultaSolicitud();
-
+            DatosSolicitudes = Solicitud.getSolicitudTableFromDB(-1, -1, -1, "Pendiente", user.getCodigo()); //ConsultaSolicitud();
             //dataGridView1.Columns[0].ReadOnly = true;
             dataGridView1.DataSource = DatosSolicitudes;
             dataGridView1.Columns[0].HeaderText = "ID";

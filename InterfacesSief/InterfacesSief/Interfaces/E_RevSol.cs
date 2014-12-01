@@ -24,11 +24,13 @@ namespace InterfacesSief
         {
             i_CapAlu1.setInteresado(Interesado.getInteresadoFromUsuario(x,"",""));
             i_CapAlu1.CargarDatosIniciales();
+            i_CapAlu1.OcultarBotones();
             i_CapInt1.OcultarBotones();
             i_CapInt1.cargarDatos(x);//Este es el numero del Interesado
             Interesado inte = Interesado.getInteresadoFromUsuario(x, "", "");
             i_CapDoc1.setUser(inte);
             i_CapDoc1.Inicializar();
+            i_CapDoc1.OcultarBotones();
 
         }
 
@@ -39,7 +41,8 @@ namespace InterfacesSief
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
-
+            E_ElaRep ERS = new E_ElaRep();
+            ERS.ShowDialog();
         }
     }
 }

@@ -13,31 +13,39 @@ namespace InterfacesSief
     public delegate void LlamarRevision1(E_RevSol u);
     public partial class EmpleadoMainComponent : UserControl
     {
+        
         string ApuntadorControl = null;
         private iModulo ModuloActual { get; set; }
 
 
-         public Usuario Empleado;
+        public Empleado user;
         public EmpleadoMainComponent()
         {
             InitializeComponent();
-            Inicio();
+            
         }
-        public void setUsuario(Usuario user)
+        public void setUsuario(Empleado emp)
         {
-            Empleado = user;
+            user=emp;
         }
        
-        private void Inicio()
+        public void Inicio()
         {
-            E_RevDoc ER = new E_RevDoc();          
-            ER.LR = new LlamarRevision(MostrarModulo);
-            MostrarModulo(ER);
+            E_RevDoc ERD = new E_RevDoc();
+            ERD.setEmpleado(user);
+            ERD.Inicio();
+            ERD.LR = new LlamarRevision(MostrarModulo);
+            MostrarModulo(ERD);
         }
 
         private void verSolicitudesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MostrarModulo(new E_RevDoc());
+            E_RevDoc ERD = new E_RevDoc();
+            ERD.setEmpleado(user);
+            ERD.Inicio();
+            ERD.LR = new LlamarRevision(MostrarModulo);
+            MostrarModulo(ERD);
+            
         }
 
         private void reporteDeSolicitudesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -73,6 +81,12 @@ namespace InterfacesSief
             //NuevoModulo.Parent = this
         }
 
+
+        public void EliminarAnterior()
+        {
+            int n = this.Controls.IndexOf(menuStrip1);
+            this.Controls[n + 1].Dispose();
+        }
     
 
       

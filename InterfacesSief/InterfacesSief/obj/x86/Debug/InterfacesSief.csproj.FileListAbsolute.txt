@@ -23,7 +23,6 @@ C:\Users\lanix\Documents\GitHub\Proyecto1\InterfacesSief\InterfacesSief\bin\Debu
 C:\Users\lanix\Documents\GitHub\Proyecto1\InterfacesSief\InterfacesSief\bin\Debug\InterfacesSief.pdb
 C:\Users\lanix\Documents\GitHub\Proyecto1\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.csprojResolveAssemblyReference.cache
 C:\Users\lanix\Documents\GitHub\Proyecto1\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.E_ElaRep.resources
-C:\Users\lanix\Documents\GitHub\Proyecto1\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.E_Form_Rev.resources
 C:\Users\lanix\Documents\GitHub\Proyecto1\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.E_MosRep.resources
 C:\Users\lanix\Documents\GitHub\Proyecto1\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.E_RevSol.resources
 C:\Users\lanix\Documents\GitHub\Proyecto1\InterfacesSief\InterfacesSief\obj\x86\Debug\InterfacesSief.I_CapInt.resources
