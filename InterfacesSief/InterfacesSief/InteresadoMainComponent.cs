@@ -65,5 +65,16 @@ namespace InterfacesSief
             Controls.Add(ICD);
             ICD.Show();
         }
+
+        private void notificacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            
+            Interfaces.I_Notificaciones IN = new Interfaces.I_Notificaciones();
+            IN.setInteresado((Interesado)interesado);
+            IN.Inicializar();
+            eliminarAnterior();
+            this.Controls.Add(IN);
+        }
     }
 }
