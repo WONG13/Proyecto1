@@ -56,7 +56,6 @@
             this.reporteDeSolicitudesToolStripMenuItem,
             this.bucarSolicitudToolStripMenuItem,
             this.registroDeRevisionesToolStripMenuItem});
-            this.inicioToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
             this.inicioToolStripMenuItem.Size = new System.Drawing.Size(62, 25);
             this.inicioToolStripMenuItem.Text = "Inicio";
