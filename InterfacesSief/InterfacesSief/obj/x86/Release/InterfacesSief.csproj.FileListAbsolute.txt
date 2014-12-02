@@ -59,3 +59,6 @@ C:\Users\WONG\Desktop\Proyecto1\InterfacesSief\InterfacesSief\obj\x86\Release\In
 C:\Users\WONG\Desktop\Proyecto1\InterfacesSief\InterfacesSief\obj\x86\Release\InterfacesSief.csproj.GenerateResource.Cache
 C:\Users\WONG\Desktop\Proyecto1\InterfacesSief\InterfacesSief\obj\x86\Release\InterfacesSief.exe
 C:\Users\WONG\Desktop\Proyecto1\InterfacesSief\InterfacesSief\obj\x86\Release\InterfacesSief.pdb
+C:\Users\WONG\Desktop\Proyecto1\InterfacesSief\InterfacesSief\obj\x86\Release\InterfacesSief.Interfaces.I_Notificaciones.resources
+C:\Users\WONG\Desktop\Proyecto1\InterfacesSief\InterfacesSief\obj\x86\Release\InterfacesSief.Interfaces.I_RegistrodeRev.resources
+C:\Users\WONG\Desktop\Proyecto1\InterfacesSief\InterfacesSief\obj\x86\Release\InterfacesSief.Interfaces.I_VerFicha.resources
