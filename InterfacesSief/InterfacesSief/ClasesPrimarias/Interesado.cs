@@ -135,5 +135,28 @@ namespace InterfacesSief
             }
             return true;
         }
+
+        public static DataTable getTablaNotificacionesFromDB(int idSol)
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = Conexion.ObtenerConexion();
+            comando.CommandText = @"SELECT * FROM Reportes WHERE CodSol=@CodSol";
+            comando.Parameters.AddWithValue("@CodSol", idSol);
+            SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            try
+            {
+                comando.Connection.Open();
+                comando.ExecuteNonQuery();
+                comando.Connection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error al cargar los tipos de Reporte>> " + e.Message);
+                return null;
+            }
+            return tabla;
+        }
     }
 }

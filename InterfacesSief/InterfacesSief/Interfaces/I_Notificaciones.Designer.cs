@@ -1,4 +1,4 @@
-﻿namespace InterfacesSief.Interfaces
+﻿namespace InterfacesSief
 {
     partial class I_Notificaciones
     {

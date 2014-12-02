@@ -86,6 +86,7 @@
             this.registroDeRevisionesToolStripMenuItem.Name = "registroDeRevisionesToolStripMenuItem";
             this.registroDeRevisionesToolStripMenuItem.Size = new System.Drawing.Size(247, 26);
             this.registroDeRevisionesToolStripMenuItem.Text = "Registro de Revisiones";
+            this.registroDeRevisionesToolStripMenuItem.Click += new System.EventHandler(this.registroDeRevisionesToolStripMenuItem_Click);
             // 
             // EmpleadoMainComponent
             // 

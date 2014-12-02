@@ -119,7 +119,7 @@ namespace InterfacesSief
             }
             else
             {
-                comando.CommandText = comando.CommandText.Replace("CodRev=@CodRev", "");
+                comando.CommandText = comando.CommandText.Replace("AND CodRev=@CodRev", "");
             }
             SqlDataAdapter adaptador = new SqlDataAdapter(comando);
             DataTable tabla = new DataTable();

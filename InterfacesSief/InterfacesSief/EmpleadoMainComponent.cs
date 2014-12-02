@@ -90,6 +90,15 @@ namespace InterfacesSief
             int n = this.Controls.IndexOf(menuStrip1);
             this.Controls[n + 1].Dispose();
         }
+
+        private void registroDeRevisionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EliminarAnterior();
+            I_RegistrodeRev IRR = new I_RegistrodeRev();
+            Controls.Add(IRR);
+            IRR.Show();
+
+        }
     
 
       

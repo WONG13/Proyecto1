@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace InterfacesSief.Interfaces
+namespace InterfacesSief
 {
     public partial class I_RegistrodeRev : UserControl
     {

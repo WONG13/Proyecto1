@@ -141,6 +141,24 @@
     <Compile Include="Interfaces\E_RevDoc.Designer.cs">
       <DependentUpon>E_RevDoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\I_Notificaciones.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\I_Notificaciones.Designer.cs">
+      <DependentUpon>I_Notificaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\I_RegistrodeRev.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\I_RegistrodeRev.Designer.cs">
+      <DependentUpon>I_RegistrodeRev.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\I_VerFicha.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\I_VerFicha.Designer.cs">
+      <DependentUpon>I_VerFicha.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\SecuenciaCaptura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +226,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\E_RevDoc.resx">
       <DependentUpon>E_RevDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\I_Notificaciones.resx">
+      <DependentUpon>I_Notificaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\I_RegistrodeRev.resx">
+      <DependentUpon>I_RegistrodeRev.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\I_VerFicha.resx">
+      <DependentUpon>I_VerFicha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\SecuenciaCaptura.resx">
       <DependentUpon>SecuenciaCaptura.cs</DependentUpon>
