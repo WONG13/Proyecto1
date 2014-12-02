@@ -100,12 +100,27 @@ namespace InterfacesSief
             return tipos;
         }
 
-        public static DataTable getTablaReportesFromDB(int CodUsuEmp)
+        public static DataTable getTablaReportesFromDB(int CodUsuEmp, int CodRev)
         {
             SqlCommand comando = new SqlCommand();
             comando.Connection = Conexion.ObtenerConexion();
-            comando.CommandText = @"SELECT * FROM Reportes WHERE CodUsuEmp=@CodUsuEmp";
-            comando.Parameters.AddWithValue("@CodUsuEmp", CodUsuEmp);
+            comando.CommandText = @"SELECT * FROM Reportes WHERE CodUsuEmp=@CodUsuEmp AND CodRev=@CodRev";
+            if (CodUsuEmp > 0)
+            {
+                comando.Parameters.AddWithValue("@CodUsuEmp", CodUsuEmp);
+            }
+            else
+            {
+                comando.CommandText = comando.CommandText.Replace("CodUsuEmp=@CodUsuEmp AND", "");
+            }
+            if (CodRev > 0)
+            {
+                comando.Parameters.AddWithValue("@CodRev", CodRev);
+            }
+            else
+            {
+                comando.CommandText = comando.CommandText.Replace("CodRev=@CodRev", "");
+            }
             SqlDataAdapter adaptador = new SqlDataAdapter(comando);
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);

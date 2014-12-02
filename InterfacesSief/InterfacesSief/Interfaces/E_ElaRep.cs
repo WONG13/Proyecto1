@@ -28,25 +28,23 @@ namespace InterfacesSief
             //cmbboxTipoReporte.Items.Add
         }
 
-        public void setSolicitud(Solicitud s,Empleado emp)
+        public void setSolicitud(Solicitud s,Empleado emp,Revision r)
         {
             sol = s;
-            user = emp;  
+            user = emp;
+            rev = r;
         }
        
         private void btnEnviar_Click(object sender, EventArgs e)
         {
             if (Validar())
-            {
-                rev = new Revision(-1, sol.codSol, "Denegada", -1, user.getCodigo(), DateTime.Now, -1);
-                rev.saveRevisionToDB();
-                rev = Revision.getRevisionFromDB(-1, sol.codSol, "Denegada", user.getCodigo());
-                //tipo=Reporte.getTipoReporte();
+            {                
                 Reporte repo = new Reporte(-1, sol.codSol, rev.codRev, 
                     tipo[cmbboxTipoReporte.Text], InfoReporte.Text, user.getCodigo());
                 if (repo.saveReporteToDB())
                 {
                     MessageBox.Show("Reporte guardado correctamente");
+                    this.Close();
                 }                                    
             }
 
@@ -59,6 +57,14 @@ namespace InterfacesSief
                 {
                     return true;
                 }
+                else
+                {
+                    errproValidar.SetError(InfoReporte, "Debe de llenar este campo con las especificaciones del reporte");
+                }
+            }
+            else
+            {
+                errproValidar.SetError(cmbboxTipoReporte, "No se permite un tipo de reporte vacio");
             }
             return false;
         }

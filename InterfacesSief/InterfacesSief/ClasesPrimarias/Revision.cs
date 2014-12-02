@@ -129,11 +129,20 @@ namespace InterfacesSief
                 comando.CommandText=comando.CommandText.Replace(", CodMon", "");
                 comando.CommandText=comando.CommandText.Replace(", @CodMon", "");
             }
+            if (codFic > 0)
+            {
+                comando.Parameters.AddWithValue("@CodFic ", codFic);
+            }
+            else
+            {
+                comando.CommandText = comando.CommandText.Replace(", CodFic", "");
+                comando.CommandText = comando.CommandText.Replace(", @CodFic", "");
+            }
             comando.Parameters.AddWithValue("@CodSol ", codSol);
             comando.Parameters.AddWithValue("@EstRev ", estRev);
             comando.Parameters.AddWithValue("@CodUsuEmp ", codUsuEmp);
             comando.Parameters.AddWithValue("@FecRev ", fecRev);
-            comando.Parameters.AddWithValue("@CodFic ", codFic);
+            
             try
             {
                 comando.Connection.Open();
@@ -146,6 +155,48 @@ namespace InterfacesSief
                 return false;
             }
             return true;
+        }
+
+        public bool actualizarRevisionToDB()
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = Conexion.ObtenerConexion();
+            comando.CommandText = @"UPDATE Revisiones SET EstRev=@EstRev, CodMon=@CodMon,  FecRev=@FecRev, CodFic= @CodFic
+                                    WHERE CodRev=@CodRev";
+
+            if (codMon > 0)
+            {
+                comando.Parameters.AddWithValue("@CodMon ", codMon);
+            }
+            else
+            {
+                comando.CommandText = comando.CommandText.Replace(", CodMon=@CodMon,", ",");
+            }
+            if (codFic > 0)
+            {
+                comando.Parameters.AddWithValue("@CodFic ", codFic);
+            }
+            else
+            {
+                comando.CommandText = comando.CommandText.Replace(", CodFic= @CodFic", "");             
+            }
+            comando.Parameters.AddWithValue("@CodRev ", codRev);
+            comando.Parameters.AddWithValue("@EstRev ", estRev);           
+            comando.Parameters.AddWithValue("@FecRev ", fecRev);
+
+            try
+            {
+                comando.Connection.Open();
+                comando.ExecuteNonQuery();
+                comando.Connection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error al cargar las Revisiones>> " + e.Message);
+                return false;
+            }
+            return true;
+ 
         }
     }
 }

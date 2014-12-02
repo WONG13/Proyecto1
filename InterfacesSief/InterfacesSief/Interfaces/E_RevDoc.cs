@@ -58,7 +58,7 @@ namespace InterfacesSief
 
                 Solicitud sol = Solicitud.getUnaSolicitudFromDB(ID, IDint, -1, "Pendiente", -1);
                 E_RevSol ERS = new E_RevSol();
-                ERS.setSolicitud(sol, Interesado.getInteresadoFromDB(IDint),user);
+                ERS.inicializar(sol, Interesado.getInteresadoFromDB(IDint),user);
                 LR(ERS);
             }
         }

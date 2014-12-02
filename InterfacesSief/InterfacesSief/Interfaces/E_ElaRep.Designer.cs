@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.InfoReporte = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.cmbboxTipoReporte = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.errproValidar = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errproValidar)).BeginInit();
             this.SuspendLayout();
             // 
             // InfoReporte
@@ -91,6 +94,10 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Informacion especifica del reporte";
             // 
+            // errproValidar
+            // 
+            this.errproValidar.ContainerControl = this;
+            // 
             // E_ElaRep
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -105,6 +112,7 @@
             this.Controls.Add(this.InfoReporte);
             this.Name = "E_ElaRep";
             this.Load += new System.EventHandler(this.E_ElaRep_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errproValidar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,5 +126,6 @@
         private System.Windows.Forms.ComboBox cmbboxTipoReporte;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ErrorProvider errproValidar;
     }
 }

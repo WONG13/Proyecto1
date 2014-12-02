@@ -28,32 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAceptar = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
             this.btnReporte = new System.Windows.Forms.Button();
             this.btnTerminar = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabTutor = new System.Windows.Forms.TabPage();
             this.i_CapInt1 = new InterfacesSief.I_CapInt();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabAlumnos = new System.Windows.Forms.TabPage();
             this.i_CapAlu1 = new InterfacesSief.I_CapAlu();
             this.i_CapDoc1 = new InterfacesSief.I_CapDoc();
+            this.tabReportes = new System.Windows.Forms.TabPage();
+            this.radbAprobar = new System.Windows.Forms.RadioButton();
+            this.radbDenegar = new System.Windows.Forms.RadioButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.errproValidar = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tabTutor.SuspendLayout();
+            this.tabAlumnos.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errproValidar)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Location = new System.Drawing.Point(217, 35);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(84, 35);
-            this.btnAceptar.TabIndex = 86;
-            this.btnAceptar.Text = "Aprobar\r\nSolicitud";
-            this.btnAceptar.UseVisualStyleBackColor = true;
             // 
             // btnReporte
             // 
-            this.btnReporte.Location = new System.Drawing.Point(119, 35);
+            this.btnReporte.Location = new System.Drawing.Point(136, 35);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(82, 35);
             this.btnReporte.TabIndex = 87;
@@ -63,33 +61,35 @@
             // 
             // btnTerminar
             // 
-            this.btnTerminar.Location = new System.Drawing.Point(13, 35);
+            this.btnTerminar.Location = new System.Drawing.Point(26, 35);
             this.btnTerminar.Name = "btnTerminar";
             this.btnTerminar.Size = new System.Drawing.Size(82, 35);
             this.btnTerminar.TabIndex = 88;
             this.btnTerminar.Text = "Terminar";
             this.btnTerminar.UseVisualStyleBackColor = true;
+            this.btnTerminar.Click += new System.EventHandler(this.btnTerminar_Click);
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabTutor);
+            this.tabControl1.Controls.Add(this.tabAlumnos);
+            this.tabControl1.Controls.Add(this.tabReportes);
             this.tabControl1.Location = new System.Drawing.Point(3, 76);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(350, 334);
+            this.tabControl1.Size = new System.Drawing.Size(356, 334);
             this.tabControl1.TabIndex = 91;
             // 
-            // tabPage1
+            // tabTutor
             // 
-            this.tabPage1.Controls.Add(this.i_CapInt1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(342, 308);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Tutor";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabTutor.Controls.Add(this.i_CapInt1);
+            this.tabTutor.Location = new System.Drawing.Point(4, 22);
+            this.tabTutor.Name = "tabTutor";
+            this.tabTutor.Padding = new System.Windows.Forms.Padding(3);
+            this.tabTutor.Size = new System.Drawing.Size(342, 308);
+            this.tabTutor.TabIndex = 0;
+            this.tabTutor.Text = "Tutor";
+            this.tabTutor.UseVisualStyleBackColor = true;
             // 
             // i_CapInt1
             // 
@@ -100,16 +100,16 @@
             this.i_CapInt1.TabIndex = 89;
             this.i_CapInt1.Load += new System.EventHandler(this.i_CapInt1_Load);
             // 
-            // tabPage2
+            // tabAlumnos
             // 
-            this.tabPage2.Controls.Add(this.i_CapAlu1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(342, 308);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Alumno";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabAlumnos.Controls.Add(this.i_CapAlu1);
+            this.tabAlumnos.Location = new System.Drawing.Point(4, 22);
+            this.tabAlumnos.Name = "tabAlumnos";
+            this.tabAlumnos.Padding = new System.Windows.Forms.Padding(3);
+            this.tabAlumnos.Size = new System.Drawing.Size(342, 308);
+            this.tabAlumnos.TabIndex = 1;
+            this.tabAlumnos.Text = "Alumno";
+            this.tabAlumnos.UseVisualStyleBackColor = true;
             // 
             // i_CapAlu1
             // 
@@ -127,36 +127,88 @@
             this.i_CapDoc1.Size = new System.Drawing.Size(475, 410);
             this.i_CapDoc1.TabIndex = 92;
             // 
+            // tabReportes
+            // 
+            this.tabReportes.Location = new System.Drawing.Point(4, 22);
+            this.tabReportes.Name = "tabReportes";
+            this.tabReportes.Size = new System.Drawing.Size(348, 308);
+            this.tabReportes.TabIndex = 2;
+            this.tabReportes.Text = "Reportes";
+            this.tabReportes.UseVisualStyleBackColor = true;
+            // 
+            // radbAprobar
+            // 
+            this.radbAprobar.AutoSize = true;
+            this.radbAprobar.Checked = true;
+            this.radbAprobar.Location = new System.Drawing.Point(12, 7);
+            this.radbAprobar.Name = "radbAprobar";
+            this.radbAprobar.Size = new System.Drawing.Size(105, 17);
+            this.radbAprobar.TabIndex = 93;
+            this.radbAprobar.TabStop = true;
+            this.radbAprobar.Text = "Aprobar Solicitud";
+            this.radbAprobar.UseVisualStyleBackColor = true;
+            // 
+            // radbDenegar
+            // 
+            this.radbDenegar.AutoSize = true;
+            this.radbDenegar.Location = new System.Drawing.Point(12, 23);
+            this.radbDenegar.Name = "radbDenegar";
+            this.radbDenegar.Size = new System.Drawing.Size(109, 17);
+            this.radbDenegar.TabIndex = 93;
+            this.radbDenegar.Text = "Denegar Solicitud";
+            this.radbDenegar.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.panel1.Controls.Add(this.radbDenegar);
+            this.panel1.Controls.Add(this.radbAprobar);
+            this.panel1.Location = new System.Drawing.Point(224, 26);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(129, 44);
+            this.panel1.TabIndex = 94;
+            // 
+            // errproValidar
+            // 
+            this.errproValidar.ContainerControl = this;
+            // 
             // E_RevSol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.i_CapDoc1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnTerminar);
             this.Controls.Add(this.btnReporte);
-            this.Controls.Add(this.btnAceptar);
             this.Name = "E_RevSol";
             this.Size = new System.Drawing.Size(840, 410);
             this.Load += new System.EventHandler(this.E_RevSol_Load);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
+            this.tabTutor.ResumeLayout(false);
+            this.tabAlumnos.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errproValidar)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnReporte;
         private System.Windows.Forms.Button btnTerminar;
         private I_CapInt i_CapInt1;
         private I_CapAlu i_CapAlu1;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabTutor;
+        private System.Windows.Forms.TabPage tabAlumnos;
         private I_CapDoc i_CapDoc1;
+        private System.Windows.Forms.TabPage tabReportes;
+        private System.Windows.Forms.RadioButton radbAprobar;
+        private System.Windows.Forms.RadioButton radbDenegar;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ErrorProvider errproValidar;
     }
 }
