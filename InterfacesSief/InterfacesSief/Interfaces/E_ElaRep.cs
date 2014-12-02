@@ -39,7 +39,7 @@ namespace InterfacesSief
             if (Validar())
             {
                 rev = new Revision(-1, sol.codSol, "Denegada", -1, user.getCodigo(), DateTime.Now, -1);
-                //rev.saveRevisionToDB();
+                rev.saveRevisionToDB();
                 rev = Revision.getRevisionFromDB(-1, sol.codSol, "Denegada", user.getCodigo());
                 //tipo=Reporte.getTipoReporte();
                 Reporte repo = new Reporte(-1, sol.codSol, rev.codRev, 
