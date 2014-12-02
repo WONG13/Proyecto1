@@ -60,7 +60,6 @@
             this.interesadoToolStripMenuItem,
             this.alumnoToolStripMenuItem,
             this.subirDocumentosToolStripMenuItem});
-            this.agergarDatosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.agergarDatosToolStripMenuItem.Name = "agergarDatosToolStripMenuItem";
             this.agergarDatosToolStripMenuItem.Size = new System.Drawing.Size(128, 25);
             this.agergarDatosToolStripMenuItem.Text = "Agregar Datos";
@@ -88,7 +87,6 @@
             // 
             // hacerSolicitudToolStripMenuItem
             // 
-            this.hacerSolicitudToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.hacerSolicitudToolStripMenuItem.Name = "hacerSolicitudToolStripMenuItem";
             this.hacerSolicitudToolStripMenuItem.Size = new System.Drawing.Size(133, 25);
             this.hacerSolicitudToolStripMenuItem.Text = "Hacer Solicitud";
@@ -96,18 +94,15 @@
             // 
             // verFichasToolStripMenuItem
             // 
-            this.verFichasToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.verFichasToolStripMenuItem.Name = "verFichasToolStripMenuItem";
-            this.verFichasToolStripMenuItem.Size = new System.Drawing.Size(94, 25);
+            this.verFichasToolStripMenuItem.Size = new System.Drawing.Size(95, 25);
             this.verFichasToolStripMenuItem.Text = "Ver Fichas";
             // 
             // notificacionesToolStripMenuItem
             // 
-            this.notificacionesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.notificacionesToolStripMenuItem.Name = "notificacionesToolStripMenuItem";
             this.notificacionesToolStripMenuItem.Size = new System.Drawing.Size(127, 25);
             this.notificacionesToolStripMenuItem.Text = "Notificaciones";
-            this.notificacionesToolStripMenuItem.Click += new System.EventHandler(this.notificacionesToolStripMenuItem_Click);
             // 
             // InteresadoMainComponent
             // 
