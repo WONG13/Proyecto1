@@ -5,6 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace InterfacesSief
 {
@@ -25,6 +27,35 @@ namespace InterfacesSief
         { 
             DataTable repos=Reporte.getTablaReportesFromDB(user.getCodigo());
             dgvReportes.DataSource=repos;
+        }
+        int Index;
+        private void dgvReportes_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            Index = dgvReportes.CurrentRow.Index;
+            txtInfoReporte.Text = dgvReportes[4, Index].Value.ToString();
+
+            Consulta();
+            string Asunto = tabla.Rows[0][0].ToString();
+            txtTipoRep.Text = Asunto;
+
+
+        }
+        DataTable tabla;
+        private void Consulta()
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = Conexion.ObtenerConexion();
+            comando.CommandText = "SELECT TipRep FROM TipoReporte where CodTipRep=@CodTipRep";
+            comando.Parameters.AddWithValue("@CodTipRep", Int16.Parse(dgvReportes[3, Index].Value.ToString()));
+            SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+            tabla = new DataTable();
+            adaptador.Fill(tabla);
+
+            comando.Connection.Open();
+            comando.ExecuteNonQuery();
+            comando.Connection.Close();
+
+            
         }
     }
 }
