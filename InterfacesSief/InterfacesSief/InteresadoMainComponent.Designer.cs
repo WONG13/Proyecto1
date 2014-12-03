@@ -95,8 +95,9 @@
             // verFichasToolStripMenuItem
             // 
             this.verFichasToolStripMenuItem.Name = "verFichasToolStripMenuItem";
-            this.verFichasToolStripMenuItem.Size = new System.Drawing.Size(95, 25);
+            this.verFichasToolStripMenuItem.Size = new System.Drawing.Size(94, 25);
             this.verFichasToolStripMenuItem.Text = "Ver Fichas";
+            this.verFichasToolStripMenuItem.Click += new System.EventHandler(this.verFichasToolStripMenuItem_Click);
             // 
             // notificacionesToolStripMenuItem
             // 

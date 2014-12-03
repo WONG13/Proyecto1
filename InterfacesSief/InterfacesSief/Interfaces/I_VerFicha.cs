@@ -11,9 +11,21 @@ namespace InterfacesSief.Interfaces
 {
     public partial class I_VerFicha : UserControl
     {
+        Interesado inter;
         public I_VerFicha()
         {
             InitializeComponent();
         }
+
+        public void setInteresado(Interesado i)
+        {
+            inter = i;
+        }
+
+        public void inicialiszar()
+        { 
+            dataGridView1.DataSource=Ficha.getFichaFromDB(-1,inter.getCodigo());
+        }
+        
     }
 }

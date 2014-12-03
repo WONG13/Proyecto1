@@ -76,5 +76,15 @@ namespace InterfacesSief
             IN.Show();
 
         }
+
+        private void verFichasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            eliminarAnterior();
+            Interfaces.I_VerFicha IVF = new Interfaces.I_VerFicha();
+            IVF.setInteresado(interesado);
+            IVF.inicialiszar();
+            Controls.Add(IVF);
+            IVF.Show();
+        }
     }
 }

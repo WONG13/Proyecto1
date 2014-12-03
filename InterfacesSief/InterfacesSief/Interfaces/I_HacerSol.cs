@@ -27,22 +27,30 @@ namespace InterfacesSief.Interfaces
         {
             if (Solicitud.getSolicitudFromDB(-1, user.getCodigo(), -1, "Pendiente",-1).Count == 0)
             {
-                if (_Alumno && _Documento && _Tutor)
+                if (Solicitud.getSolicitudFromDB(-1, user.getCodigo(), -1, "Aprobada", -1).Count == 0)
                 {
-                    Solicitud sol = new Solicitud(-1,
-                                                  Alumno.getAlumnosFromDB(-1, "", user.getCodigo()).codAlu,
-                                                  user.getCodigo(),
-                                                  -1,
-                                                  DateTime.Now, "Pendiente");
-                    if (sol.saveSolicitudToDB())
+                    if (_Alumno && _Documento && _Tutor)
                     {
-                        AdminReviciones.AsignarEmpleado(sol);
-                        MessageBox.Show("Solicitud enviada correctamente");
-                    }
+                        Solicitud sol = new Solicitud(-1,
+                                                      Alumno.getAlumnosFromDB(-1, "", user.getCodigo()).codAlu,
+                                                      user.getCodigo(),
+                                                      -1,
+                                                      DateTime.Now, "Pendiente");
+                        if (sol.saveSolicitudToDB())
+                        {
+                            AdminReviciones.AsignarEmpleado(sol);
+                            MessageBox.Show("Solicitud enviada correctamente");
+                        }
 
+                    }
+                    else
+                        MessageBox.Show("Aun no puede hacer una solicitud hasta que llenar todos los campos");
                 }
                 else
-                    MessageBox.Show("Aun no puede hacer una solicitud hasta que llenar todos los campos");
+                {
+                    MessageBox.Show("Ya hay una solicitud anterior aprobada");
+                    return;
+                }
             }
             else
                 MessageBox.Show("Ya hay una Solicitud anterior pendiente de Revision");

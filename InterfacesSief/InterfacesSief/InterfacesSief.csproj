@@ -47,6 +47,7 @@
     <Compile Include="ClasesPrimarias\AdminReviciones.cs" />
     <Compile Include="ClasesPrimarias\Alumno.cs" />
     <Compile Include="ClasesPrimarias\Escuela.cs" />
+    <Compile Include="ClasesPrimarias\Ficha.cs" />
     <Compile Include="ClasesPrimarias\NivelEducativo.cs" />
     <Compile Include="ClasesPrimarias\Reporte.cs" />
     <Compile Include="ClasesPrimarias\Revision.cs" />

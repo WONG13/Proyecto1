@@ -114,6 +114,11 @@ namespace InterfacesSief
             //Index = dataGridView1.CurrentRow.Index;
         }
 
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            Index = dataGridView1.CurrentRow.Index;
+        }
+
 
 
 
