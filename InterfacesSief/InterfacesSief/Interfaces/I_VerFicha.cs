@@ -23,8 +23,8 @@ namespace InterfacesSief.Interfaces
         }
 
         public void inicialiszar()
-        { 
-            dataGridView1.DataSource=Ficha.getFichaFromDB(-1,inter.getCodigo());
+        {
+            dataGridView1.DataSource = Ficha.getTablaFichaFromDB(-1, inter.getCodigo(), "");
         }
         
     }

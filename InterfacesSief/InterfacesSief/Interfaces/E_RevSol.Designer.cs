@@ -36,8 +36,8 @@
             this.i_CapInt1 = new InterfacesSief.I_CapInt();
             this.tabAlumnos = new System.Windows.Forms.TabPage();
             this.i_CapAlu1 = new InterfacesSief.I_CapAlu();
-            this.i_CapDoc1 = new InterfacesSief.I_CapDoc();
             this.tabReportes = new System.Windows.Forms.TabPage();
+            this.i_CapDoc1 = new InterfacesSief.I_CapDoc();
             this.radbAprobar = new System.Windows.Forms.RadioButton();
             this.radbDenegar = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -86,7 +86,7 @@
             this.tabTutor.Location = new System.Drawing.Point(4, 22);
             this.tabTutor.Name = "tabTutor";
             this.tabTutor.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTutor.Size = new System.Drawing.Size(342, 308);
+            this.tabTutor.Size = new System.Drawing.Size(348, 308);
             this.tabTutor.TabIndex = 0;
             this.tabTutor.Text = "Tutor";
             this.tabTutor.UseVisualStyleBackColor = true;
@@ -106,7 +106,7 @@
             this.tabAlumnos.Location = new System.Drawing.Point(4, 22);
             this.tabAlumnos.Name = "tabAlumnos";
             this.tabAlumnos.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAlumnos.Size = new System.Drawing.Size(342, 308);
+            this.tabAlumnos.Size = new System.Drawing.Size(348, 308);
             this.tabAlumnos.TabIndex = 1;
             this.tabAlumnos.Text = "Alumno";
             this.tabAlumnos.UseVisualStyleBackColor = true;
@@ -119,14 +119,6 @@
             this.i_CapAlu1.Size = new System.Drawing.Size(336, 245);
             this.i_CapAlu1.TabIndex = 90;
             // 
-            // i_CapDoc1
-            // 
-            this.i_CapDoc1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.i_CapDoc1.Location = new System.Drawing.Point(365, 3);
-            this.i_CapDoc1.Name = "i_CapDoc1";
-            this.i_CapDoc1.Size = new System.Drawing.Size(475, 410);
-            this.i_CapDoc1.TabIndex = 92;
-            // 
             // tabReportes
             // 
             this.tabReportes.Location = new System.Drawing.Point(4, 22);
@@ -135,6 +127,14 @@
             this.tabReportes.TabIndex = 2;
             this.tabReportes.Text = "Reportes";
             this.tabReportes.UseVisualStyleBackColor = true;
+            // 
+            // i_CapDoc1
+            // 
+            this.i_CapDoc1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.i_CapDoc1.Location = new System.Drawing.Point(365, 0);
+            this.i_CapDoc1.Name = "i_CapDoc1";
+            this.i_CapDoc1.Size = new System.Drawing.Size(475, 413);
+            this.i_CapDoc1.TabIndex = 92;
             // 
             // radbAprobar
             // 

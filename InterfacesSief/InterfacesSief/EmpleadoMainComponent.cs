@@ -40,6 +40,7 @@ namespace InterfacesSief
 
         private void verSolicitudesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            EliminarAnterior();
             E_RevDoc ERD = new E_RevDoc();
             ERD.setEmpleado(user);
             ERD.Inicio();
@@ -50,6 +51,7 @@ namespace InterfacesSief
 
         private void reporteDeSolicitudesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            EliminarAnterior();
             E_MosRep ER = new E_MosRep();
             ER.setEmpleado(user);
             ER.Inicializar();
@@ -88,13 +90,15 @@ namespace InterfacesSief
         public void EliminarAnterior()
         {
             int n = this.Controls.IndexOf(menuStrip1);
-            this.Controls[n + 1].Dispose();
+            if(Controls.Count>1)
+                this.Controls[n + 1].Dispose();
         }
 
         private void registroDeRevisionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             EliminarAnterior();
             I_RegistrodeRev IRR = new I_RegistrodeRev();
+            IRR.inicializar(null, user);
             Controls.Add(IRR);
             IRR.Show();
 

@@ -32,11 +32,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvSolDenegadas = new System.Windows.Forms.DataGridView();
+            this.dgvSolAprovadas = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSolDenegadas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSolAprovadas)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -58,8 +58,8 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.dataGridView2);
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dgvSolDenegadas);
+            this.groupBox1.Controls.Add(this.dgvSolAprovadas);
             this.groupBox1.Location = new System.Drawing.Point(8, 61);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(594, 327);
@@ -86,27 +86,27 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Solicitudes Aprobadas";
             // 
-            // dataGridView2
+            // dgvSolDenegadas
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(25, 181);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(542, 127);
-            this.dataGridView2.TabIndex = 1;
+            this.dgvSolDenegadas.AllowUserToAddRows = false;
+            this.dgvSolDenegadas.AllowUserToDeleteRows = false;
+            this.dgvSolDenegadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSolDenegadas.Location = new System.Drawing.Point(25, 181);
+            this.dgvSolDenegadas.Name = "dgvSolDenegadas";
+            this.dgvSolDenegadas.ReadOnly = true;
+            this.dgvSolDenegadas.Size = new System.Drawing.Size(542, 127);
+            this.dgvSolDenegadas.TabIndex = 1;
             // 
-            // dataGridView1
+            // dgvSolAprovadas
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 37);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(542, 111);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvSolAprovadas.AllowUserToAddRows = false;
+            this.dgvSolAprovadas.AllowUserToDeleteRows = false;
+            this.dgvSolAprovadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSolAprovadas.Location = new System.Drawing.Point(25, 37);
+            this.dgvSolAprovadas.Name = "dgvSolAprovadas";
+            this.dgvSolAprovadas.ReadOnly = true;
+            this.dgvSolAprovadas.Size = new System.Drawing.Size(542, 111);
+            this.dgvSolAprovadas.TabIndex = 0;
             // 
             // I_RegistrodeRev
             // 
@@ -119,8 +119,8 @@
             this.Size = new System.Drawing.Size(614, 409);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSolDenegadas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSolAprovadas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -131,7 +131,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvSolDenegadas;
+        private System.Windows.Forms.DataGridView dgvSolAprovadas;
     }
 }

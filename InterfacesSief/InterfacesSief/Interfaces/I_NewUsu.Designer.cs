@@ -95,6 +95,7 @@
             // 
             this.txtConConInt.Location = new System.Drawing.Point(177, 77);
             this.txtConConInt.Name = "txtConConInt";
+            this.txtConConInt.PasswordChar = '*';
             this.txtConConInt.Size = new System.Drawing.Size(169, 20);
             this.txtConConInt.TabIndex = 21;
             // 
@@ -102,6 +103,7 @@
             // 
             this.txtConUsuInt.Location = new System.Drawing.Point(177, 50);
             this.txtConUsuInt.Name = "txtConUsuInt";
+            this.txtConUsuInt.PasswordChar = '*';
             this.txtConUsuInt.Size = new System.Drawing.Size(169, 20);
             this.txtConUsuInt.TabIndex = 20;
             // 

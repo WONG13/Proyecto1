@@ -84,3 +84,6 @@ C:\Users\lanix\Documents\GitHub\Remplazo\Proyecto1\InterfacesSief\InterfacesSief
 C:\Users\lanix\Documents\GitHub\Remplazo\Proyecto1\InterfacesSief\InterfacesSief\obj\x86\Release\InterfacesSief.csproj.GenerateResource.Cache
 C:\Users\lanix\Documents\GitHub\Remplazo\Proyecto1\InterfacesSief\InterfacesSief\obj\x86\Release\InterfacesSief.exe
 C:\Users\lanix\Documents\GitHub\Remplazo\Proyecto1\InterfacesSief\InterfacesSief\obj\x86\Release\InterfacesSief.pdb
+C:\Users\lanix\Documents\GitHub\Remplazo\Proyecto1\InterfacesSief\InterfacesSief\obj\x86\Release\InterfacesSief.I_Notificaciones.resources
+C:\Users\lanix\Documents\GitHub\Remplazo\Proyecto1\InterfacesSief\InterfacesSief\obj\x86\Release\InterfacesSief.I_RegistrodeRev.resources
+C:\Users\lanix\Documents\GitHub\Remplazo\Proyecto1\InterfacesSief\InterfacesSief\obj\x86\Release\InterfacesSief.Interfaces.I_VerFicha.resources

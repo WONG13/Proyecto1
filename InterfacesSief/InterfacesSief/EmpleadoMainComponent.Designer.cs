@@ -32,7 +32,6 @@
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verSolicitudesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteDeSolicitudesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bucarSolicitudToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroDeRevisionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -54,7 +53,6 @@
             this.inicioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.verSolicitudesToolStripMenuItem,
             this.reporteDeSolicitudesToolStripMenuItem,
-            this.bucarSolicitudToolStripMenuItem,
             this.registroDeRevisionesToolStripMenuItem});
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
             this.inicioToolStripMenuItem.Size = new System.Drawing.Size(62, 25);
@@ -73,13 +71,6 @@
             this.reporteDeSolicitudesToolStripMenuItem.Size = new System.Drawing.Size(247, 26);
             this.reporteDeSolicitudesToolStripMenuItem.Text = "Reporte de Solicitudes";
             this.reporteDeSolicitudesToolStripMenuItem.Click += new System.EventHandler(this.reporteDeSolicitudesToolStripMenuItem_Click);
-            // 
-            // bucarSolicitudToolStripMenuItem
-            // 
-            this.bucarSolicitudToolStripMenuItem.Name = "bucarSolicitudToolStripMenuItem";
-            this.bucarSolicitudToolStripMenuItem.Size = new System.Drawing.Size(247, 26);
-            this.bucarSolicitudToolStripMenuItem.Text = "Buscar Solicitud";
-            this.bucarSolicitudToolStripMenuItem.Click += new System.EventHandler(this.bucarSolicitudToolStripMenuItem_Click);
             // 
             // registroDeRevisionesToolStripMenuItem
             // 
@@ -108,7 +99,6 @@
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verSolicitudesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reporteDeSolicitudesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bucarSolicitudToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroDeRevisionesToolStripMenuItem;
 
     }

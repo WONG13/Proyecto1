@@ -40,7 +40,7 @@ namespace InterfacesSief
 
         private void E_RevSol_Load(object sender, EventArgs e)
         {
-            i_CapAlu1.setInteresado(inte);
+            i_CapAlu1.setInteresado(inte);            
             i_CapAlu1.CargarDatosIniciales();
             i_CapAlu1.OcultarBotones();
             i_CapInt1.OcultarBotones();
@@ -72,11 +72,13 @@ namespace InterfacesSief
                 DataTable tabla = Reporte.getTablaReportesFromDB(emp.getCodigo(), rev.codRev);
                 if (tabla.Rows.Count == 0)
                 {
+                    Ficha fic = new Ficha(-1, sol.codSol, inte.getCodigo(), "Pendiente de acudir", Ficha.getDiaCita());
                     rev.estRev = "Aprobada";
                     rev.fecRev = DateTime.Now;
                     sol.estSol = "Aprobada";
-                    if (rev.actualizarRevisionToDB() && sol.ModificarEstadoSolicitud())
+                    if (rev.actualizarRevisionToDB() && sol.ModificarEstadoSolicitud() && fic.saveFichaToDB())
                     {
+                        rev.codFic = Ficha.getFichasFromDB(sol.codSol, inte.getCodigo(), "")[0].codFic;                       
                         MessageBox.Show("Revision registrada correctamente");
                     }
                     else
