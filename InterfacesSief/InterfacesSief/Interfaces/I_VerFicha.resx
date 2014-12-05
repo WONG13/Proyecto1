@@ -117,12 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label3.Text" xml:space="preserve">
-    <value>
-select f.CodFic,f.CodSol,f.FecFic,f.EstFic from Fichas f
-join Solicitudes s on s.CodSol=f.CodSol
-join Alumnos a on a.CodAlu=s.CodAlu
-join Interesados i on i.CorInt=s.CodUsuInt
-where s.CodSol='Idsol del usuario que esta dentro del sistema'</value>
-  </data>
 </root>

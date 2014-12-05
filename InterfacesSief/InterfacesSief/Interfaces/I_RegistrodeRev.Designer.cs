@@ -47,7 +47,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(608, 36);
+            this.label1.Size = new System.Drawing.Size(834, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Registro de Revisiones";
             // 
@@ -62,7 +62,7 @@
             this.groupBox1.Controls.Add(this.dgvSolAprovadas);
             this.groupBox1.Location = new System.Drawing.Point(8, 61);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(594, 327);
+            this.groupBox1.Size = new System.Drawing.Size(820, 328);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
@@ -70,7 +70,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(22, 161);
+            this.label3.Location = new System.Drawing.Point(22, 171);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(174, 17);
             this.label3.TabIndex = 3;
@@ -91,10 +91,10 @@
             this.dgvSolDenegadas.AllowUserToAddRows = false;
             this.dgvSolDenegadas.AllowUserToDeleteRows = false;
             this.dgvSolDenegadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSolDenegadas.Location = new System.Drawing.Point(25, 181);
+            this.dgvSolDenegadas.Location = new System.Drawing.Point(25, 191);
             this.dgvSolDenegadas.Name = "dgvSolDenegadas";
             this.dgvSolDenegadas.ReadOnly = true;
-            this.dgvSolDenegadas.Size = new System.Drawing.Size(542, 127);
+            this.dgvSolDenegadas.Size = new System.Drawing.Size(756, 137);
             this.dgvSolDenegadas.TabIndex = 1;
             // 
             // dgvSolAprovadas
@@ -105,7 +105,7 @@
             this.dgvSolAprovadas.Location = new System.Drawing.Point(25, 37);
             this.dgvSolAprovadas.Name = "dgvSolAprovadas";
             this.dgvSolAprovadas.ReadOnly = true;
-            this.dgvSolAprovadas.Size = new System.Drawing.Size(542, 111);
+            this.dgvSolAprovadas.Size = new System.Drawing.Size(756, 121);
             this.dgvSolAprovadas.TabIndex = 0;
             // 
             // I_RegistrodeRev
@@ -116,7 +116,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "I_RegistrodeRev";
-            this.Size = new System.Drawing.Size(614, 409);
+            this.Size = new System.Drawing.Size(840, 410);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSolDenegadas)).EndInit();

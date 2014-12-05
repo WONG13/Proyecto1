@@ -30,9 +30,15 @@ namespace InterfacesSief
         {
 
             ConsultaGrid(user.getCodigo());
-            int idSol = Int16.Parse(tabla.Rows[0][0].ToString());
-            DataTable repos = Interesado.getTablaNotificacionesFromDB(idSol);
-            dataGridView1.DataSource = repos;
+            List<Solicitud> sol=Solicitud.getSolicitudFromDB(-1, user.getCodigo(), -1, "", -1);//int idSol = Int16.Parse(tabla.Rows[0][0].ToString());
+            if (sol!=null)
+            {
+                if (sol.Count > 0)
+                {
+                    DataTable repos = Interesado.getTablaNotificacionesFromDB(sol[0].codSol);
+                    dataGridView1.DataSource = repos;
+                }
+            }
         }
 
 

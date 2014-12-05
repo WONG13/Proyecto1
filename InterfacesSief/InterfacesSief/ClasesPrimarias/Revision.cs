@@ -108,7 +108,7 @@ namespace InterfacesSief
             }
             else
             {
-                MessageBox.Show("Error al cargar Revision de la Base de Datos");
+                //MessageBox.Show("Error al cargar Revision de la Base de Datos");
                 return null;
             }
         }

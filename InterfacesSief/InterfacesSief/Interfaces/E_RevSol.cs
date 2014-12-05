@@ -9,11 +9,11 @@ using System.Windows.Forms;
 
 namespace InterfacesSief
 {
-    
-    public partial class E_RevSol : UserControl,iModulo
+
+    public partial class E_RevSol : UserControl, iModulo
     {
         Solicitud sol;
-        Interesado inte=null;
+        Interesado inte = null;
         Empleado emp;
         Revision rev;
         public E_RevSol()
@@ -35,12 +35,12 @@ namespace InterfacesSief
                 rev.saveRevisionToDB();
                 rev = Revision.getRevisionFromDB(-1, sol.codSol, "En proceso", emp.getCodigo());
             }
-            
+
         }
 
         private void E_RevSol_Load(object sender, EventArgs e)
         {
-            i_CapAlu1.setInteresado(inte);            
+            i_CapAlu1.setInteresado(inte);
             i_CapAlu1.CargarDatosIniciales();
             i_CapAlu1.OcultarBotones();
             i_CapInt1.OcultarBotones();
@@ -49,6 +49,8 @@ namespace InterfacesSief
             i_CapDoc1.setUser(inte);
             i_CapDoc1.Inicializar();
             i_CapDoc1.OcultarBotones();
+            i_CapAlu1.BloquearBotones();
+            i_CapInt1.BloquearBotones2();
 
         }
 
@@ -60,7 +62,7 @@ namespace InterfacesSief
         private void btnReporte_Click(object sender, EventArgs e)
         {
             E_ElaRep ER = new E_ElaRep();
-            ER.setSolicitud(sol, emp,rev);
+            ER.setSolicitud(sol, emp, rev);
             //ERS.setSolicitud(
             ER.ShowDialog();
         }
@@ -72,13 +74,24 @@ namespace InterfacesSief
                 DataTable tabla = Reporte.getTablaReportesFromDB(emp.getCodigo(), rev.codRev);
                 if (tabla.Rows.Count == 0)
                 {
-                    Ficha fic = new Ficha(-1, sol.codSol, inte.getCodigo(), "Pendiente de acudir", Ficha.getDiaCita());
                     rev.estRev = "Aprobada";
                     rev.fecRev = DateTime.Now;
                     sol.estSol = "Aprobada";
-                    if (rev.actualizarRevisionToDB() && sol.ModificarEstadoSolicitud() && fic.saveFichaToDB())
+                    if (rev.actualizarRevisionToDB() && sol.ModificarEstadoSolicitud())
                     {
-                        rev.codFic = Ficha.getFichasFromDB(sol.codSol, inte.getCodigo(), "")[0].codFic;                       
+                        List<Ficha> fic = Ficha.getFichasFromDB(sol.codSol, inte.getCodigo(), "");
+                        if (fic.Count == 0)
+                        {
+                            Ficha ficha = new Ficha(-1, sol.codSol, inte.getCodigo(), "Pendiente de acudir", Ficha.getDiaCita());
+                            if (ficha.saveFichaToDB())
+                            {
+                                rev.codFic = Ficha.getFichasFromDB(sol.codSol, inte.getCodigo(), "")[0].codFic;
+                                MessageBox.Show("Ficha asignada correctamente");
+                                rev.actualizarRevisionToDB();
+                            }
+                        }
+                        else
+                            MessageBox.Show("Ya se ha asignado una Ficha anteriormente");
                         MessageBox.Show("Revision registrada correctamente");
                     }
                     else
@@ -90,10 +103,11 @@ namespace InterfacesSief
                 {
                     errproValidar.SetError(radbAprobar, "Existen Reportes de Inconsistencias");
                 }
+                
             }
             else if (radbDenegar.Checked)
-            {               
-                DataTable tabla = Reporte.getTablaReportesFromDB(emp.getCodigo(),rev.codRev);
+            {
+                DataTable tabla = Reporte.getTablaReportesFromDB(emp.getCodigo(), rev.codRev);
                 if (tabla.Rows.Count > 0)
                 {
                     rev.estRev = "Denegada";
@@ -111,7 +125,7 @@ namespace InterfacesSief
                 else
                 {
                     errproValidar.SetError(radbDenegar, "No Existen Reportes de Inconsistencias, ¿Olvido crear alguno?");
-                } 
+                }
             }
         }
     }

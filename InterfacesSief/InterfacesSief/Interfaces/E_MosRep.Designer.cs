@@ -39,7 +39,7 @@
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(610, 35);
+            this.label1.Size = new System.Drawing.Size(816, 35);
             this.label1.Text = "Reportes";
             // 
             // groupBox1
@@ -49,16 +49,16 @@
             this.groupBox1.Controls.Add(this.txtInfoReporte);
             this.groupBox1.Controls.Add(this.dgvReportes);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Size = new System.Drawing.Size(610, 249);
+            this.groupBox1.Size = new System.Drawing.Size(816, 287);
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(466, 338);
+            this.btnAceptar.Location = new System.Drawing.Point(672, 376);
             this.btnAceptar.Visible = false;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(547, 338);
+            this.btnCancel.Location = new System.Drawing.Point(753, 376);
             this.btnCancel.Visible = false;
             // 
             // label2
@@ -80,14 +80,14 @@
             this.dgvReportes.Name = "dgvReportes";
             this.dgvReportes.ReadOnly = true;
             this.dgvReportes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvReportes.Size = new System.Drawing.Size(273, 150);
+            this.dgvReportes.Size = new System.Drawing.Size(465, 150);
             this.dgvReportes.TabIndex = 10;
             this.dgvReportes.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvReportes_CellMouseClick);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(295, 51);
+            this.label3.Location = new System.Drawing.Point(481, 51);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 13);
             this.label3.TabIndex = 15;
@@ -95,7 +95,7 @@
             // 
             // txtTipoRep
             // 
-            this.txtTipoRep.Location = new System.Drawing.Point(388, 48);
+            this.txtTipoRep.Location = new System.Drawing.Point(574, 48);
             this.txtTipoRep.Name = "txtTipoRep";
             this.txtTipoRep.ReadOnly = true;
             this.txtTipoRep.Size = new System.Drawing.Size(190, 20);
@@ -103,7 +103,7 @@
             // 
             // txtInfoReporte
             // 
-            this.txtInfoReporte.Location = new System.Drawing.Point(298, 76);
+            this.txtInfoReporte.Location = new System.Drawing.Point(484, 76);
             this.txtInfoReporte.Multiline = true;
             this.txtInfoReporte.Name = "txtInfoReporte";
             this.txtInfoReporte.ReadOnly = true;
@@ -114,7 +114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.Name = "E_MosRep";
-            this.Size = new System.Drawing.Size(634, 372);
+            this.Size = new System.Drawing.Size(840, 410);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReportes)).EndInit();

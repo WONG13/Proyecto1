@@ -36,7 +36,6 @@
             this.i_CapInt1 = new InterfacesSief.I_CapInt();
             this.tabAlumnos = new System.Windows.Forms.TabPage();
             this.i_CapAlu1 = new InterfacesSief.I_CapAlu();
-            this.tabReportes = new System.Windows.Forms.TabPage();
             this.i_CapDoc1 = new InterfacesSief.I_CapDoc();
             this.radbAprobar = new System.Windows.Forms.RadioButton();
             this.radbDenegar = new System.Windows.Forms.RadioButton();
@@ -73,7 +72,6 @@
             // 
             this.tabControl1.Controls.Add(this.tabTutor);
             this.tabControl1.Controls.Add(this.tabAlumnos);
-            this.tabControl1.Controls.Add(this.tabReportes);
             this.tabControl1.Location = new System.Drawing.Point(3, 76);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -119,15 +117,6 @@
             this.i_CapAlu1.Size = new System.Drawing.Size(336, 245);
             this.i_CapAlu1.TabIndex = 90;
             // 
-            // tabReportes
-            // 
-            this.tabReportes.Location = new System.Drawing.Point(4, 22);
-            this.tabReportes.Name = "tabReportes";
-            this.tabReportes.Size = new System.Drawing.Size(348, 308);
-            this.tabReportes.TabIndex = 2;
-            this.tabReportes.Text = "Reportes";
-            this.tabReportes.UseVisualStyleBackColor = true;
-            // 
             // i_CapDoc1
             // 
             this.i_CapDoc1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -140,7 +129,7 @@
             // 
             this.radbAprobar.AutoSize = true;
             this.radbAprobar.Checked = true;
-            this.radbAprobar.Location = new System.Drawing.Point(12, 7);
+            this.radbAprobar.Location = new System.Drawing.Point(12, 3);
             this.radbAprobar.Name = "radbAprobar";
             this.radbAprobar.Size = new System.Drawing.Size(105, 17);
             this.radbAprobar.TabIndex = 93;
@@ -163,9 +152,9 @@
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.panel1.Controls.Add(this.radbDenegar);
             this.panel1.Controls.Add(this.radbAprobar);
-            this.panel1.Location = new System.Drawing.Point(224, 26);
+            this.panel1.Location = new System.Drawing.Point(222, 26);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(129, 44);
+            this.panel1.Size = new System.Drawing.Size(137, 44);
             this.panel1.TabIndex = 94;
             // 
             // errproValidar
@@ -205,7 +194,6 @@
         private System.Windows.Forms.TabPage tabTutor;
         private System.Windows.Forms.TabPage tabAlumnos;
         private I_CapDoc i_CapDoc1;
-        private System.Windows.Forms.TabPage tabReportes;
         private System.Windows.Forms.RadioButton radbAprobar;
         private System.Windows.Forms.RadioButton radbDenegar;
         private System.Windows.Forms.Panel panel1;

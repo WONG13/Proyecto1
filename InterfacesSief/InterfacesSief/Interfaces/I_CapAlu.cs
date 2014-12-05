@@ -148,14 +148,14 @@ namespace InterfacesSief
             }
         }
 
-        public bool Validar()
+        public bool Validar2()
         {
             errorProvider1.Clear();
-            bool comprobar=true;
+            bool comprobar1 = true, comprobar2 = true;
             //Comprobar que el nombre no este vacio
             if (txtNomAlumno.Text == "")
             {
-                comprobar = false;
+                comprobar1 = false;
                 errorProvider1.SetError(txtNomAlumno, "Error, el campo nombre no debe de estar vacio");
             }
             //Comprobar que Promedio no este vacio
@@ -165,23 +165,23 @@ namespace InterfacesSief
                 try
                 {
                     if (double.Parse(txtProAlu.Text) > 0)
-                        comprobar = true;
+                        comprobar1 = true;
                     else
                     {
                         errorProvider1.SetError(txtProAlu, "El prmedio no puede se menor que 0");
-                        comprobar = false;
+                        comprobar1 = false;
                     }
                 }
                 catch (Exception e)
                 {
                     errorProvider1.SetError(txtProAlu, "Error, datos no numericos: " + e.Message);
-                    comprobar = false;
+                    comprobar1 = false;
                 }
             }
             else
             {
                 errorProvider1.SetError(txtProAlu, "Promedio no puede estar vacio");
-                comprobar = false;
+                comprobar1 = false;
             }
             //Comprobar que Grado no este vacio
             if (txtGraAlu.Text != "")
@@ -190,46 +190,66 @@ namespace InterfacesSief
                 try
                 {
                     if (int.Parse(txtGraAlu.Text) > 0)
-                        comprobar = true;
+                        comprobar2 = true;
                     else
                     {
                         errorProvider1.SetError(txtGraAlu, "El grado debe de ser mayor a 0");
-                        comprobar = false;
+                        comprobar2 = false;
                     }
                 }
                 catch (Exception e)
                 {
                     errorProvider1.SetError(txtGraAlu, "Error, datos no numericos: " + e.Message);
-                    comprobar = false;
+                    comprobar2 = false;
                 }
             }
             else
             {
                 errorProvider1.SetError(txtGraAlu, "Grado no puede estar vacio");
-                comprobar = false;
+                comprobar2 = false;
             }
-            
-           
+            if (comprobar1 && comprobar2)
+                return true;
+            else
+                return false;
+        }
+
+        public bool Validar()
+        {
+            bool condicion = Validar2(), comprobar1=true;
                 //Comprovar que la Escuela se Encuentre en la lista oficial
                 bool comprobar2 = true;
                 if (ComboBoxEsc.Text != "")//Comprobar que Escuela no este vacio
                 {
-                    comprobar2 = false;
+                    comprobar1 = false;
                     foreach (Escuela es in lista)
                     {
                         if (ComboBoxEsc.Text == es.nomEsc)
-                            comprobar2 = true;
+                        {
+                            comprobar1 = true;
+                            break;
+                        }
                     }
+                    if(!comprobar1)
+                        {
+                        errorProvider1.SetError(ComboBoxEsc, "Error, la escuela no se encuentra en la lista oficial");
+                        comprobar1 = false;
+                        }
+                    
                 }
-                if (comprobar2) { }
+                //if (comprobar1) { }
                 else
                 {
                     errorProvider1.SetError(ComboBoxEsc, "Error, la escuela no se encuentra en la lista oficial");
-                    comprobar = false;
+                    comprobar1 = false;
                 }
-           
+
+                if (condicion && comprobar1)
+                    return true;
+                else
+                    return false;
             //Regresar resultados de la validacion
-            return comprobar;
+            //return comprobar1;
         }
 
         public int CrearAlumno(int CodUsuInt)
@@ -258,6 +278,30 @@ namespace InterfacesSief
         {
             btnAceptar.Visible = false;
             btnCancel.Visible = false;
+        }
+
+        public void BloquearBotones()
+        {
+            txtGraAlu.ReadOnly = true;
+            txtNomAlumno.ReadOnly = true;
+            txtProAlu.ReadOnly = true;
+            TextBox Esc=new TextBox(), Niv=new TextBox(), Fec=new TextBox();
+            Esc.Text = ComboBoxEsc.Text;
+            Niv.Text = ComboBoxNivel.Text;
+            Fec.Text = dateFechNacimiento.Value.ToString();
+            Esc.Location = ComboBoxEsc.Location;
+            Esc.Size = ComboBoxEsc.Size;
+            Niv.Location = ComboBoxNivel.Location;
+            Niv.Size = ComboBoxNivel.Size;
+            Fec.Location = dateFechNacimiento.Location;
+            Fec.Size = dateFechNacimiento.Size;
+            ComboBoxEsc.Visible = false;
+            ComboBoxNivel.Visible = false;
+            dateFechNacimiento.Visible = false;
+            groupBox1.Controls.Add(Esc);
+            groupBox1.Controls.Add(Niv);
+            groupBox1.Controls.Add(Fec);
+            Refresh();
         }
     }
 }

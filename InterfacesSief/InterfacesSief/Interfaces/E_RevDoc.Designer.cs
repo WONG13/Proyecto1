@@ -36,23 +36,24 @@
             // 
             // label1
             // 
+            this.label1.Size = new System.Drawing.Size(843, 30);
             this.label1.Text = "Revisión de Solicitudes";
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Size = new System.Drawing.Size(560, 261);
+            this.groupBox1.Size = new System.Drawing.Size(816, 287);
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(416, 350);
+            this.btnAceptar.Location = new System.Drawing.Point(672, 376);
             this.btnAceptar.Text = "Revisar";
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(497, 350);
+            this.btnCancel.Location = new System.Drawing.Point(753, 376);
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label2
@@ -73,7 +74,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(533, 191);
+            this.dataGridView1.Size = new System.Drawing.Size(760, 191);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
@@ -82,7 +83,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.Name = "E_RevDoc";
-            this.Size = new System.Drawing.Size(584, 384);
+            this.Size = new System.Drawing.Size(840, 410);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -46,7 +46,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(-2, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(735, 41);
+            this.label1.Size = new System.Drawing.Size(834, 41);
             this.label1.TabIndex = 2;
             this.label1.Text = "Notificaciones";
             // 
@@ -61,7 +61,7 @@
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Location = new System.Drawing.Point(3, 102);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(713, 317);
+            this.groupBox1.Size = new System.Drawing.Size(812, 327);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             // 
@@ -112,7 +112,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "I_Notificaciones";
-            this.Size = new System.Drawing.Size(741, 400);
+            this.Size = new System.Drawing.Size(840, 410);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

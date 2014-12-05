@@ -102,6 +102,12 @@ namespace InterfacesSief
                 return false;
         }
 
-        
+        internal void BloquearBotones2()
+        {
+            txtCorInt.ReadOnly = true;
+            txtDirInt.ReadOnly = true;
+            txtNomComInt.ReadOnly = true;
+            txtTelInt.ReadOnly = true;
+        }
     }
 }
